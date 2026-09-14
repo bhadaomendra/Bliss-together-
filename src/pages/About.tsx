@@ -71,9 +71,9 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-pillar:first-child { padding-left: 0; }
       .about-pillar:last-child { padding-right: 0; border-right: 0; }
       
-      .about-pillar-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.25rem; }
-      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 3.4rem; font-weight: 700; color: ${teal}; line-height: 1; }
-      .about-pillar-icon-badge { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid ${gold}; display: flex; items: center; justify-content: center; color: ${gold}; flex-shrink: 0; }
+      .about-pillar-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 3.2rem; font-weight: 700; color: ${teal}; line-height: 1; display: inline-block; }
+      .about-pillar-icon { color: ${gold}; display: flex; align-items: center; justify-content: center; }
       
       .about-pillar h3 { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.04em; color: ${green}; margin: 0 0 1rem; text-transform: uppercase; line-height: 1.3; }
       .about-pillar p { font-size: 0.975rem; color: #4A5D52; line-height: 1.7; font-family: "DM Sans", sans-serif; margin: 0; }
@@ -194,7 +194,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       </div>
     </section>
 
-    {/* CORE VALUES (1:1 REFERENCE MATCH) */}
+    {/* CORE VALUES (PERFECT 1:1 ALIGNMENT MATCH) */}
     <section className="about-pillars">
       <div className="about-container">
         <div className="about-section-head">
@@ -208,8 +208,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
           <article className="about-pillar">
             <div className="about-pillar-header">
               <span className="about-number">01</span>
-              <div className="about-pillar-icon-badge">
-                <Leaf size={20} />
+              <div className="about-pillar-icon">
+                <Leaf size={32} strokeWidth={1.75} />
               </div>
             </div>
             <h3>HEALTH COMES FIRST</h3>
@@ -220,8 +220,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
           <article className="about-pillar">
             <div className="about-pillar-header">
               <span className="about-number">02</span>
-              <div className="about-pillar-icon-badge">
-                <Users size={20} />
+              <div className="about-pillar-icon">
+                <Users size={32} strokeWidth={1.75} />
               </div>
             </div>
             <h3>GENUINE EFFORTS CREATE REAL IMPACT</h3>
@@ -232,8 +232,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
           <article className="about-pillar">
             <div className="about-pillar-header">
               <span className="about-number">03</span>
-              <div className="about-pillar-icon-badge">
-                <Sun size={20} />
+              <div className="about-pillar-icon">
+                <Sun size={32} strokeWidth={1.75} />
               </div>
             </div>
             <h3>HEALTH IS THE SOURCE OF JOY AND PROSPERITY</h3>
