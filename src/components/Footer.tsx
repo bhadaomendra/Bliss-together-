@@ -30,12 +30,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="footer-columns">
 
           {/* COLUMN 1: BRAND LOGO & SOCIALS */}
-          <div>
-            <div style={{ marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center', width: '100%' }}>
               <img
                 src="/assets/bliss_together_logo_light_transparent.png"
                 alt="Bliss Together Logo"
-                style={{ height: '95px', width: 'auto', objectFit: 'contain' }}
+                style={{ height: '140px', width: 'auto', maxWidth: '240px', objectFit: 'contain', display: 'block' }}
               />
             </div>
 
@@ -43,25 +43,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               fontFamily: "'Cormorant Garamond', Georgia, serif",
               fontStyle: 'italic',
               color: 'var(--color-gold)',
-              fontSize: '0.9375rem',
-              marginBottom: '1.25rem'
+              fontSize: '1.05rem',
+              lineHeight: '1.4',
+              marginBottom: '1.25rem',
+              letterSpacing: '0.02em',
+              textAlign: 'center'
             }}>
               Nourishing Lives Better, Together.
             </p>
 
             {/* Social Media Circular Buttons */}
-            <div style={{ display: 'flex', gap: '0.65rem' }}>
-              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '34px', height: '34px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)' }} aria-label="Instagram">
-                <Instagram size={15} />
+            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', alignItems: 'center' }}>
+              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '38px', height: '38px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)', transition: 'all 0.2s ease' }} aria-label="Instagram">
+                <Instagram size={17} />
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '34px', height: '34px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)' }} aria-label="Facebook">
-                <Facebook size={15} />
+              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '38px', height: '38px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)', transition: 'all 0.2s ease' }} aria-label="Facebook">
+                <Facebook size={17} />
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '34px', height: '34px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)' }} aria-label="LinkedIn">
-                <Linkedin size={15} />
+              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '38px', height: '38px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)', transition: 'all 0.2s ease' }} aria-label="LinkedIn">
+                <Linkedin size={17} />
               </a>
-              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '34px', height: '34px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)' }} aria-label="Twitter">
-                <Twitter size={15} />
+              <a href="#" onClick={(e) => e.preventDefault()} style={{ width: '38px', height: '38px', borderRadius: '50%', border: '1px solid rgba(197, 160, 89, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-gold)', transition: 'all 0.2s ease' }} aria-label="Twitter">
+                <Twitter size={17} />
               </a>
             </div>
           </div>
