@@ -277,41 +277,30 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
         </div>
 
-        {/* Circular Gold Peacock Feather Badge Floating Overlay on Bottom Right */}
+        {/* Floating Bliss Together Transparent Logo on Bottom Right (No Circle / No Background) */}
         <div style={{
           position: 'absolute',
           bottom: '2.5rem',
           right: '3.5rem',
-          width: '145px',
-          height: '145px',
-          borderRadius: '50%',
-          backgroundColor: 'rgba(10, 35, 26, 0.82)',
-          backdropFilter: 'blur(12px)',
-          border: '2px solid var(--color-gold)',
+          width: '210px',
+          zIndex: 3,
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 10px 32px rgba(0,0,0,0.4)',
-          zIndex: 3,
-          padding: '4px'
+          filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.45))'
         }}>
           <img
-            src="/assets/rooted_in_nature_badge.png"
-            alt="Rooted in Nature, Backed by Science"
-            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            src="/assets/bliss_together_logo_light_transparent.png"
+            alt="Bliss Together - Nourish. Balance. Thrive."
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'block'
+            }}
             onError={(e) => {
-              // Fallback to stylized SVG text seal if image fails
-              const target = e.currentTarget;
-              target.style.display = 'none';
-              if (target.parentElement) {
-                target.parentElement.innerHTML = `
-                  <div style="text-align: center; color: #FFFFFF; font-family: var(--font-body); padding: 0.5rem;">
-                    <div style="font-size: 1.3rem; margin-bottom: 2px;">🪶</div>
-                    <div style="font-size: 0.55rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;">ROOTED IN NATURE</div>
-                    <div style="font-size: 0.5rem; color: #C5A059; text-transform: uppercase; margin-top: 2px;">BACKED BY SCIENCE</div>
-                  </div>
-                `;
-              }
+              e.currentTarget.src = "/assets/bliss_together_logo_transparent.png";
             }}
           />
         </div>
