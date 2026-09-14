@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Leaf, Users, Sun, Heart } from 'lucide-react';
+import { Target, Leaf, Users, Sun, Heart, FlaskConical, Shield } from 'lucide-react';
 
 interface AboutProps { onNavigate: (path: string) => void; }
 
@@ -57,6 +57,16 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-identity-name { font-size: 1rem; font-weight: 800; margin: 0 0 7px; color: #183C2D; }
       .about-identity-copy { font-size: .72rem; line-height: 1.42; color: #68776F; max-width: 175px; margin: 0; }
       .about-identity-divider { height: 1px; background: rgba(178,139,69,.45); width: 75%; margin: 20px auto 0; }
+      .about-identity-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 22px 0 0; }
+      .about-identity-principle { text-align: center; color: #183C2D; }
+      .about-identity-principle-icon { height: 30px; display: flex; align-items: center; justify-content: center; margin-bottom: 7px; color: #183C2D; }
+      .about-identity-principle span { display: block; font-size: .62rem; line-height: 1.3; font-weight: 500; }
+      .about-identity-banner { margin-top: 22px; min-height: 72px; border-radius: 9px; background: linear-gradient(90deg, #EAF0E7, #F0F4EB, #EAF0E7); display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+      .about-identity-banner:before, .about-identity-banner:after { content: ""; position: absolute; width: 74px; height: 52px; border-radius: 70% 15% 70% 15%; background: linear-gradient(135deg, rgba(92,120,88,.45), rgba(92,120,88,.08)); opacity: .55; }
+      .about-identity-banner:before { left: -12px; transform: rotate(-34deg); }
+      .about-identity-banner:after { right: -12px; transform: rotate(146deg); }
+      .about-identity-banner-text { position: relative; z-index: 1; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.25rem; line-height: 1.12; font-style: italic; color: #183C2D; }
+      .about-identity-banner-line { display: block; width: 30px; height: 2px; background: #B28B45; margin: 8px auto 0; }
       .about-guides { padding: 76px 0 84px; background: #F3EFE7; }
       .about-section-head { text-align: center; max-width: 760px; margin: 0 auto 42px; }
       .about-section-title { font-size: clamp(2.4rem, 4vw, 3.45rem); line-height: .98; margin: 9px 0 13px; }
@@ -96,7 +106,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-hero-title { font-size: 2.55rem; line-height: .93; } .about-hero-sub { font-size: .83rem; }
         .about-hero-art { height: 285px; margin-top: 2px; } .about-hero-message { right: -4px; top: 22%; width: 92px; font-size: .9rem; }
         .about-story { padding: 54px 0 62px; } .about-story-title { font-size: 2.55rem; }
-        .about-story-visual { min-height: 340px; } .about-identity-grid { gap: 8px; } .about-identity-card { padding: 18px 10px; }
+        .about-story-visual { min-height: 430px; } .about-identity-grid { gap: 8px; } .about-identity-card { padding: 18px 10px; }
         .about-identity-card img { width: 105px; height: 48px; } .about-identity-card.brand img { width: 98px; height: 54px; }
         .about-identity-name { font-size: .85rem; } .about-identity-copy { font-size: .62rem; max-width: 135px; }
         .about-guide-card { padding: 28px 24px; min-height: 0; } .about-card-title { font-size: 1.75rem; }
@@ -139,7 +149,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
             <div className="about-identity-heading">Two Names. One Purpose.</div>
             <div className="about-identity-grid">
               <article className="about-identity-card">
-                <img src="/assets/krishiv_logo_white.png" alt="Krishiv Wellness LLP" style={{filter:'invert(1)'}} />
+                <img src="/assets/krishiv_logo_dark.png" alt="Krishiv Wellness LLP" />
                 <div className="about-identity-label">The Company</div>
                 <h3 className="about-identity-name">Krishiv Wellness LLP</h3>
                 <p className="about-identity-copy">The foundation that brings vision, expertise and purpose to life.</p>
@@ -152,6 +162,26 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
               </article>
             </div>
             <div className="about-identity-divider" />
+            <div className="about-identity-principles">
+              <div className="about-identity-principle">
+                <div className="about-identity-principle-icon"><Users size={23} strokeWidth={1.7}/></div>
+                <span>People First</span>
+              </div>
+              <div className="about-identity-principle">
+                <div className="about-identity-principle-icon"><FlaskConical size={23} strokeWidth={1.7}/></div>
+                <span>Science Driven</span>
+              </div>
+              <div className="about-identity-principle">
+                <div className="about-identity-principle-icon"><Shield size={23} strokeWidth={1.7}/></div>
+                <span>Long-Term Impact</span>
+              </div>
+            </div>
+            <div className="about-identity-banner">
+              <div className="about-identity-banner-text">
+                Nourish. Balance. Thrive.<br/>Together.
+                <span className="about-identity-banner-line" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
