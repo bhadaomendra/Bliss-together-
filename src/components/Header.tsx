@@ -45,9 +45,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           aria-label="Krishiv Wellness LLP Home"
         >
           <img
-            src="/assets/bliss_together_logo_light_transparent.png"
-            alt="Bliss Together Logo"
-            style={{ height: '64px', width: 'auto', objectFit: 'contain' }}
+            src="/assets/krishiv_logo_white.png"
+            alt="Krishiv Wellness LLP Logo"
+            style={{ height: '62px', width: 'auto', objectFit: 'contain' }}
           />
         </a>
 
