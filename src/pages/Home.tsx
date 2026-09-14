@@ -277,105 +277,88 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
         </div>
 
-        {/* Exact Thought Cloud Bubble with Bliss Together Logo floating near Boy's Head */}
+        {/* Exact Fluffy Scalloped Comic Puffy Cloud with Bliss Together Logo */}
         <div style={{
           position: 'absolute',
-          top: '2.2rem',
-          right: '4.5rem',
+          top: '1.2rem',
+          right: '3.5rem',
+          width: '360px',
+          height: '240px',
           zIndex: 4,
           animation: 'floatSpeech 4.5s ease-in-out infinite'
         }}>
-          {/* Main White Oval Cloud */}
-          <div style={{
-            position: 'relative',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '160px / 100px',
-            width: '295px',
-            height: '175px',
-            boxShadow: '0 16px 40px rgba(0, 0, 0, 0.28)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1.25rem 1.8rem'
-          }}>
-            {/* White Ray Dashes around Top Right of Cloud */}
+          {/* SVG Puffy Scalloped Cloud Wrapper */}
+          <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+            <svg viewBox="0 0 520 320" width="100%" height="100%" style={{ overflow: 'visible' }}>
+              <defs>
+                <filter id="puffy-shadow-exact" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="12" floodColor="#000000" floodOpacity="0.25" />
+                </filter>
+              </defs>
+
+              {/* Spark Lines Top-Left */}
+              <line x1="85" y1="65" x2="60" y2="40" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+              <line x1="115" y1="48" x2="100" y2="20" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+
+              {/* Spark Lines Top-Right */}
+              <line x1="435" y1="65" x2="460" y2="40" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+              <line x1="405" y1="48" x2="420" y2="20" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+              <line x1="460" y1="95" x2="485" y2="85" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+
+              {/* Spark Lines Bottom-Right */}
+              <line x1="445" y1="235" x2="470" y2="258" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+              <line x1="415" y1="255" x2="430" y2="282" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+
+              {/* Spark Lines Bottom-Left */}
+              <line x1="105" y1="255" x2="85" y2="278" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+              <line x1="135" y1="270" x2="125" y2="295" stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round" />
+
+              {/* Fluffy Puffy Scalloped Cloud Shape */}
+              <path d="M 140 80 
+                       A 42 42 0 0 1 210 55 
+                       A 52 52 0 0 1 300 50 
+                       A 46 46 0 0 1 380 70 
+                       A 44 44 0 0 1 435 115 
+                       A 42 42 0 0 1 445 170 
+                       A 44 44 0 0 1 410 220 
+                       A 46 46 0 0 1 340 250 
+                       A 52 52 0 0 1 240 255 
+                       A 46 46 0 0 1 160 238 
+                       A 42 42 0 0 1 105 198 
+                       A 44 44 0 0 1 95 135 
+                       A 42 42 0 0 1 140 80 Z" 
+                    fill="#FFFFFF" filter="url(#puffy-shadow-exact)" />
+
+              {/* Thought Dots leading directly from near Boy's mouth/face */}
+              <circle cx="82" cy="225" r="18" fill="#FFFFFF" filter="url(#puffy-shadow-exact)" />
+              <circle cx="52" cy="258" r="10" fill="#FFFFFF" filter="url(#puffy-shadow-exact)" />
+              <circle cx="28" cy="285" r="6" fill="#FFFFFF" filter="url(#puffy-shadow-exact)" />
+            </svg>
+
+            {/* Bliss Together Logo Centered Inside Puffy Cloud */}
             <div style={{
               position: 'absolute',
-              top: '-12px',
-              right: '-10px',
-              width: '50px',
-              height: '50px',
-              pointerEvents: 'none'
+              top: '18%',
+              left: '21%',
+              width: '58%',
+              height: '62%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}>
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                <line x1="30" y1="14" x2="42" y2="4" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
-                <line x1="38" y1="26" x2="48" y2="20" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
-                <line x1="20" y1="8" x2="28" y2="2" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
-              </svg>
+              <img
+                src="/assets/bliss_together_logo_transparent.png"
+                alt="Bliss Together - Nourish. Balance. Thrive."
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '135px',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
+              />
             </div>
-
-            {/* Bliss Together Logo centered inside White Oval */}
-            <img
-              src="/assets/bliss_together_logo_transparent.png"
-              alt="Bliss Together - Nourish. Balance. Thrive."
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxHeight: '128px',
-                objectFit: 'contain',
-                display: 'block'
-              }}
-            />
           </div>
-
-          {/* Thought Bubble Dots leading directly from near Boy's mouth up to Cloud */}
-          {/* Dot 1 (Nearest to Cloud) */}
-          <div style={{
-            position: 'absolute',
-            bottom: '-18px',
-            left: '25px',
-            width: '22px',
-            height: '22px',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '50%',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
-          }} />
-
-          {/* Dot 2 (Middle) */}
-          <div style={{
-            position: 'absolute',
-            bottom: '-40px',
-            left: '6px',
-            width: '16px',
-            height: '16px',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '50%',
-            boxShadow: '0 3px 8px rgba(0, 0, 0, 0.18)'
-          }} />
-
-          {/* Dot 3 (Lower) */}
-          <div style={{
-            position: 'absolute',
-            bottom: '-60px',
-            left: '-12px',
-            width: '11px',
-            height: '11px',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '50%',
-            boxShadow: '0 2px 6px rgba(0, 0, 0, 0.16)'
-          }} />
-
-          {/* Dot 4 (Closest to Boy's Mouth) */}
-          <div style={{
-            position: 'absolute',
-            bottom: '-76px',
-            left: '-26px',
-            width: '7px',
-            height: '7px',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '50%',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)'
-          }} />
         </div>
       </section>
 
