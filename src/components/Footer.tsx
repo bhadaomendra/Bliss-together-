@@ -33,9 +33,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <div style={{ marginBottom: '1rem' }}>
               <img
-                src="/assets/krishiv_logo_white.png"
-                alt="Krishiv Wellness LLP Logo"
-                style={{ height: '88px', width: 'auto', objectFit: 'contain' }}
+                src="/assets/bliss_together_logo_light_transparent.png"
+                alt="Bliss Together Logo"
+                style={{ height: '95px', width: 'auto', objectFit: 'contain' }}
               />
             </div>
 
