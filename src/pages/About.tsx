@@ -45,10 +45,11 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       /* IDENTITY CARDS (CIRCULAR MOCKUP MATCH) */
       .about-identity { position: relative; background: #FAF8F4; border-radius: 28px; padding: 2.5rem 1.25rem 2rem; box-shadow: 0 10px 35px rgba(0,0,0,0.03); border: 1px solid rgba(27,59,43,0.06); text-align: center; overflow: hidden; }
       .about-identity-heading { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2.1rem; font-weight: 700; color: ${green}; margin-bottom: 2rem; position: relative; z-index: 2; }
-      .about-identity-grid { display: flex; justify-content: center; align-items: center; gap: 0.85rem; margin: 0 auto 1.25rem; width: 100%; position: relative; z-index: 2; }
-      .about-identity-card { background: #F4F0E6; border-radius: 50%; width: 215px; height: 215px; padding: 1.15rem 0.75rem; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: inset 0 0 0 1px rgba(24, 60, 45, 0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; flex-shrink: 0; }
+      .about-identity-grid { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 0 auto 1.25rem; width: 100%; position: relative; z-index: 2; }
+      .about-identity-card { background: #F4F0E6; border-radius: 50%; width: 230px; height: 230px; padding: 1.2rem 0.85rem; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: inset 0 0 0 1px rgba(24, 60, 45, 0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; flex-shrink: 0; }
       .about-identity-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
-      .about-identity-card img { height: 38px; width: auto; object-fit: contain; margin-bottom: 0.35rem; }
+      .about-identity-card img { height: 54px; max-width: 150px; width: auto; object-fit: contain; margin-bottom: 0.35rem; }
+
       .about-identity-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.1em; color: ${gold}; text-transform: uppercase; margin-top: 0.15rem; }
       .about-identity-name { font-size: 0.875rem; font-weight: 700; color: ${green}; margin: 0.15rem 0 0.25rem; }
       .about-identity-copy { font-size: 0.7rem; color: #5A6E63; line-height: 1.3; max-width: 170px; }
