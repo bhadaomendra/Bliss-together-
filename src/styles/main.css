@@ -32,6 +32,15 @@
   --header-height: 96px;
 }
 
+@keyframes floatSpeech {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 /* Reset */
 *, *::before, *::after {
   box-sizing: border-box;

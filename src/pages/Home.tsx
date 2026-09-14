@@ -277,32 +277,80 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
         </div>
 
-        {/* Floating Bliss Together Transparent Logo on Bottom Right (No Circle / No Background) */}
+        {/* Talking Cloud / Speech Bubble with Bliss Together Logo floating near Boy's Face */}
         <div style={{
           position: 'absolute',
-          bottom: '2.5rem',
-          right: '3.5rem',
-          width: '210px',
-          zIndex: 3,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.45))'
+          top: '15%',
+          right: '16%',
+          zIndex: 4,
+          animation: 'floatSpeech 4s ease-in-out infinite'
         }}>
-          <img
-            src="/assets/bliss_together_logo_light_transparent.png"
-            alt="Bliss Together - Nourish. Balance. Thrive."
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain',
-              display: 'block'
-            }}
-            onError={(e) => {
-              e.currentTarget.src = "/assets/bliss_together_logo_transparent.png";
-            }}
-          />
+          {/* Main Speech Cloud Container */}
+          <div style={{
+            position: 'relative',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(12px)',
+            borderRadius: '24px 24px 4px 24px',
+            padding: '0.85rem 1.25rem',
+            border: '2px solid var(--color-gold)',
+            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.35)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            maxWidth: '210px'
+          }}>
+            {/* Small 'Feeling' quote badge */}
+            <div style={{
+              fontSize: '0.625rem',
+              fontWeight: 800,
+              letterSpacing: '0.12em',
+              color: 'var(--color-primary)',
+              textTransform: 'uppercase',
+              marginBottom: '0.25rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.3rem'
+            }}>
+              <span style={{ fontSize: '0.75rem' }}>💬</span>
+              <span style={{ color: 'var(--color-gold)' }}>FEELING</span>
+            </div>
+
+            {/* Bliss Together Logo Image */}
+            <img
+              src="/assets/bliss_together_logo_transparent.png"
+              alt="Bliss Together"
+              style={{
+                width: '155px',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
+
+            {/* Speech Bubble Pointer / Tail (Points down-right towards boy's mouth) */}
+            <div style={{
+              position: 'absolute',
+              bottom: '-12px',
+              right: '18px',
+              width: '0',
+              height: '0',
+              borderLeft: '12px solid transparent',
+              borderRight: '6px solid transparent',
+              borderTop: '14px solid #C5A059',
+              filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))'
+            }} />
+            <div style={{
+              position: 'absolute',
+              bottom: '-9px',
+              right: '20px',
+              width: '0',
+              height: '0',
+              borderLeft: '10px solid transparent',
+              borderRight: '5px solid transparent',
+              borderTop: '12px solid rgba(255, 255, 255, 0.95)'
+            }} />
+          </div>
         </div>
       </section>
 
