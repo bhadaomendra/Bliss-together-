@@ -77,17 +77,17 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-card-label { font-size: .64rem; font-weight: 800; letter-spacing: .18em; color: #B28B45; }
       .about-card-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; line-height: 1.02; margin: 8px 0 15px; font-weight: 600; }
       .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.18rem; line-height: 1.48; margin: 0; color: #385247; }
-      .about-pillars { padding: 54px 0 58px; background: #FBF9F5; }
+      .about-pillars { padding: 34px 0 38px; background: #FBF9F5; }
       .about-pillars .about-section-head { margin-bottom: 0; }
-      .about-pillars .about-section-title { font-size: clamp(1.65rem, 3vw, 2.65rem); margin: 5px 0 6px; }
-      .about-pillars .about-section-sub { font-size: .68rem; line-height: 1.35; }
-      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
-      .about-pillar { padding: 0 24px; min-height: 0; border-right: 1px solid rgba(27,59,43,.1); }
+      .about-pillars .about-section-title { font-size: clamp(1.45rem, 2.7vw, 2.25rem); margin: 4px 0 5px; }
+      .about-pillars .about-section-sub { font-size: .62rem; line-height: 1.3; }
+      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+      .about-pillar { padding: 0 20px; min-height: 0; border-right: 1px solid rgba(27,59,43,.1); }
       .about-pillar:first-child { padding-left: 0; } .about-pillar:last-child { padding-right: 0; border-right: 0; }
-      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; line-height: 1; color: #079E8D; }
-      .about-pillar-icon { color: #B28B45; margin: 5px 0 10px; }
-      .about-pillar h3 { font-size: .76rem; margin: 0 0 5px; line-height: 1.25; }
-      .about-pillar p { color: #68776F; line-height: 1.4; font-size: .68rem; margin: 0; }
+      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; line-height: 1; color: #079E8D; display: inline-block; margin-right: 6px; }
+      .about-pillar-icon { color: #B28B45; margin: -3px 0 9px; display: inline-flex; vertical-align: middle; }
+      .about-pillar h3 { font-size: .72rem; margin: 0 0 5px; line-height: 1.2; }
+      .about-pillar p { color: #68776F; line-height: 1.35; font-size: .63rem; margin: 0; }
       .about-belief { text-align: center; padding: 70px 20px 76px; background: #FBF9F5; }
       .about-belief-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(2rem, 3.2vw, 2.7rem); line-height: 1.12; margin: 8px 0 0; }
       .about-belief-line { display: block; width: 34px; height: 1px; background: #B28B45; margin: 20px auto 0; }
@@ -104,6 +104,19 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 14px; border-right: 1px solid rgba(27,59,43,.1); border-bottom: 0; min-height: 0; }
         .about-pillar:first-child { padding-left: 0; }
         .about-pillar:last-child { padding-right: 0; border-right: 0; }
+      }
+      @media (max-width: 700px) and (min-width: 561px) {
+        .about-pillars { padding: 20px 0 22px; }
+        .about-pillars .about-section-head { margin-bottom: 0; }
+        .about-pillars .about-section-title { font-size: 1.18rem; margin: 3px 0 3px; letter-spacing: -.015em; }
+        .about-pillars .about-section-sub { font-size: .45rem; line-height: 1.25; }
+        .about-pillar-grid { margin-top: 14px; }
+        .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 10px; }
+        .about-number { font-size: 1rem; margin-right: 4px; }
+        .about-pillar-icon { margin: -2px 0 5px; }
+        .about-pillar-icon svg { width: 17px; height: 17px; }
+        .about-pillar h3 { font-size: .52rem; line-height: 1.15; margin-bottom: 3px; }
+        .about-pillar p { font-size: .43rem; line-height: 1.28; }
       }
       @media (max-width: 560px) {
         .about-container { width: calc(100% - 32px); } .about-hero-copy { padding-top: 38px; }
