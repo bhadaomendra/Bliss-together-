@@ -277,80 +277,93 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
         </div>
 
-        {/* Talking Cloud / Speech Bubble with Bliss Together Logo floating near Boy's Face */}
+        {/* Exact Thought Cloud Bubble with Bliss Together Logo floating near Boy's Head */}
         <div style={{
           position: 'absolute',
-          top: '15%',
-          right: '16%',
+          top: '2.2rem',
+          right: '4.5rem',
           zIndex: 4,
-          animation: 'floatSpeech 4s ease-in-out infinite'
+          animation: 'floatSpeech 4.5s ease-in-out infinite'
         }}>
-          {/* Main Speech Cloud Container */}
+          {/* Main White Oval Cloud */}
           <div style={{
             position: 'relative',
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            backdropFilter: 'blur(12px)',
-            borderRadius: '24px 24px 4px 24px',
-            padding: '0.85rem 1.25rem',
-            border: '2px solid var(--color-gold)',
-            boxShadow: '0 12px 35px rgba(0, 0, 0, 0.35)',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '160px / 100px',
+            width: '295px',
+            height: '175px',
+            boxShadow: '0 16px 40px rgba(0, 0, 0, 0.28)',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            maxWidth: '210px'
+            padding: '1.25rem 1.8rem'
           }}>
-            {/* Small 'Feeling' quote badge */}
+            {/* White Ray Dashes around Top Right of Cloud */}
             <div style={{
-              fontSize: '0.625rem',
-              fontWeight: 800,
-              letterSpacing: '0.12em',
-              color: 'var(--color-primary)',
-              textTransform: 'uppercase',
-              marginBottom: '0.25rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.3rem'
+              position: 'absolute',
+              top: '-12px',
+              right: '-10px',
+              width: '50px',
+              height: '50px',
+              pointerEvents: 'none'
             }}>
-              <span style={{ fontSize: '0.75rem' }}>💬</span>
-              <span style={{ color: 'var(--color-gold)' }}>FEELING</span>
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <line x1="30" y1="14" x2="42" y2="4" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
+                <line x1="38" y1="26" x2="48" y2="20" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
+                <line x1="20" y1="8" x2="28" y2="2" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" />
+              </svg>
             </div>
 
-            {/* Bliss Together Logo Image */}
+            {/* Bliss Together Logo centered inside White Oval */}
             <img
               src="/assets/bliss_together_logo_transparent.png"
-              alt="Bliss Together"
+              alt="Bliss Together - Nourish. Balance. Thrive."
               style={{
-                width: '155px',
+                width: '100%',
                 height: 'auto',
+                maxHeight: '128px',
                 objectFit: 'contain',
                 display: 'block'
               }}
             />
-
-            {/* Speech Bubble Pointer / Tail (Points down-right towards boy's mouth) */}
-            <div style={{
-              position: 'absolute',
-              bottom: '-12px',
-              right: '18px',
-              width: '0',
-              height: '0',
-              borderLeft: '12px solid transparent',
-              borderRight: '6px solid transparent',
-              borderTop: '14px solid #C5A059',
-              filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.2))'
-            }} />
-            <div style={{
-              position: 'absolute',
-              bottom: '-9px',
-              right: '20px',
-              width: '0',
-              height: '0',
-              borderLeft: '10px solid transparent',
-              borderRight: '5px solid transparent',
-              borderTop: '12px solid rgba(255, 255, 255, 0.95)'
-            }} />
           </div>
+
+          {/* Thought Bubble Dots leading to Boy's head */}
+          {/* Medium Dot */}
+          <div style={{
+            position: 'absolute',
+            bottom: '-16px',
+            left: '30px',
+            width: '22px',
+            height: '22px',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '50%',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
+          }} />
+
+          {/* Small Dot */}
+          <div style={{
+            position: 'absolute',
+            bottom: '-32px',
+            left: '12px',
+            width: '14px',
+            height: '14px',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '50%',
+            boxShadow: '0 3px 8px rgba(0, 0, 0, 0.18)'
+          }} />
+
+          {/* Extra Tiny Dot */}
+          <div style={{
+            position: 'absolute',
+            bottom: '-42px',
+            left: '2px',
+            width: '8px',
+            height: '8px',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '50%',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)'
+          }} />
         </div>
       </section>
 
