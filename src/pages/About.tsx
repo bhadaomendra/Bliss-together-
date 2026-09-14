@@ -101,8 +101,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         </svg>
       </div>
 
-      {/* Top Right Leaf Cluster Graphic */}
-      <div style={{ position: 'absolute', top: '-10px', right: '-20px', width: '180px', height: '240px', opacity: 0.35, pointerEvents: 'none', zIndex: 1 }}>
+      {/* Top Right Leaf Cluster Graphic (Positioned safely behind without text overlap) */}
+      <div style={{ position: 'absolute', top: '0px', right: '-40px', width: '120px', height: '180px', opacity: 0.16, pointerEvents: 'none', zIndex: 0 }}>
         <svg viewBox="0 0 180 240" fill="none">
           <path d="M200 -10 C140 40, 60 120, 10 240 C70 160, 140 80, 200 -10 Z" fill="#183C2D" />
           <path d="M180 20 C130 70, 70 140, 30 230 C80 160, 140 90, 180 20 Z" fill="#2A523C" />
@@ -125,7 +125,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
             <img src="/assets/our_story_art.png" alt="Krishiv Wellness Krishna & Shiva Vision Line Art" />
           </div>
 
-          <div className="about-hero-message">
+          <div className="about-hero-message" style={{ position: 'relative', zIndex: 5 }}>
             <p>Wellness<br/>is better when<br/>we experience it<br/>together.</p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `1.5px solid ${gold}`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: gold }}>
