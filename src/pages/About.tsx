@@ -108,15 +108,15 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       @media (max-width: 700px) and (min-width: 561px) {
         .about-pillars { padding: 20px 0 22px; }
         .about-pillars .about-section-head { margin-bottom: 0; }
-        .about-pillars .about-section-title { font-size: 1.18rem; margin: 3px 0 3px; letter-spacing: -.015em; }
-        .about-pillars .about-section-sub { font-size: .50rem; line-height: 1.28; }
+        .about-pillars .about-section-title { font-size: 1.24rem; margin: 3px 0 3px; letter-spacing: -.015em; }
+        .about-pillars .about-section-sub { font-size: .54rem; line-height: 1.3; }
         .about-pillar-grid { margin-top: 14px; }
         .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 10px; }
-        .about-number { font-size: 1rem; margin-right: 4px; }
-        .about-pillar-icon { margin: -2px 0 5px; }
-        .about-pillar-icon svg { width: 17px; height: 17px; }
-        .about-pillar h3 { font-size: .57rem; line-height: 1.18; margin-bottom: 3px; }
-        .about-pillar p { font-size: .48rem; line-height: 1.3; }
+        .about-number { font-size: 1.12rem; margin-right: 5px; font-weight: 700; }
+        .about-pillar-icon { margin: -2px 0 5px; font-weight: 700; }
+        .about-pillar-icon svg { width: 20px; height: 20px; stroke-width: 2.6; }
+        .about-pillar h3 { font-size: .60rem; line-height: 1.18; margin-bottom: 3px; font-weight: 700; }
+        .about-pillar p { font-size: .51rem; line-height: 1.32; }
       }
       @media (max-width: 560px) {
         .about-container { width: calc(100% - 32px); } .about-hero-copy { padding-top: 38px; }
