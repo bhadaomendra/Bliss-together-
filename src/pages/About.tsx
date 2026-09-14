@@ -18,16 +18,21 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-eyebrow { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.18em; color: ${gold}; text-transform: uppercase; }
       .about-display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
       
-      /* HERO HEADER */
-      .about-hero { position: relative; padding: 3.5rem 0; background: #F7F4EC; border-bottom: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; }
-      .about-hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: center; }
-      .about-hero-title { font-size: clamp(2.1rem, 3.2vw, 3rem); line-height: 1.15; margin: 0.75rem 0 1.25rem; font-weight: 700; color: ${green}; }
-      .about-hero-sub { color: #4A5D52; line-height: 1.6; font-size: 1.025rem; margin-bottom: 1.75rem; }
+      /* HERO HEADER (EXACT MOCKUP MATCH) */
+      .about-hero { position: relative; padding: 4rem 0 3.5rem; background: #F8F5EE; border-bottom: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; }
+      .about-hero-grid { display: grid; grid-template-columns: 36% 46% 18%; gap: 1.5rem; align-items: center; }
+      .about-hero-title { font-size: clamp(2.3rem, 3.5vw, 3.4rem); line-height: 1.12; margin: 0.75rem 0 1.25rem; font-weight: 700; color: ${green}; }
+      .about-hero-sub { color: #4A5D52; line-height: 1.6; font-size: 1.05rem; margin-bottom: 1.75rem; max-width: 440px; }
       .about-hero-tag { display: inline-flex; align-items: center; gap: 0.65rem; font-size: 0.78125rem; font-weight: 800; letter-spacing: 0.15em; color: ${green}; text-transform: uppercase; }
       .about-hero-art { text-align: center; display: flex; justify-content: center; align-items: center; }
-      .about-hero-art img { width: 100%; height: auto; max-height: 320px; object-fit: contain; display: block; }
+      .about-hero-art img { width: 100%; height: auto; max-height: 380px; object-fit: contain; display: block; }
       .about-hero-message { text-align: center; padding-left: 0.5rem; }
-      .about-hero-message p { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.25rem, 1.8vw, 1.6rem); color: ${green}; font-weight: 600; line-height: 1.3; margin-bottom: 1rem; }
+      .about-hero-message p { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.35rem, 2vw, 1.8rem); color: ${green}; font-weight: 600; line-height: 1.25; margin-bottom: 1.25rem; }
+
+      @media (max-width: 992px) {
+        .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+        .about-hero-sub { max-width: 100%; }
+      }
       
       /* FOUNDER'S STORY */
       .about-story { padding: 5rem 0; background: ${cream}; }
@@ -85,13 +90,30 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       }
     `}</style>
 
-    {/* HERO SECTION */}
+    {/* HERO SECTION (EXACT MOCKUP MATCH) */}
     <section className="about-hero">
-      <div className="about-container">
+      {/* Left Leaf Cluster Graphic */}
+      <div style={{ position: 'absolute', top: '-10px', left: '-20px', width: '220px', height: '300px', opacity: 0.35, pointerEvents: 'none', zIndex: 1 }}>
+        <svg viewBox="0 0 220 300" fill="none">
+          <path d="M-20 300 C20 180, 100 80, 220 10 C170 90, 110 190,-20 300 Z" fill="#183C2D" />
+          <path d="M20 280 C60 190, 130 110, 210 40 C170 120, 110 200, 20 280 Z" fill="#2A523C" />
+          <path d="M-10 210 C30 140, 90 80, 160 30 C130 90, 70 150, -10 210 Z" fill="#69896C" />
+        </svg>
+      </div>
+
+      {/* Top Right Leaf Cluster Graphic */}
+      <div style={{ position: 'absolute', top: '-10px', right: '-20px', width: '180px', height: '240px', opacity: 0.35, pointerEvents: 'none', zIndex: 1 }}>
+        <svg viewBox="0 0 180 240" fill="none">
+          <path d="M200 -10 C140 40, 60 120, 10 240 C70 160, 140 80, 200 -10 Z" fill="#183C2D" />
+          <path d="M180 20 C130 70, 70 140, 30 230 C80 160, 140 90, 180 20 Z" fill="#2A523C" />
+        </svg>
+      </div>
+
+      <div className="about-container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="about-hero-grid">
           <div>
             <div className="about-eyebrow">ABOUT KRISHIV</div>
-            <h1 className="about-display about-hero-title">From Healthcare Experience to Everyday Wellness</h1>
+            <h1 className="about-display about-hero-title">From Healthcare Experience<br/>to Everyday Wellness</h1>
             <p className="about-hero-sub">Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.</p>
             <div className="about-hero-tag">
               <span style={{ color: gold, fontSize: '1.2rem', fontWeight: 300 }}>────</span>
