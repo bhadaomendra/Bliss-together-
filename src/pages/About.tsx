@@ -197,21 +197,22 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
                 <path d="M10 90 C15 50, 40 20, 90 10 C70 40, 50 70, 10 90 Z" fill="#183C2D" />
               </svg>
 
-              {/* Right Side Botanical Leaf Branch (Matching User Mockup) */}
-              <svg viewBox="0 0 120 300" fill="none" style={{ position: 'absolute', top: '10px', right: '-15px', width: '130px', height: '340px', opacity: 0.82, pointerEvents: 'none', zIndex: 1 }}>
-                <defs>
-                  <linearGradient id="branchLeafGrad" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#3E5C42" />
-                    <stop offset="50%" stopColor="#6C8F70" />
-                    <stop offset="100%" stopColor="#A4C4A6" />
-                  </linearGradient>
-                </defs>
-                <path d="M120 0 C100 60, 90 140, 110 280" stroke="#345238" strokeWidth="2.2" fill="none" strokeLinecap="round" />
-                <path d="M105 40 C80 30, 45 35, 25 45 C45 60, 80 55, 105 40 Z" fill="url(#branchLeafGrad)" />
-                <path d="M98 95 C70 90, 40 103, 20 120 C45 130, 75 120, 98 95 Z" fill="url(#branchLeafGrad)" />
-                <path d="M95 155 C65 157, 35 175, 18 195 C45 200, 75 185, 95 155 Z" fill="url(#branchLeafGrad)" />
-                <path d="M102 215 C75 225, 50 245, 35 270 C60 267, 85 250, 102 215 Z" fill="url(#branchLeafGrad)" />
-              </svg>
+              {/* Right Side Botanical Leaf Branch (Original Reference Image) */}
+              <img 
+                src="/assets/right_leaf_branch.png" 
+                alt="Original Botanical Leaf Branch" 
+                style={{
+                  position: 'absolute',
+                  top: '15px',
+                  right: '0px',
+                  height: '340px',
+                  width: 'auto',
+                  pointerEvents: 'none',
+                  zIndex: 1,
+                  objectFit: 'contain'
+                }} 
+              />
+
 
               <h3 className="about-identity-heading">Two Names. One Purpose.</h3>
               <div className="about-identity-grid">
