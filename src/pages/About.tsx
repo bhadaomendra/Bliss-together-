@@ -42,19 +42,23 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-story-text p { margin-bottom: 1.25rem; }
       .about-quote { background: #FAF5EA; border-left: 4px solid ${gold}; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; font-weight: 700; color: ${green}; margin: 0.5rem 0 1.25rem; }
       
-      /* IDENTITY CARDS */
-      .about-identity { background: #FFFFFF; border-radius: 24px; padding: 2.5rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(27,59,43,0.08); text-align: center; }
-      .about-identity-heading { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.85rem; font-weight: 700; color: ${green}; margin-bottom: 2rem; }
-      .about-identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-      .about-identity-card { background: #FAF7F2; border-radius: 20px; padding: 1.5rem 1rem; border: 1px solid rgba(27,59,43,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-      .about-identity-card img { height: 54px; width: auto; object-fit: contain; margin-bottom: 0.75rem; }
-      .about-identity-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: ${gold}; text-transform: uppercase; }
-      .about-identity-name { font-size: 1rem; font-weight: 700; color: ${green}; margin: 0.2rem 0 0.4rem; }
-      .about-identity-copy { font-size: 0.8125rem; color: #5A6E63; line-height: 1.4; }
-      .about-identity-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(27,59,43,0.08); margin-bottom: 2rem; }
+      /* IDENTITY CARDS (CIRCULAR MOCKUP MATCH) */
+      .about-identity { position: relative; background: #FAF8F4; border-radius: 28px; padding: 2.5rem 1.25rem 2rem; box-shadow: 0 10px 35px rgba(0,0,0,0.03); border: 1px solid rgba(27,59,43,0.06); text-align: center; overflow: hidden; }
+      .about-identity-heading { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2.1rem; font-weight: 700; color: ${green}; margin-bottom: 2rem; position: relative; z-index: 2; }
+      .about-identity-grid { display: flex; justify-content: center; align-items: center; gap: 0.85rem; margin: 0 auto 1.25rem; width: 100%; position: relative; z-index: 2; }
+      .about-identity-card { background: #F4F0E6; border-radius: 50%; width: 215px; height: 215px; padding: 1.15rem 0.75rem; border: none; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: inset 0 0 0 1px rgba(24, 60, 45, 0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; flex-shrink: 0; }
+      .about-identity-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
+      .about-identity-card img { height: 38px; width: auto; object-fit: contain; margin-bottom: 0.35rem; }
+      .about-identity-label { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.1em; color: ${gold}; text-transform: uppercase; margin-top: 0.15rem; }
+      .about-identity-name { font-size: 0.875rem; font-weight: 700; color: ${green}; margin: 0.15rem 0 0.25rem; }
+      .about-identity-copy { font-size: 0.7rem; color: #5A6E63; line-height: 1.3; max-width: 170px; }
+      .about-identity-divider { width: 42px; height: 2px; background-color: ${gold}; border-radius: 1px; margin: 1.5rem auto 1.25rem; position: relative; z-index: 2; }
+      .about-identity-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; padding-top: 0; border-top: none; margin-bottom: 1.75rem; position: relative; z-index: 2; }
       .about-identity-principle-icon { color: #00A896; margin-bottom: 0.35rem; display: flex; justify-content: center; }
       .about-identity-principle span { font-size: 0.78125rem; font-weight: 700; color: ${green}; }
-      .about-identity-banner { position: relative; background: #E5EFE6; border-radius: 16px; padding: 1.4rem 2rem 1.6rem; border: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .about-identity-banner { position: relative; background: #E5EFE6; border-radius: 16px; padding: 1.4rem 2rem 1.6rem; border: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 2; }
+
+
       .about-identity-banner-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.45rem; font-weight: 600; color: ${green}; line-height: 1.35; margin: 0; position: relative; z-index: 2; }
       .about-identity-banner-line { width: 34px; height: 3px; background-color: ${gold}; border-radius: 2px; margin-top: 10px; position: relative; z-index: 2; }
       
@@ -187,6 +191,27 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
 
           <div>
             <div className="about-identity">
+              {/* Top Left Subtle Leaf Watermark */}
+              <svg viewBox="0 0 100 100" fill="none" style={{ position: 'absolute', top: '-10px', left: '-10px', width: '110px', height: '110px', opacity: 0.12, pointerEvents: 'none', zIndex: 0 }}>
+                <path d="M10 90 C15 50, 40 20, 90 10 C70 40, 50 70, 10 90 Z" fill="#183C2D" />
+              </svg>
+
+              {/* Right Side Botanical Leaf Branch (Matching User Mockup) */}
+              <svg viewBox="0 0 120 300" fill="none" style={{ position: 'absolute', top: '10px', right: '-15px', width: '130px', height: '340px', opacity: 0.82, pointerEvents: 'none', zIndex: 1 }}>
+                <defs>
+                  <linearGradient id="branchLeafGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#3E5C42" />
+                    <stop offset="50%" stopColor="#6C8F70" />
+                    <stop offset="100%" stopColor="#A4C4A6" />
+                  </linearGradient>
+                </defs>
+                <path d="M120 0 C100 60, 90 140, 110 280" stroke="#345238" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+                <path d="M105 40 C80 30, 45 35, 25 45 C45 60, 80 55, 105 40 Z" fill="url(#branchLeafGrad)" />
+                <path d="M98 95 C70 90, 40 103, 20 120 C45 130, 75 120, 98 95 Z" fill="url(#branchLeafGrad)" />
+                <path d="M95 155 C65 157, 35 175, 18 195 C45 200, 75 185, 95 155 Z" fill="url(#branchLeafGrad)" />
+                <path d="M102 215 C75 225, 50 245, 35 270 C60 267, 85 250, 102 215 Z" fill="url(#branchLeafGrad)" />
+              </svg>
+
               <h3 className="about-identity-heading">Two Names. One Purpose.</h3>
               <div className="about-identity-grid">
                 <div className="about-identity-card">
@@ -203,6 +228,9 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
                   <div className="about-identity-copy">Thoughtfully crafted nutrition for a happier, healthier you.</div>
                 </div>
               </div>
+
+              {/* Gold Center Accent Line */}
+              <div className="about-identity-divider" />
 
               <div className="about-identity-principles">
                 <div className="about-identity-principle">
