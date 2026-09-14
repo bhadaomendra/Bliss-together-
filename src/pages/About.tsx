@@ -125,11 +125,41 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
             <img src="/assets/our_story_art.png" alt="Krishiv Wellness Krishna & Shiva Vision Line Art" />
           </div>
 
-          <div className="about-hero-message" style={{ position: 'relative', zIndex: 5 }}>
-            <p>Wellness<br/>is better when<br/>we experience it<br/>together.</p>
+          <div className="about-hero-message" style={{
+            position: 'relative',
+            zIndex: 5,
+            transform: 'rotate(-5deg) translateX(-12px)',
+            transformOrigin: 'center center',
+            textAlign: 'center'
+          }}>
+            <p style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontStyle: 'italic',
+              fontSize: 'clamp(1.55rem, 2.3vw, 2.15rem)',
+              color: '#183C2D',
+              fontWeight: 600,
+              lineHeight: 1.25,
+              marginBottom: '1.25rem',
+              letterSpacing: '0.01em'
+            }}>
+              Wellness<br/>
+              is better when<br/>
+              we experience it<br/>
+              together.
+            </p>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `1.5px solid ${gold}`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: gold }}>
-                <Heart size={16} />
+              <div style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: '50%',
+                border: `1.5px solid ${gold}`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: gold,
+                boxShadow: '0 4px 12px rgba(0,0,0,0.04)'
+              }}>
+                <Heart size={18} />
               </div>
             </div>
           </div>
