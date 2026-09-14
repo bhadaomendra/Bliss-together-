@@ -77,14 +77,17 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-card-label { font-size: .64rem; font-weight: 800; letter-spacing: .18em; color: #B28B45; }
       .about-card-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; line-height: 1.02; margin: 8px 0 15px; font-weight: 600; }
       .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.18rem; line-height: 1.48; margin: 0; color: #385247; }
-      .about-pillars { padding: 82px 0 88px; background: #FBF9F5; }
-      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
-      .about-pillar { padding: 4px 38px; min-height: 270px; border-right: 1px solid rgba(27,59,43,.1); }
+      .about-pillars { padding: 54px 0 58px; background: #FBF9F5; }
+      .about-pillars .about-section-head { margin-bottom: 0; }
+      .about-pillars .about-section-title { font-size: clamp(1.65rem, 3vw, 2.65rem); margin: 5px 0 6px; }
+      .about-pillars .about-section-sub { font-size: .68rem; line-height: 1.35; }
+      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+      .about-pillar { padding: 0 24px; min-height: 0; border-right: 1px solid rgba(27,59,43,.1); }
       .about-pillar:first-child { padding-left: 0; } .about-pillar:last-child { padding-right: 0; border-right: 0; }
-      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; color: #079E8D; }
-      .about-pillar-icon { color: #B28B45; margin: 8px 0 15px; }
-      .about-pillar h3 { font-size: 1rem; margin: 0 0 7px; line-height: 1.35; }
-      .about-pillar p { color: #68776F; line-height: 1.62; font-size: .86rem; margin: 0; }
+      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; line-height: 1; color: #079E8D; }
+      .about-pillar-icon { color: #B28B45; margin: 5px 0 10px; }
+      .about-pillar h3 { font-size: .76rem; margin: 0 0 5px; line-height: 1.25; }
+      .about-pillar p { color: #68776F; line-height: 1.4; font-size: .68rem; margin: 0; }
       .about-belief { text-align: center; padding: 70px 20px 76px; background: #FBF9F5; }
       .about-belief-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(2rem, 3.2vw, 2.7rem); line-height: 1.12; margin: 8px 0 0; }
       .about-belief-line { display: block; width: 34px; height: 1px; background: #B28B45; margin: 20px auto 0; }
@@ -97,9 +100,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-hero-message { right: 2%; top: 30%; width: 110px; font-size: 1rem; }
         .about-story-grid { grid-template-columns: 1fr; gap: 34px; } .about-story-copy { padding-right: 0; }
         .about-story-visual { min-height: 420px; } .about-identity { max-width: 520px; } .about-guide-grid { grid-template-columns: 1fr; }
-        .about-pillar-grid { grid-template-columns: 1fr; gap: 30px; }
-        .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 0 30px; border-right: 0; border-bottom: 1px solid rgba(27,59,43,.1); min-height: 0; }
-        .about-pillar:last-child { border-bottom: 0; padding-bottom: 0; }
+        .about-pillar-grid { grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 24px; }
+        .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 14px; border-right: 1px solid rgba(27,59,43,.1); border-bottom: 0; min-height: 0; }
+        .about-pillar:first-child { padding-left: 0; }
+        .about-pillar:last-child { padding-right: 0; border-right: 0; }
       }
       @media (max-width: 560px) {
         .about-container { width: calc(100% - 32px); } .about-hero-copy { padding-top: 38px; }
@@ -110,7 +114,16 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-identity-card img { width: 105px; height: 48px; } .about-identity-card.brand img { width: 98px; height: 54px; }
         .about-identity-name { font-size: .85rem; } .about-identity-copy { font-size: .62rem; max-width: 135px; }
         .about-guide-card { padding: 28px 24px; min-height: 0; } .about-card-title { font-size: 1.75rem; }
-        .about-card-copy { font-size: 1.05rem; } .about-guides, .about-pillars { padding: 62px 0 68px; }
+        .about-card-copy { font-size: 1.05rem; } .about-guides { padding: 62px 0 68px; }
+        .about-pillars { padding: 42px 0 46px; }
+        .about-pillars .about-section-title { font-size: 1.6rem; }
+        .about-pillars .about-section-sub { font-size: .58rem; }
+        .about-pillar-grid { margin-top: 20px; }
+        .about-pillar { padding: 0 9px !important; }
+        .about-number { font-size: 1.15rem; }
+        .about-pillar-icon { margin: 4px 0 7px; }
+        .about-pillar h3 { font-size: .61rem; }
+        .about-pillar p { font-size: .52rem; line-height: 1.3; }
         .about-section-head { margin-bottom: 32px; } .about-section-title { font-size: 2.45rem; } .about-belief { padding: 58px 20px 64px; }
       }
     `}</style>
