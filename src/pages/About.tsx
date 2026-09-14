@@ -1,7 +1,9 @@
 import React from 'react';
 import { Target, Leaf, Users, Sun, Heart, FlaskConical, Shield } from 'lucide-react';
 
-interface AboutProps { onNavigate: (path: string) => void; }
+interface AboutProps { 
+  onNavigate: (path: string) => void; 
+}
 
 const green = '#183C2D';
 const gold = '#B28B45';
@@ -9,24 +11,237 @@ const teal = '#079E8D';
 const cream = '#FBF9F5';
 
 export const About: React.FC<AboutProps> = ({ onNavigate }) => (
-  <main className="about-page" style={{ background: cream, color: green }}>
+  <main className="about-page" style={{ background: cream, color: green, paddingTop: 'var(--header-height)' }}>
     <style>{`
-      .about-page{overflow:hidden}.about-container{width:min(1280px,calc(100% - 72px));margin:0 auto}.about-eyebrow{font-size:.68rem;font-weight:800;letter-spacing:.24em;color:${gold};text-transform:uppercase}.about-display{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.025em}
-      .about-hero{position:relative;min-height:390px;display:flex;align-items:center;background:radial-gradient(circle at 79% 48%,rgba(235,218,178,.22),transparent 22%),radial-gradient(circle at 17% 25%,rgba(226,236,228,.35),transparent 25%),${cream}}
-      .about-hero:before,.about-hero:after{content:"";position:absolute;width:170px;height:300px;pointer-events:none;opacity:.32;border-radius:55% 45% 60% 40%;background:linear-gradient(145deg,transparent 38%,rgba(105,137,108,.22) 39%,transparent 42%)}.about-hero:before{left:-75px;top:35px;transform:rotate(-28deg)}.about-hero:after{right:-80px;top:-20px;transform:rotate(26deg)}
-      .about-hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:38% 62%;align-items:center;min-height:390px}.about-hero-copy{padding:24px 0 18px}.about-hero-title{font-size:clamp(2.55rem,4.5vw,4.35rem);line-height:.9;margin:12px 0 18px;max-width:590px}.about-hero-sub{color:#617168;line-height:1.55;font-size:.9rem;max-width:410px;margin:0}.about-hero-tag{margin-top:22px;font-size:.55rem;font-weight:800;letter-spacing:.25em;color:${green}}.about-hero-art{position:relative;height:370px;display:flex;align-items:center;justify-content:center}.about-hero-art img{width:min(680px,100%);height:100%;object-fit:contain;transform:translate(1%,2%)}.about-hero-message{position:absolute;right:0;top:50%;transform:translateY(-50%);width:135px;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem;font-style:italic;line-height:1.12;color:${green}}.about-hero-message .heart{color:${gold};display:block;margin:12px auto 0}
-      .about-story{padding:70px 0 76px}.about-story-grid{display:grid;grid-template-columns:52% 48%;align-items:center;gap:42px}.about-story-copy{padding-right:10px}.about-story-title{font-size:clamp(2.35rem,4vw,3.55rem);line-height:.95;margin:10px 0 24px}.about-story-text{color:#4B5F55;line-height:1.68;font-size:.9rem;max-width:690px}.about-story-text p{margin:0 0 16px}.about-quote{margin:22px 0 24px;padding:16px 22px;border-left:2px solid ${gold};background:#F5F1E8;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.38rem;font-weight:700;color:#4B5F55}.about-story-visual{position:relative;min-height:470px;display:flex;align-items:center;justify-content:center}.about-identity{width:100%;max-width:610px}.about-identity-heading{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.55rem;font-weight:600;margin:0 0 22px;color:${green}}.about-identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.about-identity-card{text-align:center;padding:30px 18px 25px;border-radius:50%;aspect-ratio:1;background:radial-gradient(circle at 50% 42%,#F4F1E8 0%,#F8F6F0 68%,#FBF9F5 100%);display:flex;flex-direction:column;align-items:center;justify-content:center}.about-identity-card img{width:145px;height:62px;object-fit:contain;margin-bottom:8px}.about-identity-card.brand img{width:132px;height:70px}.about-identity-label{font-size:.61rem;font-weight:800;letter-spacing:.18em;color:${gold};text-transform:uppercase;margin-bottom:8px}.about-identity-name{font-size:1rem;font-weight:800;margin:0 0 7px;color:${green}}.about-identity-copy{font-size:.72rem;line-height:1.42;color:#68776F;max-width:175px;margin:0}.about-identity-divider{height:1px;background:rgba(178,139,69,.45);width:75%;margin:20px auto 0}.about-identity-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 0}.about-identity-principle{text-align:center;color:${green}}.about-identity-principle-icon{height:30px;display:flex;align-items:center;justify-content:center;margin-bottom:7px;color:${green}}.about-identity-principle span{display:block;font-size:.62rem;line-height:1.3;font-weight:500}.about-identity-banner{margin-top:22px;min-height:72px;border-radius:9px;background:linear-gradient(90deg,#EAF0E7,#F0F4EB,#EAF0E7);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}.about-identity-banner:before,.about-identity-banner:after{content:"";position:absolute;width:74px;height:52px;border-radius:70% 15% 70% 15%;background:linear-gradient(135deg,rgba(92,120,88,.45),rgba(92,120,88,.08));opacity:.55}.about-identity-banner:before{left:-12px;transform:rotate(-34deg)}.about-identity-banner:after{right:-12px;transform:rotate(146deg)}.about-identity-banner-text{position:relative;z-index:1;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;line-height:1.12;font-style:italic;color:${green}}.about-identity-banner-line{display:block;width:30px;height:2px;background:${gold};margin:8px auto 0}
-      .about-guides{padding:76px 0 84px;background:#F3EFE7}.about-section-head{text-align:center;max-width:760px;margin:0 auto 42px}.about-section-title{font-size:clamp(2.4rem,4vw,3.45rem);line-height:.98;margin:9px 0 13px}.about-section-sub{color:#68776F;margin:0;line-height:1.6}.about-guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.about-guide-card{background:#fff;border:1px solid rgba(27,59,43,.06);border-radius:24px;padding:34px 38px;min-height:292px}.about-icon{width:50px;height:50px;border-radius:50%;background:#EAF2EC;display:flex;align-items:center;justify-content:center;color:${teal};margin-bottom:22px}.about-card-label{font-size:.64rem;font-weight:800;letter-spacing:.18em;color:${gold}}.about-card-title{font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;line-height:1.02;margin:8px 0 15px;font-weight:600}.about-card-copy{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.18rem;line-height:1.48;margin:0;color:#385247}
-      .about-pillars{padding:50px 0 54px;background:${cream}}.about-pillars .about-section-head{margin-bottom:0}.about-pillars .about-section-title{font-size:clamp(1.7rem,2.8vw,2.35rem);margin:4px 0 5px}.about-pillars .about-section-sub{font-size:.68rem;line-height:1.3}.about-pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:27px}.about-pillar{padding:0 28px;min-height:0;border-right:1px solid rgba(27,59,43,.12)}.about-pillar:first-child{padding-left:0}.about-pillar:last-child{padding-right:0;border-right:0}.about-number{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.52rem;line-height:1;color:${teal};display:inline-block;margin-right:7px;font-weight:700}.about-pillar-icon{color:${gold};margin:-4px 0 9px;display:inline-flex;vertical-align:middle}.about-pillar-icon svg{width:24px;height:24px;stroke-width:2.25}.about-pillar h3{font-size:.80rem;margin:0 0 6px;line-height:1.24;font-weight:700}.about-pillar p{color:#68776F;line-height:1.4;font-size:.68rem;margin:0}
-      .about-belief{text-align:center;padding:70px 20px 76px;background:${cream}}.about-belief-text{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(2rem,3.2vw,2.7rem);line-height:1.12;margin:8px 0 0}.about-belief-line{display:block;width:34px;height:1px;background:${gold};margin:20px auto 0}
-      @media(max-width:900px){.about-container{width:min(100% - 40px,680px)}.about-hero{min-height:0}.about-hero-inner{grid-template-columns:1fr;min-height:0}.about-hero-copy{padding:58px 0 0}.about-hero-title{font-size:clamp(2.65rem,9vw,4rem);max-width:520px}.about-hero-sub{max-width:430px}.about-hero-art{height:330px;margin-top:-8px}.about-hero-art img{width:105%;transform:translate(-3%,0)}.about-hero-message{right:2%;top:30%;width:110px;font-size:1rem}.about-story-grid{grid-template-columns:1fr;gap:34px}.about-story-copy{padding-right:0}.about-story-visual{min-height:420px}.about-identity{max-width:520px}.about-guide-grid{grid-template-columns:1fr}.about-pillar-grid{grid-template-columns:repeat(3,1fr);gap:0;margin-top:24px}.about-pillar,.about-pillar:first-child,.about-pillar:last-child{padding:0 14px;border-right:1px solid rgba(27,59,43,.1);border-bottom:0;min-height:0}.about-pillar:first-child{padding-left:0}.about-pillar:last-child{padding-right:0;border-right:0}}
-      @media(max-width:700px) and (min-width:561px){.about-pillars{padding:24px 0 26px}.about-pillars .about-section-head{margin-bottom:0}.about-pillars .about-section-title{font-size:1.38rem;margin:3px 0 3px;letter-spacing:-.015em}.about-pillars .about-section-sub{font-size:.58rem;line-height:1.3}.about-pillar-grid{margin-top:16px}.about-pillar,.about-pillar:first-child,.about-pillar:last-child{padding:0 10px}.about-number{font-size:1.22rem;margin-right:5px;font-weight:700}.about-pillar-icon{margin:-2px 0 5px}.about-pillar-icon svg{width:21px;height:21px;stroke-width:2.6}.about-pillar h3{font-size:.63rem;line-height:1.18;margin-bottom:3px;font-weight:700}.about-pillar p{font-size:.53rem;line-height:1.32}}
-      @media(max-width:560px){.about-container{width:calc(100% - 32px)}.about-hero-copy{padding-top:38px}.about-hero-title{font-size:2.55rem;line-height:.93}.about-hero-sub{font-size:.83rem}.about-hero-art{height:285px;margin-top:2px}.about-hero-message{right:-4px;top:22%;width:92px;font-size:.9rem}.about-story{padding:54px 0 62px}.about-story-title{font-size:2.55rem}.about-story-visual{min-height:430px}.about-identity-grid{gap:8px}.about-identity-card{padding:18px 10px}.about-identity-card img{width:105px;height:48px}.about-identity-card.brand img{width:98px;height:54px}.about-identity-name{font-size:.85rem}.about-identity-copy{font-size:.62rem;max-width:135px}.about-guide-card{padding:28px 24px;min-height:0}.about-card-title{font-size:1.75rem}.about-card-copy{font-size:1.05rem}.about-guides{padding:62px 0 68px}.about-pillars{padding:44px 0 48px}.about-pillars .about-section-title{font-size:1.6rem}.about-pillars .about-section-sub{font-size:.58rem}.about-pillar-grid{margin-top:20px}.about-pillar{padding:0 9px!important}.about-number{font-size:1.2rem}.about-pillar-icon{margin:4px 0 7px}.about-pillar-icon svg{width:20px;height:20px;stroke-width:2.6}.about-pillar h3{font-size:.63rem}.about-pillar p{font-size:.53rem;line-height:1.3}.about-section-head{margin-bottom:32px}.about-section-title{font-size:2.45rem}.about-belief{padding:58px 20px 64px}}
+      .about-page { overflow: hidden; }
+      .about-container { width: min(1280px, calc(100% - 72px)); margin: 0 auto; }
+      .about-eyebrow { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.18em; color: ${gold}; text-transform: uppercase; }
+      .about-display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
+      
+      /* HERO HEADER */
+      .about-hero { position: relative; padding: 3.5rem 0; background: #F7F4EC; border-bottom: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; }
+      .about-hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: center; }
+      .about-hero-title { font-size: clamp(2.1rem, 3.2vw, 3rem); line-height: 1.15; margin: 0.75rem 0 1.25rem; font-weight: 700; color: ${green}; }
+      .about-hero-sub { color: #4A5D52; line-height: 1.6; font-size: 1.025rem; margin-bottom: 1.75rem; }
+      .about-hero-tag { display: inline-flex; align-items: center; gap: 0.65rem; font-size: 0.78125rem; font-weight: 800; letter-spacing: 0.15em; color: ${green}; text-transform: uppercase; }
+      .about-hero-art { text-align: center; display: flex; justify-content: center; align-items: center; }
+      .about-hero-art img { width: 100%; height: auto; max-height: 320px; object-fit: contain; display: block; }
+      .about-hero-message { text-align: center; padding-left: 0.5rem; }
+      .about-hero-message p { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.25rem, 1.8vw, 1.6rem); color: ${green}; font-weight: 600; line-height: 1.3; margin-bottom: 1rem; }
+      
+      /* FOUNDER'S STORY */
+      .about-story { padding: 5rem 0; background: ${cream}; }
+      .about-story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 4.5rem; align-items: flex-start; }
+      .about-story-title { font-size: 2.5rem; line-height: 1.2; margin: 0.75rem 0 1.5rem; color: ${green}; font-weight: 700; }
+      .about-story-text { color: #2C3E35; line-height: 1.75; font-size: 1.025rem; }
+      .about-story-text p { margin-bottom: 1.25rem; }
+      .about-quote { background: #FAF5EA; border-left: 4px solid ${gold}; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; font-weight: 700; color: ${green}; margin: 0.5rem 0 1.25rem; }
+      
+      /* IDENTITY CARDS */
+      .about-identity { background: #FFFFFF; border-radius: 24px; padding: 2.5rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(27,59,43,0.08); text-align: center; }
+      .about-identity-heading { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.85rem; font-weight: 700; color: ${green}; margin-bottom: 2rem; }
+      .about-identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+      .about-identity-card { background: #FAF7F2; border-radius: 20px; padding: 1.5rem 1rem; border: 1px solid rgba(27,59,43,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .about-identity-card img { height: 54px; width: auto; object-fit: contain; margin-bottom: 0.75rem; }
+      .about-identity-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: ${gold}; text-transform: uppercase; }
+      .about-identity-name { font-size: 1rem; font-weight: 700; color: ${green}; margin: 0.2rem 0 0.4rem; }
+      .about-identity-copy { font-size: 0.8125rem; color: #5A6E63; line-height: 1.4; }
+      .about-identity-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(27,59,43,0.08); margin-bottom: 2rem; }
+      .about-identity-principle-icon { color: #00A896; margin-bottom: 0.35rem; display: flex; justify-content: center; }
+      .about-identity-principle span { font-size: 0.78125rem; font-weight: 700; color: ${green}; }
+      .about-identity-banner { background: #EBF3EE; border-radius: 16px; padding: 1.25rem 1.5rem; border: 1px solid rgba(27,59,43,0.08); }
+      .about-identity-banner-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.3rem; font-weight: 700; color: ${green}; margin: 0; }
+      
+      /* VISION & MISSION */
+      .about-guides { padding: 4rem 0; background: #F4F0E8; }
+      .about-guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+      .about-guide-card { background: #FFFFFF; border-radius: 24px; padding: 3rem 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(27,59,43,0.08); }
+      .about-icon { width: 56px; height: 56px; border-radius: 50%; background: #EBF3EE; color: #00A896; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+      .about-card-label { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.15em; color: ${gold}; text-transform: uppercase; margin-bottom: 0.5rem; }
+      .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; font-weight: 600; color: ${green}; line-height: 1.55; font-style: italic; margin: 0; }
+
+      /* CORE VALUES PILLARS (EXACT REFERENCE MATCH) */
+      .about-pillars { padding: 5rem 0 6rem; background: #FAF8F4; }
+      .about-section-head { text-align: center; margin-bottom: 4rem; }
+      .about-section-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.3rem, 3.5vw, 3.2rem); font-weight: 700; color: ${green}; margin: 0.5rem 0 0.75rem; }
+      .about-section-sub { font-size: 1.05rem; color: #5A6E63; margin: 0; }
+      
+      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; align-items: stretch; }
+      .about-pillar { padding: 1.5rem 2.5rem; border-right: 1px solid rgba(24, 60, 45, 0.14); display: flex; flex-direction: column; justify-content: flex-start; }
+      .about-pillar:first-child { padding-left: 0; }
+      .about-pillar:last-child { padding-right: 0; border-right: 0; }
+      
+      .about-pillar-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.25rem; }
+      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 3.4rem; font-weight: 700; color: ${teal}; line-height: 1; }
+      .about-pillar-icon-badge { width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid ${gold}; display: flex; items: center; justify-content: center; color: ${gold}; flex-shrink: 0; }
+      
+      .about-pillar h3 { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.04em; color: ${green}; margin: 0 0 1rem; text-transform: uppercase; line-height: 1.3; }
+      .about-pillar p { font-size: 0.975rem; color: #4A5D52; line-height: 1.7; font-family: "DM Sans", sans-serif; margin: 0; }
+
+      @media (max-width: 900px) {
+        .about-pillar-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        .about-pillar { padding: 0 0 2rem 0 !important; border-right: none !important; border-bottom: 1px solid rgba(24, 60, 45, 0.12); }
+        .about-pillar:last-child { border-bottom: none; }
+      }
     `}</style>
-    <section className="about-hero"><div className="about-container about-hero-inner"><div className="about-hero-copy"><div className="about-eyebrow">About Krishiv</div><h1 className="about-display about-hero-title">From Healthcare Experience<br/>to Everyday Wellness</h1><p className="about-hero-sub">Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.</p><div className="about-hero-tag">NOURISH. BALANCE. THRIVE.</div></div><div className="about-hero-art"><img src="/assets/our_story_art.png" alt="Shiva, peacock feather and trident artwork"/><div className="about-hero-message">Wellness<br/>is better when<br/>we experience it<br/>together.<Heart_PLACEHOLDER</div></div></div></section>
-    <section className="about-story"><div className="about-container about-story-grid"><div className="about-story-copy"><div className="about-eyebrow">The Founder's Journey</div><h2 className="about-display about-story-title">A Journey with a Purpose</h2><div className="about-story-text"><p>With <strong>18 years of experience</strong> in the pharmaceutical industry, <strong>Shailendra Pal Singh</strong> has always been closely connected to healthcare and, more importantly, to the wellbeing of the people around him.</p><p>While exploring opportunities to build a new venture with his partner, one thought kept coming back:</p><div className="about-quote">“Prevention is better than cure.”</div><p>This belief led them towards the world of nutraceuticals—a space where everyday nutrition and wellness could become a part of people’s lives in a simple and enjoyable way.</p><p>As they explored the evolving nutraceutical landscape, they discovered the exciting potential of gummies: a convenient and enjoyable way to make wellness a more approachable part of everyday life.</p><p style={{fontWeight:700,color:green}}>And that’s where Bliss Together was born. Because we believe wellness is better when we experience it together.</p></div></div><div className="about-story-visual"><div className="about-identity"><div className="about-identity-heading">Two Names. One Purpose.</div><div className="about-identity-grid"><article className="about-identity-card"><img src="/assets/krishiv_logo_dark.png" alt="Krishiv Wellness LLP"/><div className="about-identity-label">The Company</div><h3 className="about-identity-name">Krishiv Wellness LLP</h3><p className="about-identity-copy">The foundation that brings vision, expertise and purpose to life.</p></article><article className="about-identity-card brand"><img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together"/><div className="about-identity-label">Our Brand</div><h3 className="about-identity-name">Bliss Together</h3><p className="about-identity-copy">Thoughtfully crafted nutrition for a happier, healthier you.</p></article></div><div className="about-identity-divider"/><div className="about-identity-principles"><div className="about-identity-principle"><div className="about-identity-principle-icon"><Users size={23} strokeWidth={1.7}/></div><span>People First</span></div><div className="about-identity-principle"><div className="about-identity-principle-icon"><FlaskConical size={23} strokeWidth={1.7}/></div><span>Science Driven</span></div><div className="about-identity-principle"><div className="about-identity-principle-icon"><Shield size={23} strokeWidth={1.7}/></div><span>Long-Term Impact</span></div></div><div className="about-identity-banner"><div className="about-identity-banner-text">Nourish. Balance. Thrive.<br/>Together.<span className="about-identity-banner-line"/></div></div></div></div></div></section>
-    <section className="about-guides"><div className="about-container"><div className="about-section-head"><div className="about-eyebrow">What Guides Us</div><h2 className="about-display about-section-title">Wellness with Purpose</h2><p className="about-section-sub">Our vision and mission shape the way we build, formulate and grow.</p></div><div className="about-guide-grid"><article className="about-guide-card"><div className="about-icon"><Target size={23}/></div><div className="about-card-label">Our Vision</div><h3 className="about-card-title">A healthier way to experience life</h3><p className="about-card-copy">“To help everyone experience complete wellbeing—holistically—so they can live life to its fullest and enjoy every moment with greater health, happiness and joy.”</p></article><article className="about-guide-card"><div className="about-icon"><Leaf size={23}/></div><div className="about-card-label">Our Mission</div><h3 className="about-card-title">Making wellness easier to embrace</h3><p className="about-card-copy">“To reach every person who cares about their wellbeing and inspire them to become a part of the wave towards a healthier India.”</p></article></div></div></section>
-    <section className="about-pillars"><div className="about-container"><div className="about-section-head"><div className="about-eyebrow">Core Values</div><h2 className="about-display about-section-title">Our Three Philosophical Pillars</h2><p className="about-section-sub">Guiding every product we formulate and every decision we make.</p></div><div className="about-pillar-grid"><article className="about-pillar"><div className="about-number">01</div><div className="about-pillar-icon"><Leaf size={21}/></div><h3>Health Comes First</h3><p>“We believe health is the foundation of a fulfilling life. When we take care of our wellbeing, we create the foundation to experience life with greater energy, happiness and purpose.”</p></article><article className="about-pillar"><div className="about-number">02</div><div className="about-pillar-icon"><Users size={21}/></div><h3>Genuine Efforts Create Real Impact</h3><p>“We believe that every sincere effort towards wellbeing matters. Small, consistent and genuine choices can create meaningful impact—not only for individuals, but for the people and communities around them.”</p></article><article className="about-pillar"><div className="about-number">03</div><div className="about-pillar-icon"><Sun size={21}/></div><h3>Health is the Source of Joy and Prosperity</h3><p>“We believe true joy and prosperity begin with good health. When people are healthy and well, they are better able to enjoy life, pursue their aspirations and create prosperity for themselves and those around them.”</p></article></div></div></section>
-    <section className="about-belief"><div className="about-eyebrow">Our Belief</div><p className="about-belief-text">Wellness is better when we<br/>experience it together.</p><span className="about-belief-line"/></section>
+
+    {/* HERO SECTION */}
+    <section className="about-hero">
+      <div className="about-container">
+        <div className="about-hero-grid">
+          <div>
+            <div className="about-eyebrow">ABOUT KRISHIV</div>
+            <h1 className="about-display about-hero-title">From Healthcare Experience to Everyday Wellness</h1>
+            <p className="about-hero-sub">Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.</p>
+            <div className="about-hero-tag">
+              <span style={{ color: gold, fontSize: '1.2rem', fontWeight: 300 }}>────</span>
+              <span>NOURISH. BALANCE. THRIVE.</span>
+            </div>
+          </div>
+
+          <div className="about-hero-art">
+            <img src="/assets/our_story_art.png" alt="Krishiv Wellness Krishna & Shiva Vision Line Art" />
+          </div>
+
+          <div className="about-hero-message">
+            <p>Wellness<br/>is better when<br/>we experience it<br/>together.</p>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '50%', border: `1.5px solid ${gold}`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: gold }}>
+                <Heart size={16} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* FOUNDER'S STORY */}
+    <section className="about-story">
+      <div className="about-container">
+        <div className="about-story-grid">
+          <div>
+            <div className="about-eyebrow">THE FOUNDER'S JOURNEY</div>
+            <h2 className="about-display about-story-title">A Journey with a Purpose</h2>
+            <div className="about-story-text">
+              <p>With <strong>18 years of experience</strong> in the pharmaceutical industry, <strong>Shailendra Pal Singh</strong> has always been closely connected to healthcare and, more importantly, to the wellbeing of the people around him.</p>
+              <p>While exploring opportunities to build a new venture with his partner, one thought kept coming back:</p>
+              <div className="about-quote">“Prevention is better than cure.”</div>
+              <p>This belief led them towards the world of nutraceuticals — a space where everyday nutrition and wellness could become a part of people’s lives in a simple and enjoyable way.</p>
+              <p>As they explored the evolving nutraceutical landscape, they discovered the exciting potential of gummies: a convenient and enjoyable way to make wellness a more approachable part of everyday life.</p>
+              <p style={{ fontWeight: 700, color: green, fontSize: '1.1rem' }}>And that’s where Bliss Together was born. Because we believe wellness is better when we experience it together.</p>
+            </div>
+          </div>
+
+          <div>
+            <div className="about-identity">
+              <h3 className="about-identity-heading">Two Names. One Purpose.</h3>
+              <div className="about-identity-grid">
+                <div className="about-identity-card">
+                  <img src="/assets/krishiv_logo_dark.png" alt="Krishiv Wellness LLP" />
+                  <div className="about-identity-label">THE COMPANY</div>
+                  <div className="about-identity-name">Krishiv Wellness LLP</div>
+                  <div className="about-identity-copy">The foundation that brings vision, expertise and purpose to life.</div>
+                </div>
+
+                <div className="about-identity-card">
+                  <img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together" />
+                  <div className="about-identity-label">OUR BRAND</div>
+                  <div className="about-identity-name">Bliss Together</div>
+                  <div className="about-identity-copy">Thoughtfully crafted nutrition for a happier, healthier you.</div>
+                </div>
+              </div>
+
+              <div className="about-identity-principles">
+                <div className="about-identity-principle">
+                  <div className="about-identity-principle-icon"><Users size={22} /></div>
+                  <span>People First</span>
+                </div>
+                <div className="about-identity-principle">
+                  <div className="about-identity-principle-icon"><FlaskConical size={22} /></div>
+                  <span>Science Driven</span>
+                </div>
+                <div className="about-identity-principle">
+                  <div className="about-identity-principle-icon"><Shield size={22} /></div>
+                  <span>Long-Term Impact</span>
+                </div>
+              </div>
+
+              <div className="about-identity-banner">
+                <p className="about-identity-banner-text">Nourish. Balance. Thrive. Together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* VISION & MISSION */}
+    <section className="about-guides">
+      <div className="about-container">
+        <div className="about-guide-grid">
+          <div className="about-guide-card">
+            <div className="about-icon"><Target size={28} /></div>
+            <div className="about-card-label">OUR VISION</div>
+            <p className="about-card-copy">“To help everyone experience complete wellbeing—holistically—so they can live life to its fullest and enjoy every moment with greater health, happiness and joy.”</p>
+          </div>
+
+          <div className="about-guide-card">
+            <div className="about-icon"><Leaf size={28} /></div>
+            <div className="about-card-label">OUR MISSION</div>
+            <p className="about-card-copy">“To reach every person who cares about their wellbeing and inspire them to become a part of the wave towards a healthier India.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* CORE VALUES (1:1 REFERENCE MATCH) */}
+    <section className="about-pillars">
+      <div className="about-container">
+        <div className="about-section-head">
+          <div className="about-eyebrow">CORE VALUES</div>
+          <h2 className="about-display about-section-title">Our Three Philosophical Pillars</h2>
+          <p className="about-section-sub">Guiding every product we formulate and every decision we make.</p>
+        </div>
+
+        <div className="about-pillar-grid">
+          {/* PILLAR 01 */}
+          <article className="about-pillar">
+            <div className="about-pillar-header">
+              <span className="about-number">01</span>
+              <div className="about-pillar-icon-badge">
+                <Leaf size={20} />
+              </div>
+            </div>
+            <h3>HEALTH COMES FIRST</h3>
+            <p>“We believe health is the foundation of a fulfilling life. When we take care of our wellbeing, we create the foundation to experience life with greater energy, happiness and purpose.”</p>
+          </article>
+
+          {/* PILLAR 02 */}
+          <article className="about-pillar">
+            <div className="about-pillar-header">
+              <span className="about-number">02</span>
+              <div className="about-pillar-icon-badge">
+                <Users size={20} />
+              </div>
+            </div>
+            <h3>GENUINE EFFORTS CREATE REAL IMPACT</h3>
+            <p>“We believe that every sincere effort towards wellbeing matters. Small, consistent and genuine choices can create meaningful impact—not only for individuals, but for the people and communities around them.”</p>
+          </article>
+
+          {/* PILLAR 03 */}
+          <article className="about-pillar">
+            <div className="about-pillar-header">
+              <span className="about-number">03</span>
+              <div className="about-pillar-icon-badge">
+                <Sun size={20} />
+              </div>
+            </div>
+            <h3>HEALTH IS THE SOURCE OF JOY AND PROSPERITY</h3>
+            <p>“We believe true joy and prosperity begin with good health. When people are healthy and well, they are better able to enjoy life, pursue their aspirations and create prosperity for themselves and those around them.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 );
