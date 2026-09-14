@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Leaf, Users, Sun } from 'lucide-react';
+import { Target, Leaf, Users, Sun, Heart } from 'lucide-react';
 
 interface AboutProps { onNavigate: (path: string) => void; }
 
@@ -9,73 +9,162 @@ const teal = '#079E8D';
 const cream = '#FBF9F5';
 
 export const About: React.FC<AboutProps> = ({ onNavigate }) => (
-  <main style={{ paddingTop: 'var(--header-height)', background: cream, color: green }}>
-    <section style={{ padding: '58px 0 40px' }}>
-      <div style={{ width: 'min(1160px, calc(100% - 44px))', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', maxWidth: 820, margin: '0 auto' }}>
-          <div style={{ fontSize: '.72rem', fontWeight: 800, letterSpacing: '.22em', color: gold }}>ABOUT KRISHIV</div>
-          <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.6rem, 5vw, 4.5rem)', lineHeight: .98, margin: '10px 0 0' }}>From Healthcare Experience<br/>to Everyday Wellness</h1>
-          <p style={{ maxWidth: 590, margin: '19px auto 0', color: '#617168', lineHeight: 1.7 }}>Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.</p>
+  <main className="about-page" style={{ background: cream, color: green }}>
+    <style>{\`
+      .about-page { overflow: hidden; }
+      .about-container { width: min(1280px, calc(100% - 72px)); margin: 0 auto; }
+      .about-eyebrow { font-size: .68rem; font-weight: 800; letter-spacing: .24em; color: #B28B45; text-transform: uppercase; }
+      .about-display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -.025em; }
+      .about-hero {
+        position: relative; min-height: 390px; display: flex; align-items: center;
+        background: radial-gradient(circle at 79% 48%, rgba(235,218,178,.22), transparent 22%),
+          radial-gradient(circle at 17% 25%, rgba(226,236,228,.35), transparent 25%), #FBF9F5;
+      }
+      .about-hero:before, .about-hero:after {
+        content: ""; position: absolute; width: 170px; height: 300px; pointer-events: none; opacity: .32;
+        border-radius: 55% 45% 60% 40%; background: linear-gradient(145deg, transparent 38%, rgba(105,137,108,.22) 39%, transparent 42%);
+      }
+      .about-hero:before { left: -75px; top: 35px; transform: rotate(-28deg); }
+      .about-hero:after { right: -80px; top: -20px; transform: rotate(26deg); }
+      .about-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 38% 62%; align-items: center; min-height: 390px; }
+      .about-hero-copy { padding: 24px 0 18px; }
+      .about-hero-title { font-size: clamp(2.55rem, 4.5vw, 4.35rem); line-height: .9; margin: 12px 0 18px; max-width: 590px; }
+      .about-hero-sub { color: #617168; line-height: 1.55; font-size: .9rem; max-width: 410px; margin: 0; }
+      .about-hero-tag { margin-top: 22px; font-size: .55rem; font-weight: 800; letter-spacing: .25em; color: #183C2D; }
+      .about-hero-art { position: relative; height: 370px; display: flex; align-items: center; justify-content: center; }
+      .about-hero-art img { width: min(680px, 100%); height: 100%; object-fit: contain; transform: translate(1%, 2%); }
+      .about-hero-message {
+        position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 135px; text-align: center;
+        font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.15rem; font-style: italic; line-height: 1.12; color: #183C2D;
+      }
+      .about-hero-message .heart { color: #B28B45; display: block; margin: 12px auto 0; }
+      .about-story { padding: 78px 0 82px; }
+      .about-story-grid { display: grid; grid-template-columns: 54% 46%; align-items: center; gap: 24px; }
+      .about-story-copy { padding-right: 36px; }
+      .about-story-title { font-size: clamp(2.4rem, 4vw, 3.55rem); line-height: .95; margin: 10px 0 25px; }
+      .about-story-text { color: #4B5F55; line-height: 1.72; font-size: .92rem; }
+      .about-story-text p { margin: 0 0 18px; }
+      .about-quote { margin: 24px 0 26px; padding: 18px 24px; border-left: 2px solid #B28B45; background: #F5F1E8;
+        font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; font-weight: 700; color: #4B5F55; }
+      .about-story-visual { position: relative; min-height: 450px; display: flex; align-items: center; justify-content: center; }
+      .about-story-visual > img { width: 100%; max-width: 590px; max-height: 480px; object-fit: contain; }
+      .about-brand-note { position: absolute; right: 8px; bottom: 18px; display: flex; align-items: center; gap: 9px;
+        padding: 8px 13px; background: rgba(255,255,255,.92); border: 1px solid rgba(27,59,43,.08);
+        border-radius: 13px; box-shadow: 0 12px 30px rgba(27,59,43,.07); }
+      .about-brand-note img { width: 82px; height: 34px; object-fit: contain; }
+      .about-brand-note span { font-size: .64rem; color: #64736C; white-space: nowrap; }
+      .about-guides { padding: 76px 0 84px; background: #F3EFE7; }
+      .about-section-head { text-align: center; max-width: 760px; margin: 0 auto 42px; }
+      .about-section-title { font-size: clamp(2.4rem, 4vw, 3.45rem); line-height: .98; margin: 9px 0 13px; }
+      .about-section-sub { color: #68776F; margin: 0; line-height: 1.6; }
+      .about-guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+      .about-guide-card { background: #fff; border: 1px solid rgba(27,59,43,.06); border-radius: 24px; padding: 34px 38px; min-height: 292px; }
+      .about-icon { width: 50px; height: 50px; border-radius: 50%; background: #EAF2EC; display: flex; align-items: center; justify-content: center; color: #079E8D; margin-bottom: 22px; }
+      .about-card-label { font-size: .64rem; font-weight: 800; letter-spacing: .18em; color: #B28B45; }
+      .about-card-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; line-height: 1.02; margin: 8px 0 15px; font-weight: 600; }
+      .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.18rem; line-height: 1.48; margin: 0; color: #385247; }
+      .about-pillars { padding: 82px 0 88px; background: #FBF9F5; }
+      .about-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+      .about-pillar { padding: 4px 38px; min-height: 270px; border-right: 1px solid rgba(27,59,43,.1); }
+      .about-pillar:first-child { padding-left: 0; } .about-pillar:last-child { padding-right: 0; border-right: 0; }
+      .about-number { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; color: #079E8D; }
+      .about-pillar-icon { color: #B28B45; margin: 8px 0 15px; }
+      .about-pillar h3 { font-size: 1rem; margin: 0 0 7px; line-height: 1.35; }
+      .about-pillar p { color: #68776F; line-height: 1.62; font-size: .86rem; margin: 0; }
+      .about-belief { text-align: center; padding: 70px 20px 76px; background: #FBF9F5; }
+      .about-belief-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(2rem, 3.2vw, 2.7rem); line-height: 1.12; margin: 8px 0 0; }
+      .about-belief-line { display: block; width: 34px; height: 1px; background: #B28B45; margin: 20px auto 0; }
+      @media (max-width: 900px) {
+        .about-container { width: min(100% - 40px, 680px); }
+        .about-hero { min-height: 0; } .about-hero-inner { grid-template-columns: 1fr; min-height: 0; }
+        .about-hero-copy { padding: 58px 0 0; } .about-hero-title { font-size: clamp(2.65rem, 9vw, 4rem); max-width: 520px; }
+        .about-hero-sub { max-width: 430px; } .about-hero-art { height: 330px; margin-top: -8px; }
+        .about-hero-art img { width: 105%; transform: translate(-3%, 0); }
+        .about-hero-message { right: 2%; top: 30%; width: 110px; font-size: 1rem; }
+        .about-story-grid { grid-template-columns: 1fr; gap: 30px; } .about-story-copy { padding-right: 0; }
+        .about-story-visual { min-height: 390px; } .about-guide-grid { grid-template-columns: 1fr; }
+        .about-pillar-grid { grid-template-columns: 1fr; gap: 30px; }
+        .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 0 30px; border-right: 0; border-bottom: 1px solid rgba(27,59,43,.1); min-height: 0; }
+        .about-pillar:last-child { border-bottom: 0; padding-bottom: 0; }
+      }
+      @media (max-width: 560px) {
+        .about-container { width: calc(100% - 32px); } .about-hero-copy { padding-top: 38px; }
+        .about-hero-title { font-size: 2.55rem; line-height: .93; } .about-hero-sub { font-size: .83rem; }
+        .about-hero-art { height: 285px; margin-top: 2px; } .about-hero-message { right: -4px; top: 22%; width: 92px; font-size: .9rem; }
+        .about-story { padding: 58px 0 64px; } .about-story-title { font-size: 2.55rem; }
+        .about-story-visual { min-height: 315px; } .about-story-visual > img { width: 112%; }
+        .about-brand-note { right: -2px; bottom: 0; transform: scale(.9); transform-origin: right bottom; }
+        .about-guide-card { padding: 28px 24px; min-height: 0; } .about-card-title { font-size: 1.75rem; }
+        .about-card-copy { font-size: 1.05rem; } .about-guides, .about-pillars { padding: 62px 0 68px; }
+        .about-section-head { margin-bottom: 32px; } .about-section-title { font-size: 2.45rem; } .about-belief { padding: 58px 20px 64px; }
+      }
+    \`}</style>
+
+    <section className="about-hero">
+      <div className="about-container about-hero-inner">
+        <div className="about-hero-copy">
+          <div className="about-eyebrow">About Krishiv</div>
+          <h1 className="about-display about-hero-title">From Healthcare Experience<br/>to Everyday Wellness</h1>
+          <p className="about-hero-sub">Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.</p>
+          <div className="about-hero-tag">NOURISH. BALANCE. THRIVE.</div>
         </div>
-        <div style={{ marginTop: 34, padding: '17px 0', borderTop: '1px solid rgba(27,59,43,.1)', borderBottom: '1px solid rgba(27,59,43,.1)', display: 'grid', gridTemplateColumns: '1fr 1px 1fr', alignItems: 'center', gap: 18 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <img src='/assets/krishiv_logo_dark.png' alt='Krishiv Wellness LLP' style={{ width: 145, height: 58, objectFit: 'contain' }}/>
-            <div><div style={{ fontSize: '.62rem', fontWeight: 800, letterSpacing: '.16em', color: gold }}>THE COMPANY</div><div style={{ fontWeight: 750, marginTop: 5 }}>Krishiv Wellness LLP</div><div style={{ fontSize: '.78rem', color: '#718078', marginTop: 4 }}>The company behind the vision and purpose.</div></div>
-          </div>
-          <div style={{ height: 58, width: 1, background: 'rgba(178,139,69,.45)' }}/>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <img src='/assets/bliss_together_logo_transparent.png' alt='Bliss Together' style={{ width: 145, height: 58, objectFit: 'contain' }}/>
-            <div><div style={{ fontSize: '.62rem', fontWeight: 800, letterSpacing: '.16em', color: gold }}>THE BRAND</div><div style={{ fontWeight: 750, marginTop: 5 }}>Bliss Together</div><div style={{ fontSize: '.78rem', color: '#718078', marginTop: 4 }}>A wellness brand created to make everyday wellbeing feel good.</div></div>
-          </div>
+        <div className="about-hero-art">
+          <img src="/assets/our_story_art.png" alt="Shiva, peacock feather and trident artwork" />
+          <div className="about-hero-message">Wellness<br/>is better when<br/>we experience it<br/>together.<<Heart className="heart" size={19} strokeWidth={1.4}/></div>
         </div>
       </div>
     </section>
 
-    <section style={{ padding: '70px 0 78px' }}>
-      <div style={{ width: 'min(1160px, calc(100% - 44px))', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 70, alignItems: 'center' }}>
-        <div>
-          <div style={{ fontSize: '.72rem', fontWeight: 800, letterSpacing: '.22em', color: gold }}>THE FOUNDER'S JOURNEY</div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', lineHeight: 1.02, margin: '9px 0 22px' }}>A Journey with a Purpose</h2>
-          <div style={{ color: '#4B5F55', lineHeight: 1.8, fontSize: '.97rem' }}>
+    <section className="about-story">
+      <div className="about-container about-story-grid">
+        <div className="about-story-copy">
+          <div className="about-eyebrow">The Founder's Journey</div>
+          <h2 className="about-display about-story-title">A Journey with a Purpose</h2>
+          <div className="about-story-text">
             <p>With <strong>18 years of experience</strong> in the pharmaceutical industry, <strong>Shailendra Pal Singh</strong> has always been closely connected to healthcare and, more importantly, to the wellbeing of the people around him.</p>
             <p>While exploring opportunities to build a new venture with his partner, one thought kept coming back:</p>
-            <div style={{ margin: '24px 0', padding: '17px 22px', borderLeft: '2px solid '+gold, background: '#F5F1E8', fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.5rem', fontWeight: 700 }}>“Prevention is better than cure.”</div>
+            <div className="about-quote">“Prevention is better than cure.”</div>
             <p>This belief led them towards the world of nutraceuticals—a space where everyday nutrition and wellness could become a part of people’s lives in a simple and enjoyable way.</p>
             <p>As they explored the evolving nutraceutical landscape, they discovered the exciting potential of gummies: a convenient and enjoyable way to make wellness a more approachable part of everyday life.</p>
             <p style={{ fontWeight: 700, color: green }}>And that’s where Bliss Together was born. Because we believe wellness is better when we experience it together.</p>
           </div>
         </div>
-        <div style={{ position: 'relative', minHeight: 420, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src='/assets/our_story_art.png' alt='Shiva and peacock artwork' style={{ width: '100%', maxWidth: 500, maxHeight: 480, objectFit: 'contain' }}/>
-          <div style={{ position: 'absolute', right: 0, bottom: 10, display: 'flex', alignItems: 'center', gap: 10, padding: '9px 14px', background: 'rgba(255,255,255,.94)', border: '1px solid rgba(27,59,43,.08)', borderRadius: 14, boxShadow: '0 12px 30px rgba(27,59,43,.07)' }}>
-            <img src='/assets/bliss_together_logo_transparent.png' alt='Bliss Together' style={{ width: 90, height: 38, objectFit: 'contain' }}/>
-            <span style={{ fontSize: '.67rem', color: '#64736C', whiteSpace: 'nowrap' }}>A brand by Krishiv Wellness LLP</span>
-          </div>
+        <div className="about-story-visual">
+          <img src="/assets/our_story_art.png" alt="Shiva and peacock artwork" />
+          <div className="about-brand-note"><img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together" /><span>A brand by Krishiv Wellness LLP</span></div>
         </div>
       </div>
     </section>
 
-    <section style={{ padding: '74px 0', background: '#F3EFE7' }}>
-      <div style={{ width: 'min(1160px, calc(100% - 44px))', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 38px' }}><div style={{ fontSize: '.72rem', fontWeight: 800, letterSpacing: '.22em', color: gold }}>WHAT GUIDES US</div><h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', margin: '8px 0 12px' }}>Wellness with Purpose</h2><p style={{ color: '#68776F', margin: 0 }}>Our vision and mission shape the way we build, formulate and grow.</p></div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 22 }}>
-          <article style={{ background: '#fff', border: '1px solid rgba(27,59,43,.07)', borderRadius: 20, padding: 30, minHeight: 275 }}><div style={{ width: 48, height: 48, borderRadius: '50%', background: '#EAF2EC', display: 'flex', alignItems: 'center', justifyContent: 'center', color: teal, marginBottom: 20 }}><Target size={23}/></div><div style={{ fontSize: '.65rem', fontWeight: 800, letterSpacing: '.16em', color: gold }}>OUR VISION</div><h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.9rem', margin: '7px 0 14px' }}>A healthier way to experience life</h3><p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.15rem', lineHeight: 1.55, margin: 0 }}>“To help everyone experience complete wellbeing—holistically—so they can live life to its fullest and enjoy every moment with greater health, happiness and joy.”</p></article>
-          <article style={{ background: '#fff', border: '1px solid rgba(27,59,43,.07)', borderRadius: 20, padding: 30, minHeight: 275 }}><div style={{ width: 48, height: 48, borderRadius: '50%', background: '#EAF2EC', display: 'flex', alignItems: 'center', justifyContent: 'center', color: teal, marginBottom: 20 }}><Leaf size={23}/></div><div style={{ fontSize: '.65rem', fontWeight: 800, letterSpacing: '.16em', color: gold }}>OUR MISSION</div><h3 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.9rem', margin: '7px 0 14px' }}>Making wellness easier to embrace</h3><p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '1.15rem', lineHeight: 1.55, margin: 0 }}>“To reach every person who cares about their wellbeing and inspire them to become a part of the wave towards a healthier India.”</p></article>
+    <section className="about-guides">
+      <div className="about-container">
+        <div className="about-section-head">
+          <div className="about-eyebrow">What Guides Us</div>
+          <h2 className="about-display about-section-title">Wellness with Purpose</h2>
+          <p className="about-section-sub">Our vision and mission shape the way we build, formulate and grow.</p>
+        </div>
+        <div className="about-guide-grid">
+          <article className="about-guide-card"><div className="about-icon"><Target size={23}/></div><div className="about-card-label">Our Vision</div><h3 className="about-card-title">A healthier way to experience life</h3><p className="about-card-copy">“To help everyone experience complete wellbeing—holistically—so they can live life to its fullest and enjoy every moment with greater health, happiness and joy.”</p></article>
+          <article className="about-guide-card"><div className="about-icon"><Leaf size={23}/></div><div className="about-card-label">Our Mission</div><h3 className="about-card-title">Making wellness easier to embrace</h3><p className="about-card-copy">“To reach every person who cares about their wellbeing and inspire them to become a part of the wave towards a healthier India.”</p></article>
         </div>
       </div>
     </section>
 
-    <section style={{ padding: '74px 0' }}>
-      <div style={{ width: 'min(1160px, calc(100% - 44px))', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 38px' }}><div style={{ fontSize: '.72rem', fontWeight: 800, letterSpacing: '.22em', color: gold }}>CORE VALUES</div><h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', margin: '8px 0 12px' }}>Our Three Philosophical Pillars</h2><p style={{ color: '#68776F', margin: 0 }}>Guiding every product we formulate and every decision we make.</p></div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)' }}>
-          <article style={{ padding: '8px 34px 8px 0', borderRight: '1px solid rgba(27,59,43,.1)' }}><div style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', color: teal }}>01</div><div style={{ color: gold, margin: '5px 0 14px' }}><Leaf size={21}/></div><h3 style={{ fontSize: '1rem' }}>Health Comes First</h3><p style={{ color: '#68776F', lineHeight: 1.65, fontSize: '.87rem' }}>“We believe health is the foundation of a fulfilling life. When we take care of our wellbeing, we create the foundation to experience life with greater energy, happiness and purpose.”</p></article>
-          <article style={{ padding: '8px 34px', borderRight: '1px solid rgba(27,59,43,.1)' }}><div style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', color: teal }}>02</div><div style={{ color: gold, margin: '5px 0 14px' }}><Users size={21}/></div><h3 style={{ fontSize: '1rem' }}>Genuine Efforts Create Real Impact</h3><p style={{ color: '#68776F', lineHeight: 1.65, fontSize: '.87rem' }}>“We believe that every sincere effort towards wellbeing matters. Small, consistent and genuine choices can create meaningful impact—not only for individuals, but for the people and communities around them.”</p></article>
-          <article style={{ padding: '8px 0 8px 34px' }}><div style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: '2rem', color: teal }}>03</div><div style={{ color: gold, margin: '5px 0 14px' }}><Sun size={21}/></div><h3 style={{ fontSize: '1rem' }}>Health is the Source of Joy and Prosperity</h3><p style={{ color: '#68776F', lineHeight: 1.65, fontSize: '.87rem' }}>“We believe true joy and prosperity begin with good health. When people are healthy and well, they are better able to enjoy life, pursue their aspirations and create prosperity for themselves and those around them.”</p></article>
+    <section className="about-pillars">
+      <div className="about-container">
+        <div className="about-section-head">
+          <div className="about-eyebrow">Core Values</div>
+          <h2 className="about-display about-section-title">Our Three Philosophical Pillars</h2>
+          <p className="about-section-sub">Guiding every product we formulate and every decision we make.</p>
+        </div>
+        <div className="about-pillar-grid">
+          <article className="about-pillar"><div className="about-number">01</div><div className="about-pillar-icon"><Leaf size={21}/></div><h3>Health Comes First</h3><p>“We believe health is the foundation of a fulfilling life. When we take care of our wellbeing, we create the foundation to experience life with greater energy, happiness and purpose.”</p></article>
+          <article className="about-pillar"><div className="about-number">02</div><div className="about-pillar-icon"><Users size={21}/></div><h3>Genuine Efforts Create Real Impact</h3><p>“We believe that every sincere effort towards wellbeing matters. Small, consistent and genuine choices can create meaningful impact—not only for individuals, but for the people and communities around them.”</p></article>
+          <article className="about-pillar"><div className="about-number">03</div><div className="about-pillar-icon"><Sun size={21}/></div><h3>Health is the Source of Joy and Prosperity</h3><p>“We believe true joy and prosperity begin with good health. When people are healthy and well, they are better able to enjoy life, pursue their aspirations and create prosperity for themselves and those around them.”</p></article>
         </div>
       </div>
     </section>
 
-    <section style={{ textAlign: 'center', padding: '66px 20px 74px', background: cream }}><div style={{ fontSize: '.72rem', fontWeight: 800, letterSpacing: '.22em', color: gold }}>OUR BELIEF</div><p style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontStyle: 'italic', fontSize: 'clamp(1.8rem,3vw,2.45rem)', lineHeight: 1.15, margin: '8px 0 0' }}>Wellness is better when we<br/>experience it together.</p><span style={{ display: 'block', width: 34, height: 1, background: gold, margin: '20px auto 0' }}/></section>
+    <section className="about-belief"><div className="about-eyebrow">Our Belief</div><p className="about-belief-text">Wellness is better when we<br/>experience it together.</p><span className="about-belief-line"/></section>
   </main>
 );
