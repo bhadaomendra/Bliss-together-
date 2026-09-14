@@ -54,8 +54,9 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-identity-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(27,59,43,0.08); margin-bottom: 2rem; }
       .about-identity-principle-icon { color: #00A896; margin-bottom: 0.35rem; display: flex; justify-content: center; }
       .about-identity-principle span { font-size: 0.78125rem; font-weight: 700; color: ${green}; }
-      .about-identity-banner { background: #EBF3EE; border-radius: 16px; padding: 1.25rem 1.5rem; border: 1px solid rgba(27,59,43,0.08); }
-      .about-identity-banner-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.3rem; font-weight: 700; color: ${green}; margin: 0; }
+      .about-identity-banner { position: relative; background: #E5EFE6; border-radius: 16px; padding: 1.4rem 2rem 1.6rem; border: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .about-identity-banner-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.45rem; font-weight: 600; color: ${green}; line-height: 1.35; margin: 0; position: relative; z-index: 2; }
+      .about-identity-banner-line { width: 34px; height: 3px; background-color: ${gold}; border-radius: 2px; margin-top: 10px; position: relative; z-index: 2; }
       
       /* VISION & MISSION */
       .about-guides { padding: 4rem 0; background: #F4F0E8; }
@@ -219,7 +220,57 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
               </div>
 
               <div className="about-identity-banner">
-                <p className="about-identity-banner-text">Nourish. Balance. Thrive. Together.</p>
+                {/* Left Leaf SVG */}
+                <svg viewBox="0 0 100 100" fill="none" style={{ position: 'absolute', left: '8px', top: '50%', transform: 'translateY(-50%)', width: '68px', height: '68px', pointerEvents: 'none', zIndex: 1 }}>
+                  <defs>
+                    <linearGradient id="leafLeftGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#4A6B4E" />
+                      <stop offset="50%" stopColor="#759879" />
+                      <stop offset="100%" stopColor="#A8C7AA" />
+                    </linearGradient>
+                    <linearGradient id="veinGradLeft" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#2E4731" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="#557959" stopOpacity="0.3" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M12 88 Q30 70 50 48" stroke="#39543C" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M12 88 C10 65 30 30 90 12 C72 45 65 75 12 88 Z" fill="url(#leafLeftGrad)" />
+                  <path d="M12 88 Q50 50 90 12" stroke="url(#veinGradLeft)" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M30 68 Q42 60 50 62" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                  <path d="M48 50 Q60 42 68 44" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                  <path d="M66 32 Q76 26 82 28" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+                </svg>
+
+                {/* Right Leaf Cluster SVG (3 Leaves) */}
+                <svg viewBox="0 0 120 120" fill="none" style={{ position: 'absolute', right: '4px', top: '50%', transform: 'translateY(-50%)', width: '85px', height: '85px', pointerEvents: 'none', zIndex: 1 }}>
+                  <defs>
+                    <linearGradient id="leafRightGrad" x1="100%" y1="50%" x2="0%" y2="50%">
+                      <stop offset="0%" stopColor="#4A6B4E" />
+                      <stop offset="60%" stopColor="#759879" />
+                      <stop offset="100%" stopColor="#A8C7AA" />
+                    </linearGradient>
+                  </defs>
+                  {/* Stem */}
+                  <path d="M115 60 Q70 58 20 48" stroke="#39543C" strokeWidth="2" strokeLinecap="round" />
+                  
+                  {/* Top Leaf */}
+                  <path d="M115 60 C95 38 65 18 35 15 C45 35 70 50 115 60 Z" fill="url(#leafRightGrad)" />
+                  <path d="M115 60 Q75 35 35 15" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2" />
+
+                  {/* Middle Leaf */}
+                  <path d="M115 60 C85 58 45 52 15 48 C38 62 75 65 115 60 Z" fill="url(#leafRightGrad)" />
+                  <path d="M115 60 Q65 54 15 48" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2" />
+
+                  {/* Bottom Leaf */}
+                  <path d="M115 60 C95 75 70 92 40 100 C50 82 75 70 115 60 Z" fill="url(#leafRightGrad)" />
+                  <path d="M115 60 Q78 78 40 100" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2" />
+                </svg>
+
+                <p className="about-identity-banner-text">
+                  Nourish. Balance. Thrive.<br />
+                  Together.
+                </p>
+                <div className="about-identity-banner-line" />
               </div>
             </div>
           </div>
