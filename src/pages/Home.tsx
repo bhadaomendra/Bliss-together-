@@ -328,12 +328,12 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             />
           </div>
 
-          {/* Thought Bubble Dots leading to Boy's head */}
-          {/* Medium Dot */}
+          {/* Thought Bubble Dots leading directly from near Boy's mouth up to Cloud */}
+          {/* Dot 1 (Nearest to Cloud) */}
           <div style={{
             position: 'absolute',
-            bottom: '-16px',
-            left: '30px',
+            bottom: '-18px',
+            left: '25px',
             width: '22px',
             height: '22px',
             backgroundColor: '#FFFFFF',
@@ -341,28 +341,40 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
           }} />
 
-          {/* Small Dot */}
+          {/* Dot 2 (Middle) */}
           <div style={{
             position: 'absolute',
-            bottom: '-32px',
-            left: '12px',
-            width: '14px',
-            height: '14px',
+            bottom: '-40px',
+            left: '6px',
+            width: '16px',
+            height: '16px',
             backgroundColor: '#FFFFFF',
             borderRadius: '50%',
             boxShadow: '0 3px 8px rgba(0, 0, 0, 0.18)'
           }} />
 
-          {/* Extra Tiny Dot */}
+          {/* Dot 3 (Lower) */}
           <div style={{
             position: 'absolute',
-            bottom: '-42px',
-            left: '2px',
-            width: '8px',
-            height: '8px',
+            bottom: '-60px',
+            left: '-12px',
+            width: '11px',
+            height: '11px',
             backgroundColor: '#FFFFFF',
             borderRadius: '50%',
-            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)'
+            boxShadow: '0 2px 6px rgba(0, 0, 0, 0.16)'
+          }} />
+
+          {/* Dot 4 (Closest to Boy's Mouth) */}
+          <div style={{
+            position: 'absolute',
+            bottom: '-76px',
+            left: '-26px',
+            width: '7px',
+            height: '7px',
+            backgroundColor: '#FFFFFF',
+            borderRadius: '50%',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.15)'
           }} />
         </div>
       </section>
