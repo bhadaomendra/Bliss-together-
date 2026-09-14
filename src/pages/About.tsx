@@ -38,21 +38,25 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.15rem; font-style: italic; line-height: 1.12; color: #183C2D;
       }
       .about-hero-message .heart { color: #B28B45; display: block; margin: 12px auto 0; }
-      .about-story { padding: 78px 0 82px; }
-      .about-story-grid { display: grid; grid-template-columns: 54% 46%; align-items: center; gap: 24px; }
-      .about-story-copy { padding-right: 36px; }
-      .about-story-title { font-size: clamp(2.4rem, 4vw, 3.55rem); line-height: .95; margin: 10px 0 25px; }
-      .about-story-text { color: #4B5F55; line-height: 1.72; font-size: .92rem; }
-      .about-story-text p { margin: 0 0 18px; }
-      .about-quote { margin: 24px 0 26px; padding: 18px 24px; border-left: 2px solid #B28B45; background: #F5F1E8;
-        font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; font-weight: 700; color: #4B5F55; }
-      .about-story-visual { position: relative; min-height: 450px; display: flex; align-items: center; justify-content: center; }
-      .about-story-visual > img { width: 100%; max-width: 590px; max-height: 480px; object-fit: contain; }
-      .about-brand-note { position: absolute; right: 8px; bottom: 18px; display: flex; align-items: center; gap: 9px;
-        padding: 8px 13px; background: rgba(255,255,255,.92); border: 1px solid rgba(27,59,43,.08);
-        border-radius: 13px; box-shadow: 0 12px 30px rgba(27,59,43,.07); }
-      .about-brand-note img { width: 82px; height: 34px; object-fit: contain; }
-      .about-brand-note span { font-size: .64rem; color: #64736C; white-space: nowrap; }
+      .about-story { padding: 70px 0 76px; }
+      .about-story-grid { display: grid; grid-template-columns: 52% 48%; align-items: center; gap: 42px; }
+      .about-story-copy { padding-right: 10px; }
+      .about-story-title { font-size: clamp(2.35rem, 4vw, 3.55rem); line-height: .95; margin: 10px 0 24px; }
+      .about-story-text { color: #4B5F55; line-height: 1.68; font-size: .9rem; max-width: 690px; }
+      .about-story-text p { margin: 0 0 16px; }
+      .about-quote { margin: 22px 0 24px; padding: 16px 22px; border-left: 2px solid #B28B45; background: #F5F1E8;
+        font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.38rem; font-weight: 700; color: #4B5F55; }
+      .about-story-visual { position: relative; min-height: 470px; display: flex; align-items: center; justify-content: center; }
+      .about-identity { width: 100%; max-width: 610px; }
+      .about-identity-heading { text-align: center; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.55rem; font-weight: 600; margin: 0 0 22px; color: #183C2D; }
+      .about-identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+      .about-identity-card { text-align: center; padding: 30px 18px 25px; border-radius: 50%; aspect-ratio: 1; background: radial-gradient(circle at 50% 42%, #F4F1E8 0%, #F8F6F0 68%, #FBF9F5 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .about-identity-card img { width: 145px; height: 62px; object-fit: contain; margin-bottom: 8px; }
+      .about-identity-card.brand img { width: 132px; height: 70px; }
+      .about-identity-label { font-size: .61rem; font-weight: 800; letter-spacing: .18em; color: #B28B45; text-transform: uppercase; margin-bottom: 8px; }
+      .about-identity-name { font-size: 1rem; font-weight: 800; margin: 0 0 7px; color: #183C2D; }
+      .about-identity-copy { font-size: .72rem; line-height: 1.42; color: #68776F; max-width: 175px; margin: 0; }
+      .about-identity-divider { height: 1px; background: rgba(178,139,69,.45); width: 75%; margin: 20px auto 0; }
       .about-guides { padding: 76px 0 84px; background: #F3EFE7; }
       .about-section-head { text-align: center; max-width: 760px; margin: 0 auto 42px; }
       .about-section-title { font-size: clamp(2.4rem, 4vw, 3.45rem); line-height: .98; margin: 9px 0 13px; }
@@ -81,8 +85,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-hero-sub { max-width: 430px; } .about-hero-art { height: 330px; margin-top: -8px; }
         .about-hero-art img { width: 105%; transform: translate(-3%, 0); }
         .about-hero-message { right: 2%; top: 30%; width: 110px; font-size: 1rem; }
-        .about-story-grid { grid-template-columns: 1fr; gap: 30px; } .about-story-copy { padding-right: 0; }
-        .about-story-visual { min-height: 390px; } .about-guide-grid { grid-template-columns: 1fr; }
+        .about-story-grid { grid-template-columns: 1fr; gap: 34px; } .about-story-copy { padding-right: 0; }
+        .about-story-visual { min-height: 420px; } .about-identity { max-width: 520px; } .about-guide-grid { grid-template-columns: 1fr; }
         .about-pillar-grid { grid-template-columns: 1fr; gap: 30px; }
         .about-pillar, .about-pillar:first-child, .about-pillar:last-child { padding: 0 0 30px; border-right: 0; border-bottom: 1px solid rgba(27,59,43,.1); min-height: 0; }
         .about-pillar:last-child { border-bottom: 0; padding-bottom: 0; }
@@ -91,9 +95,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-container { width: calc(100% - 32px); } .about-hero-copy { padding-top: 38px; }
         .about-hero-title { font-size: 2.55rem; line-height: .93; } .about-hero-sub { font-size: .83rem; }
         .about-hero-art { height: 285px; margin-top: 2px; } .about-hero-message { right: -4px; top: 22%; width: 92px; font-size: .9rem; }
-        .about-story { padding: 58px 0 64px; } .about-story-title { font-size: 2.55rem; }
-        .about-story-visual { min-height: 315px; } .about-story-visual > img { width: 112%; }
-        .about-brand-note { right: -2px; bottom: 0; transform: scale(.9); transform-origin: right bottom; }
+        .about-story { padding: 54px 0 62px; } .about-story-title { font-size: 2.55rem; }
+        .about-story-visual { min-height: 340px; } .about-identity-grid { gap: 8px; } .about-identity-card { padding: 18px 10px; }
+        .about-identity-card img { width: 105px; height: 48px; } .about-identity-card.brand img { width: 98px; height: 54px; }
+        .about-identity-name { font-size: .85rem; } .about-identity-copy { font-size: .62rem; max-width: 135px; }
         .about-guide-card { padding: 28px 24px; min-height: 0; } .about-card-title { font-size: 1.75rem; }
         .about-card-copy { font-size: 1.05rem; } .about-guides, .about-pillars { padding: 62px 0 68px; }
         .about-section-head { margin-bottom: 32px; } .about-section-title { font-size: 2.45rem; } .about-belief { padding: 58px 20px 64px; }
@@ -130,8 +135,24 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
           </div>
         </div>
         <div className="about-story-visual">
-          <img src="/assets/our_story_art.png" alt="Shiva and peacock artwork" />
-          <div className="about-brand-note"><img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together" /><span>A brand by Krishiv Wellness LLP</span></div>
+          <div className="about-identity">
+            <div className="about-identity-heading">Two Names. One Purpose.</div>
+            <div className="about-identity-grid">
+              <article className="about-identity-card">
+                <img src="/assets/krishiv_logo_white.png" alt="Krishiv Wellness LLP" style={{filter:'invert(1)'}} />
+                <div className="about-identity-label">The Company</div>
+                <h3 className="about-identity-name">Krishiv Wellness LLP</h3>
+                <p className="about-identity-copy">The foundation that brings vision, expertise and purpose to life.</p>
+              </article>
+              <article className="about-identity-card brand">
+                <img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together" />
+                <div className="about-identity-label">Our Brand</div>
+                <h3 className="about-identity-name">Bliss Together</h3>
+                <p className="about-identity-copy">Thoughtfully crafted nutrition for a happier, healthier you.</p>
+              </article>
+            </div>
+            <div className="about-identity-divider" />
+          </div>
         </div>
       </div>
     </section>
