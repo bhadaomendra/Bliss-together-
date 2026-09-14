@@ -11,23 +11,60 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
     <main style={{ paddingTop: 'var(--header-height)', backgroundColor: '#FBF9F5', minHeight: '100vh' }}>
       
       {/* ========================================================================= */}
-      {/* 1. HERO HEADER: ABOUT KRISHIV */}
+      {/* 1. HERO HEADER: ABOUT KRISHIV (EXACT 1:1 BANNER MATCH) */}
       {/* ========================================================================= */}
-      <section style={{ padding: '4rem 0 3.5rem', backgroundColor: '#F4F0E8', borderBottom: '1px solid rgba(27,59,43,0.06)' }}>
-        <div className="container">
+      <section style={{
+        position: 'relative',
+        padding: '3.5rem 0',
+        backgroundColor: '#F7F4EC',
+        borderBottom: '1px solid rgba(27,59,43,0.08)',
+        overflow: 'hidden'
+      }}>
+        {/* Decorative Background Leaf Accents */}
+        <div style={{
+          position: 'absolute',
+          top: '-20px',
+          left: '-30px',
+          width: '180px',
+          height: '240px',
+          opacity: 0.22,
+          pointerEvents: 'none'
+        }}>
+          <svg viewBox="0 0 200 240" fill="none">
+            <path d="M10 230 C30 150, 90 70, 180 10 C140 80, 100 160, 10 230 Z" fill="#1B3B2B" />
+            <path d="M40 220 C70 160, 120 100, 190 50 C160 110, 110 180, 40 220 Z" fill="#2A523C" />
+          </svg>
+        </div>
+
+        <div style={{
+          position: 'absolute',
+          top: '-10px',
+          right: '-20px',
+          width: '160px',
+          height: '200px',
+          opacity: 0.22,
+          pointerEvents: 'none'
+        }}>
+          <svg viewBox="0 0 160 200" fill="none">
+            <path d="M150 10 C100 40, 50 100, 10 190 C60 130, 110 60, 150 10 Z" fill="#1B3B2B" />
+          </svg>
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-            gap: '3.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '2.5rem',
             alignItems: 'center'
           }}>
-            {/* Left Content */}
+            
+            {/* 1. Left Content Column */}
             <div>
               <div style={{
                 fontSize: '0.8125rem',
                 fontWeight: 800,
                 letterSpacing: '0.18em',
-                color: 'var(--color-gold)',
+                color: '#C5A059',
                 textTransform: 'uppercase',
                 marginBottom: '0.75rem'
               }}>
@@ -36,7 +73,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
 
               <h1 style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: 'clamp(2.2rem, 4vw, 3.2rem)',
+                fontSize: 'clamp(2.1rem, 3.2vw, 3rem)',
                 fontWeight: 700,
                 color: '#1B3B2B',
                 lineHeight: 1.15,
@@ -46,11 +83,10 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               </h1>
 
               <p style={{
-                fontSize: '1.1rem',
+                fontSize: '1.025rem',
                 color: '#4A5D52',
                 lineHeight: 1.6,
-                marginBottom: '1.75rem',
-                maxWidth: '560px'
+                marginBottom: '1.75rem'
               }}>
                 Building a community that inspires people to embrace wellness, happiness, and healthier everyday choices.
               </p>
@@ -59,59 +95,67 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.75rem',
-                fontSize: '0.8125rem',
+                gap: '0.65rem',
+                fontSize: '0.78125rem',
                 fontWeight: 800,
                 letterSpacing: '0.15em',
                 color: '#1B3B2B',
                 textTransform: 'uppercase'
               }}>
-                <span style={{ color: 'var(--color-gold)', fontWeight: 300 }}>───</span>
+                <span style={{ color: '#C5A059', fontWeight: 300, fontSize: '1.2rem' }}>────</span>
                 <span>NOURISH. BALANCE. THRIVE.</span>
               </div>
             </div>
 
-            {/* Right Artwork & Handwritten Tag */}
-            <div style={{ position: 'relative', textAlign: 'center' }}>
-              <div style={{
-                backgroundColor: '#FFFFFF',
-                borderRadius: '24px',
-                padding: '1.5rem',
-                boxShadow: '0 12px 35px rgba(0,0,0,0.06)',
-                border: '1px solid rgba(27,59,43,0.08)'
-              }}>
-                <img
-                  src="/assets/our_story_art.png"
-                  alt="Krishiv Wellness Krishna & Shiva Vision Line Art"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: '290px',
-                    objectFit: 'contain',
-                    display: 'block'
-                  }}
-                />
-              </div>
+            {/* 2. Center Seamless Artwork Column */}
+            <div style={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img
+                src="/assets/our_story_art.png"
+                alt="Krishiv Wellness Krishna & Shiva Vision Line Art"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: '320px',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
+              />
+            </div>
 
-              {/* Handwritten Quote Accent */}
-              <div style={{
-                marginTop: '1rem',
-                textAlign: 'right',
-                paddingRight: '0.5rem'
+            {/* 3. Right Handwritten Calligraphy Quote Column */}
+            <div style={{ textAlign: 'center', paddingLeft: '0.5rem' }}>
+              <p style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontStyle: 'italic',
+                fontSize: 'clamp(1.25rem, 1.8vw, 1.6rem)',
+                color: '#1B3B2B',
+                fontWeight: 600,
+                lineHeight: 1.3,
+                marginBottom: '1rem'
               }}>
-                <p style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontStyle: 'italic',
-                  fontSize: '1.35rem',
-                  color: '#1B3B2B',
-                  fontWeight: 600,
-                  lineHeight: 1.3
+                Wellness<br />
+                is better when<br />
+                we experience it<br />
+                together.
+              </p>
+              
+              {/* Gold Heart Icon */}
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '50%',
+                  border: '1.5px solid #C5A059',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#C5A059'
                 }}>
-                  Wellness is better when we experience it together.{' '}
-                  <span style={{ color: '#C5A059' }}>♡</span>
-                </p>
+                  <Heart size={16} />
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
