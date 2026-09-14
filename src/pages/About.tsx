@@ -10,7 +10,7 @@ const cream = '#FBF9F5';
 
 export const About: React.FC<AboutProps> = ({ onNavigate }) => (
   <main className="about-page" style={{ background: cream, color: green }}>
-    <style>{\`
+    <style>{`
       .about-page { overflow: hidden; }
       .about-container { width: min(1280px, calc(100% - 72px)); margin: 0 auto; }
       .about-eyebrow { font-size: .68rem; font-weight: 800; letter-spacing: .24em; color: #B28B45; text-transform: uppercase; }
@@ -98,7 +98,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         .about-card-copy { font-size: 1.05rem; } .about-guides, .about-pillars { padding: 62px 0 68px; }
         .about-section-head { margin-bottom: 32px; } .about-section-title { font-size: 2.45rem; } .about-belief { padding: 58px 20px 64px; }
       }
-    \`}</style>
+    `}</style>
 
     <section className="about-hero">
       <div className="about-container about-hero-inner">
@@ -110,7 +110,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
         </div>
         <div className="about-hero-art">
           <img src="/assets/our_story_art.png" alt="Shiva, peacock feather and trident artwork" />
-          <div className="about-hero-message">Wellness<br/>is better when<br/>we experience it<br/>together.<<Heart className="heart" size={19} strokeWidth={1.4}/></div>
+          <div className="about-hero-message">Wellness<br/>is better when<br/>we experience it<br/>together.<Heart className="heart" size={19} strokeWidth={1.4}/></div>
         </div>
       </div>
     </section>
