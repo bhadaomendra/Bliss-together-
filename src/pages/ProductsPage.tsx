@@ -72,11 +72,11 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           position: 'absolute',
           right: '-10px',
           top: '0%',
-          width: '420px',
-          height: '450px',
+          width: '290px',
+          height: '300px',
           background: '#E2EEE5',
           borderRadius: '50% 0 0 50% / 50% 0 0 50%',
-          opacity: 0.65,
+          opacity: 0.55,
           pointerEvents: 'none',
           zIndex: 0
         }} />
@@ -85,13 +85,13 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
         <div className="desktop-only-quote" style={{
           position: 'absolute',
           left: '3.5%',
-          top: '40%',
+          top: '38%',
           transform: 'translateY(-50%) rotate(-4deg)',
           fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.6rem, 2.4vw, 2.25rem)',
+          fontSize: 'clamp(1.15rem, 1.5vw, 1.45rem)',
           fontWeight: 700,
           color: '#183C2D',
-          lineHeight: 1.25,
+          lineHeight: 1.2,
           textAlign: 'center',
           pointerEvents: 'none',
           zIndex: 2,
@@ -101,20 +101,20 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           Steps<br />
           Healthier<br />
           Tomorrows<br />
-          <span style={{ fontSize: '1.4rem', color: '#B28B45', display: 'inline-block', marginTop: '2px' }}>♡</span>
+          <span style={{ fontSize: '1.1rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
         </div>
 
         {/* Right Handwritten Quote (Filling Right Gap) */}
         <div className="desktop-only-quote" style={{
           position: 'absolute',
           right: '3.5%',
-          top: '40%',
+          top: '38%',
           transform: 'translateY(-50%) rotate(4deg)',
           fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.65rem, 2.5vw, 2.3rem)',
+          fontSize: 'clamp(1.15rem, 1.5vw, 1.45rem)',
           fontWeight: 700,
           color: '#183C2D',
-          lineHeight: 1.25,
+          lineHeight: 1.2,
           textAlign: 'center',
           pointerEvents: 'none',
           zIndex: 2,
@@ -124,7 +124,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           Nutrition<br />
           Brighter<br />
           Days<br />
-          <span style={{ fontSize: '1.4rem', color: '#B28B45', display: 'inline-block', marginTop: '2px' }}>♡</span>
+          <span style={{ fontSize: '1.1rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
