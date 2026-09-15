@@ -95,11 +95,11 @@ button {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1420px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 /* Header Navbar */

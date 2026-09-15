@@ -80,16 +80,17 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       <section style={{
         position: 'relative',
         minHeight: '82vh',
-        backgroundImage: "linear-gradient(90deg, rgba(10, 35, 26, 0.88) 0%, rgba(10, 35, 26, 0.65) 45%, rgba(10, 35, 26, 0.15) 75%), url('/assets/hero_wallpaper.jpg')",
+        backgroundColor: '#0A231A',
+        backgroundImage: "linear-gradient(90deg, #0A231A 0%, rgba(10, 35, 26, 0.94) 32%, rgba(10, 35, 26, 0.65) 58%, rgba(10, 35, 26, 0.12) 88%), url('/assets/hero_wallpaper.jpg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center right',
+        backgroundPosition: 'right 30%',
         display: 'flex',
         alignItems: 'center',
         padding: '5rem 0',
         overflow: 'hidden'
       }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '600px' }}>
+          <div style={{ maxWidth: '640px' }}>
             {/* Eyebrow */}
             <div style={{
               display: 'inline-flex',
