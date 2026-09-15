@@ -337,30 +337,56 @@ button {
 /* Mobile Responsive Adjustments */
 @media (max-width: 900px) {
   .nav-menu {
-    display: none;
+    display: none !important;
   }
   .mobile-toggle {
-    display: block;
+    display: block !important;
+  }
+  .desktop-only-cta {
+    display: none !important;
+  }
+  .desktop-only-quote {
+    display: none !important;
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   .trust-signals-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
   }
   .container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .product-jars-showcase {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .hero-jar-item {
-    min-width: 30%;
+    min-width: 28%;
+  }
+  .filter-pills-row {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.35rem;
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .whatsapp-floating-widget {
+    bottom: 16px !important;
+    right: 16px !important;
+    padding: 0.65rem 0.95rem !important;
+  }
+  .wa-widget-label {
+    display: none !important;
   }
 }
 

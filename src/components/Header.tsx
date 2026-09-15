@@ -92,10 +92,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           </ul>
         </nav>
 
-        {/* Right: DISCOVER WELLNESS ♡ Button */}
+        {/* Right: DISCOVER WELLNESS ♡ Button & Mobile Toggle */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <button
             onClick={() => handleNavClick('/products')}
+            className="desktop-only-cta"
             style={{
               backgroundColor: '#00A896',
               color: '#FFFFFF',
@@ -119,12 +120,84 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
             className="mobile-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Mobile Menu"
-            style={{ color: '#FFFFFF' }}
+            style={{ color: '#FFFFFF', padding: '0.5rem', cursor: 'pointer' }}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Slide-Down Menu Overlay */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: '84px',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: '#0A251C',
+          zIndex: 999,
+          padding: '2rem 1.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          overflowY: 'auto'
+        }}>
+          <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', listStyle: 'none' }}>
+            {navItems.map((item) => (
+              <li key={item.label} style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)', paddingBottom: '1rem' }}>
+                <a
+                  href={item.path}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.path);
+                  }}
+                  style={{
+                    fontSize: '1.15rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.1em',
+                    color: currentPath === item.path ? '#00A896' : '#FFFFFF',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textDecoration: 'none'
+                  }}
+                >
+                  <span>{item.label}</span>
+                  {item.hasDropdown && <ChevronDown size={18} style={{ opacity: 0.8 }} />}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div style={{ paddingTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <button
+              onClick={() => handleNavClick('/products')}
+              style={{
+                width: '100%',
+                backgroundColor: '#00A896',
+                color: '#FFFFFF',
+                padding: '0.9rem',
+                borderRadius: '50px',
+                fontSize: '0.9rem',
+                fontWeight: 700,
+                letterSpacing: '0.05em',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                boxShadow: '0 4px 14px rgba(0,168,150,0.35)'
+              }}
+            >
+              <span>DISCOVER WELLNESS RANGE</span>
+              <Heart size={16} fill="#FFFFFF" color="#FFFFFF" />
+            </button>
+            <div style={{ textAlign: 'center', color: '#B8C7BF', fontSize: '0.8125rem' }}>
+              ✦ Krishiv Wellness LLP · Bliss Together
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
