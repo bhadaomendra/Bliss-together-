@@ -17,7 +17,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       tubImg: "/assets/products/hair-skin-nails.png",
       accent: "#D946EF",
       bgGradient: "linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%)",
-      badge: "Hair, Skin & Nails",
+      badge: "Hair • Skin • Nails",
       ingredients: "Biotin | Zinc | Vitamin C",
       flavour: "Strawberry Flavour"
     },
@@ -33,26 +33,15 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       flavour: "Orange Flavour"
     },
     {
-      id: "prod-6", // Melatonin Sleep / Calm
-      title: "Calm & Anti-Stress",
-      subtitle: "Calm & Anti-Stress",
+      id: "prod-6", // Melatonin Sleep
+      title: "Melatonin Sleep",
+      subtitle: "Sleep Support",
       tubImg: "/assets/products/melatonin.png",
       accent: "#8B5CF6",
       bgGradient: "linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%)",
-      badge: "Calm & Anti-Stress",
-      ingredients: "Ashwagandha | L-Theanine | Vitamin B6",
+      badge: "Sleep Support",
+      ingredients: "Melatonin | Tagar | Chamomile",
       flavour: "Blueberry Flavour"
-    },
-    {
-      id: "prod-3", // Kids Immunity / Melatonin
-      title: "Melatonin Sleep",
-      subtitle: "Melatonin",
-      tubImg: "/assets/products/kids-immunity.png",
-      accent: "#3B82F6",
-      bgGradient: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)",
-      badge: "Melatonin Sleep",
-      ingredients: "Melatonin | Chamomile | Vitamin B6",
-      flavour: "Berry Flavour"
     },
     {
       id: "prod-2", // Eye Care
@@ -63,6 +52,28 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       bgGradient: "linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%)",
       badge: "Eye Care",
       ingredients: "Lutein | Zeaxanthin | Vitamin A",
+      flavour: "Mixed Fruit Flavour"
+    },
+    {
+      id: "prod-1", // Kids Brain Booster
+      title: "Kids Brain Booster",
+      subtitle: "Brain & Focus",
+      tubImg: "/assets/products/kids-brain-booster.png",
+      accent: "#3B82F6",
+      bgGradient: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)",
+      badge: "Focus & Learning",
+      ingredients: "DHA | Lutein | B-Vitamins",
+      flavour: "Mango Flavour"
+    },
+    {
+      id: "prod-3", // Kids Immunity Booster
+      title: "Kids Immunity Booster",
+      subtitle: "Immunity",
+      tubImg: "/assets/products/kids-immunity.png",
+      accent: "#D97706",
+      bgGradient: "linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)",
+      badge: "Immunity",
+      ingredients: "Vitamin C | Vitamin D3 | Zinc",
       flavour: "Mixed Berry Flavour"
     }
   ];

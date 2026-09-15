@@ -21,81 +21,6 @@ export interface Product {
 
 export const productsData: Product[] = [
   {
-    id: "prod-1",
-    slug: "kids-brain-booster",
-    name: "Kids Brain Booster Gummies",
-    brandLine: "BLISS TOGETHER",
-    category: "Brain & Focus",
-    categorySlug: "brain",
-    subtitle: "Supports Brain Development, Focus & Memory",
-    image: "/assets/products/kids-brain-booster.png",
-    accentColor: "#2E5B88",
-    badge: "Focus & Learning",
-    flavour: "Mixed Berry Flavour",
-    description: "Thoughtfully formulated to support growing minds. Delicious Mixed Berry flavoured gummies packed with DHA, Lutein, Zinc and essential B-vitamins to aid concentration, cognitive performance, and memory retention.",
-    benefits: [
-      "Supports cognitive performance & brain development",
-      "Enhances memory retention & concentration during learning",
-      "Protects young eyes during digital study hours",
-      "Gentle on young stomachs with 100% natural fruit flavours"
-    ],
-    keyIngredients: ["DHA", "Lutein", "Zinc", "Magnesium", "B-Vitamins"],
-    ingredients: ["DHA", "Lutein", "Zeaxanthin", "Zinc", "Magnesium", "Vitamins A, B1, B6, B12"],
-    usage: "Children (ages 4+): Take 1 to 2 gummies daily under adult supervision.",
-    servings: "30 Gummies",
-    amazonUrl: "https://www.amazon.in/dp/B0BLISSKIDSBRAIN?tag=blisstogether-21"
-  },
-  {
-    id: "prod-2",
-    slug: "eye-care-gummies",
-    name: "Eye Care Gummies",
-    brandLine: "BLISS TOGETHER",
-    category: "Eye Health",
-    categorySlug: "eye",
-    subtitle: "Digital Screen Strain Relief & Vision Defense",
-    image: "/assets/products/eye-care.png",
-    accentColor: "#9C4D78",
-    badge: "Eye Health",
-    flavour: "Mango Citrus Flavour",
-    description: "Designed for modern digital lifestyles. Refreshing Mango Citrus flavoured gummies formulated with premium Lutein, Zeaxanthin, Astaxanthin and DHA to protect eyes against blue light, reduce digital eye strain, and support long-term eye health.",
-    benefits: [
-      "Relieves eye fatigue and dryness from extended screen time",
-      "Filters harmful blue light emitted by phones, laptops & TVs",
-      "Supports macular health and sharp visual acuity",
-      "Rich in antioxidant carotenoids & Vitamin C & E"
-    ],
-    keyIngredients: ["Lutein", "Zeaxanthin", "Astaxanthin", "DHA", "Vitamin C"],
-    ingredients: ["Lutein", "Zeaxanthin", "Astaxanthin", "DHA", "Vitamin C & E"],
-    usage: "Take 1 gummy daily with meals or as recommended by a healthcare professional.",
-    servings: "30 Gummies",
-    amazonUrl: "https://www.amazon.in/dp/B0BLISSEYECARE?tag=blisstogether-21"
-  },
-  {
-    id: "prod-3",
-    slug: "kids-immunity-booster",
-    name: "Kids Immunity Booster Gummies",
-    brandLine: "BLISS TOGETHER",
-    category: "Immunity",
-    categorySlug: "immunity",
-    subtitle: "Daily Immune Defense & Vital Energy",
-    image: "/assets/products/kids-immunity.png",
-    accentColor: "#D97706",
-    badge: "Immunity",
-    flavour: "Tangy Orange Flavour",
-    description: "Empower your child's natural immune shield. Delicious Tangy Orange flavoured gummies blending high-potency Vitamin C, Vitamin D3, Zinc, and Elderberry extract to strengthen immunity against daily environmental challenges.",
-    benefits: [
-      "Strengthens natural immune defense for year-round protection",
-      "Supports healthy bone growth & vital daily energy levels",
-      "Helps reduce seasonal fatigue and minor health setbacks",
-      "Pectin-based, gelatin-free, safe & enjoyable daily treat"
-    ],
-    keyIngredients: ["Vitamin C", "Vitamin D3", "Zinc", "Elderberry Extract"],
-    ingredients: ["Vitamin C", "Vitamin D3", "Zinc Citrate", "Elderberry Extract"],
-    usage: "Children (ages 3+): 1 gummy daily. Chew thoroughly before swallowing.",
-    servings: "30 Gummies",
-    amazonUrl: "https://www.amazon.in/dp/B0BLISIMMUNITYKIDS?tag=blisstogether-21"
-  },
-  {
     id: "prod-4",
     slug: "hair-skin-nails",
     name: "Hair-Skin-Nails Gummies",
@@ -106,8 +31,8 @@ export const productsData: Product[] = [
     image: "/assets/products/hair-skin-nails.png",
     accentColor: "#BE123C",
     badge: "Hair • Skin • Nails",
-    flavour: "Juicy Strawberry Flavour",
-    description: "Nourish your inner beauty from within. Delicious Juicy Strawberry flavoured gummies featuring high-dose Natural Biotin (10,000 mcg), Amla extract, Hyaluronic Acid, and key anti-aging vitamins to promote lush hair growth, radiant glowing skin, and strong resilient nails.",
+    flavour: "Strawberry Flavour",
+    description: "Nourish your inner beauty from within. Delicious Strawberry flavoured gummies featuring high-dose Natural Biotin (10,000 mcg), Amla extract, Hyaluronic Acid, and key anti-aging vitamins to promote lush hair growth, radiant glowing skin, and strong resilient nails.",
     benefits: [
       "Promotes stronger, thicker hair growth and reduces hair breakage",
       "Deeply hydrates skin with Hyaluronic Acid for a natural radiant glow",
@@ -131,8 +56,8 @@ export const productsData: Product[] = [
     image: "/assets/products/pre-probiotic-multivitamin.png",
     accentColor: "#15803D",
     badge: "Daily Wellness",
-    flavour: "Citrus Grape Flavour",
-    description: "The complete daily foundation for optimal digestive balance and overall wellness. Delicious Citrus Grape flavoured gummies combining active spore-forming probiotics, prebiotic fiber, and essential multivitamin spectrum for maximum gut absorption.",
+    flavour: "Orange Flavour",
+    description: "The complete daily foundation for optimal digestive balance and overall wellness. Refreshing Orange flavoured gummies combining active spore-forming probiotics, prebiotic fiber, and essential multivitamin spectrum for maximum gut absorption.",
     benefits: [
       "Balances gut microbiome and promotes smooth digestion",
       "Fills daily nutritional gaps caused by fast-paced routines",
@@ -169,6 +94,81 @@ export const productsData: Product[] = [
     usage: "Adults: Take 1 gummy 30-45 minutes before bedtime.",
     servings: "30 Gummies",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSMELATONIN?tag=blisstogether-21"
+  },
+  {
+    id: "prod-2",
+    slug: "eye-care-gummies",
+    name: "Eye Care Gummies",
+    brandLine: "BLISS TOGETHER",
+    category: "Eye Health",
+    categorySlug: "eye",
+    subtitle: "Digital Screen Strain Relief & Vision Defense",
+    image: "/assets/products/eye-care.png",
+    accentColor: "#9C4D78",
+    badge: "Eye Health",
+    flavour: "Mixed Fruit Flavour",
+    description: "Designed for modern digital lifestyles. Delicious Mixed Fruit flavoured gummies formulated with premium Lutein, Zeaxanthin, Astaxanthin and DHA to protect eyes against blue light, reduce digital eye strain, and support long-term eye health.",
+    benefits: [
+      "Relieves eye fatigue and dryness from extended screen time",
+      "Filters harmful blue light emitted by phones, laptops & TVs",
+      "Supports macular health and sharp visual acuity",
+      "Rich in antioxidant carotenoids & Vitamin C & E"
+    ],
+    keyIngredients: ["Lutein", "Zeaxanthin", "Astaxanthin", "DHA", "Vitamin C"],
+    ingredients: ["Lutein", "Zeaxanthin", "Astaxanthin", "DHA", "Vitamin C & E"],
+    usage: "Take 1 gummy daily with meals or as recommended by a healthcare professional.",
+    servings: "30 Gummies",
+    amazonUrl: "https://www.amazon.in/dp/B0BLISSEYECARE?tag=blisstogether-21"
+  },
+  {
+    id: "prod-1",
+    slug: "kids-brain-booster",
+    name: "Kids Brain Booster Gummies",
+    brandLine: "BLISS TOGETHER",
+    category: "Brain & Focus",
+    categorySlug: "brain",
+    subtitle: "Supports Brain Development, Focus & Memory",
+    image: "/assets/products/kids-brain-booster.png",
+    accentColor: "#2E5B88",
+    badge: "Focus & Learning",
+    flavour: "Mango Flavour",
+    description: "Thoughtfully formulated to support growing minds. Delicious Mango flavoured gummies packed with DHA, Lutein, Zinc and essential B-vitamins to aid concentration, cognitive performance, and memory retention.",
+    benefits: [
+      "Supports cognitive performance & brain development",
+      "Enhances memory retention & concentration during learning",
+      "Protects young eyes during digital study hours",
+      "Gentle on young stomachs with 100% natural fruit flavours"
+    ],
+    keyIngredients: ["DHA", "Lutein", "Zinc", "Magnesium", "B-Vitamins"],
+    ingredients: ["DHA", "Lutein", "Zeaxanthin", "Zinc", "Magnesium", "Vitamins A, B1, B6, B12"],
+    usage: "Children (ages 4+): Take 1 to 2 gummies daily under adult supervision.",
+    servings: "30 Gummies",
+    amazonUrl: "https://www.amazon.in/dp/B0BLISSKIDSBRAIN?tag=blisstogether-21"
+  },
+  {
+    id: "prod-3",
+    slug: "kids-immunity-booster",
+    name: "Kids Immunity Booster Gummies",
+    brandLine: "BLISS TOGETHER",
+    category: "Immunity",
+    categorySlug: "immunity",
+    subtitle: "Daily Immune Defense & Vital Energy",
+    image: "/assets/products/kids-immunity.png",
+    accentColor: "#D97706",
+    badge: "Immunity",
+    flavour: "Mixed Berry Flavour",
+    description: "Empower your child's natural immune shield. Delicious Mixed Berry flavoured gummies blending high-potency Vitamin C, Vitamin D3, Zinc, and Elderberry extract to strengthen immunity against daily environmental challenges.",
+    benefits: [
+      "Strengthens natural immune defense for year-round protection",
+      "Supports healthy bone growth & vital daily energy levels",
+      "Helps reduce seasonal fatigue and minor health setbacks",
+      "Pectin-based, gelatin-free, safe & enjoyable daily treat"
+    ],
+    keyIngredients: ["Vitamin C", "Vitamin D3", "Zinc", "Elderberry Extract"],
+    ingredients: ["Vitamin C", "Vitamin D3", "Zinc Citrate", "Elderberry Extract"],
+    usage: "Children (ages 3+): 1 gummy daily. Chew thoroughly before swallowing.",
+    servings: "30 Gummies",
+    amazonUrl: "https://www.amazon.in/dp/B0BLISIMMUNITYKIDS?tag=blisstogether-21"
   }
 ];
 
