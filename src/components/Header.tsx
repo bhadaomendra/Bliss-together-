@@ -37,8 +37,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     }}>
       <div className="container header-container" style={{
         height: '100%',
-        maxWidth: '1420px',
-        padding: '0 2.25rem',
+        maxWidth: '1600px',
+        padding: '0 4vw',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'

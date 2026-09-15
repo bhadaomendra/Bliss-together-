@@ -79,18 +79,17 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       <section style={{
         position: 'relative',
-        minHeight: '82vh',
-        backgroundColor: '#0A231A',
-        backgroundImage: "linear-gradient(90deg, #0A231A 0%, rgba(10, 35, 26, 0.94) 32%, rgba(10, 35, 26, 0.65) 58%, rgba(10, 35, 26, 0.12) 88%), url('/assets/hero_wallpaper.jpg')",
+        minHeight: '86vh',
+        backgroundImage: "linear-gradient(90deg, rgba(10, 35, 26, 0.85) 0%, rgba(10, 35, 26, 0.62) 48%, rgba(10, 35, 26, 0.1) 82%), url('/assets/hero_wallpaper.jpg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'right 30%',
+        backgroundPosition: 'right center',
         display: 'flex',
         alignItems: 'center',
         padding: '5rem 0',
         overflow: 'hidden'
       }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '640px' }}>
+          <div style={{ maxWidth: '680px' }}>
             {/* Eyebrow */}
             <div style={{
               display: 'inline-flex',
