@@ -768,22 +768,22 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. FEATURED WELLNESS SECTION (FULL-BLEED SEAMLESS BACKGROUND PHOTO) */}
+      {/* 5. FEATURED WELLNESS SECTION (PRODUCT LEFT, TEXT CENTER, GIRL RIGHT) */}
       {/* ========================================================================= */}
       <section style={{
         position: 'relative',
         backgroundColor: '#F7F4EC',
-        padding: '3rem 0',
+        padding: '3.5rem 0',
         overflow: 'hidden',
         borderTop: '1px solid rgba(27,59,43,0.06)',
         borderBottom: '1px solid rgba(27,59,43,0.06)'
       }}>
-        {/* Right Background Photo (Slightly smaller, fading seamlessly into Section) */}
+        {/* Right Background Photo (GIRL IMAGE - UNTOUCHED & PRESERVED) */}
         <div style={{
           position: 'absolute',
-          top: '4%',
-          right: '2%',
-          bottom: '4%',
+          top: 0,
+          right: 0,
+          bottom: 0,
           width: '38%',
           zIndex: 1,
           pointerEvents: 'none'
@@ -796,15 +796,20 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center right',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 15%, black 45%)',
-              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 15%, black 45%)'
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)'
             }}
           />
         </div>
 
-        <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1280px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '0.95fr 1.45fr', gap: '2.5rem', alignItems: 'center' }}>
-            {/* Left Tub Visual (Realistic 3D Floor Shadow & Depth) */}
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(280px, 340px) 1fr 340px',
+            gap: '2rem',
+            alignItems: 'center'
+          }}>
+            {/* 1. LEFT: Product Tub Visual (Shifted to Far Left) */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -818,10 +823,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 bottom: '12px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                width: '78%',
+                width: '85%',
                 height: '24px',
                 borderRadius: '50%',
-                background: 'radial-gradient(ellipse at center, rgba(17, 35, 28, 0.32) 0%, rgba(17, 35, 28, 0.12) 55%, rgba(17, 35, 28, 0) 80%)',
+                background: 'radial-gradient(ellipse at center, rgba(17, 35, 28, 0.35) 0%, rgba(17, 35, 28, 0.12) 55%, rgba(17, 35, 28, 0) 80%)',
                 filter: 'blur(7px)',
                 pointerEvents: 'none',
                 zIndex: 1
@@ -832,7 +837,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 alt="Krishiv Calm & Anti Stress Gummy Tub Render"
                 style={{
                   width: '100%',
-                  maxHeight: '350px',
+                  maxHeight: '360px',
                   objectFit: 'contain',
                   position: 'relative',
                   zIndex: 2,
@@ -841,8 +846,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               />
             </div>
 
-            {/* Middle Featured Content */}
-            <div style={{ padding: '0.5rem 0', maxWidth: '580px' }}>
+            {/* 2. CENTER: Featured Text Content */}
+            <div style={{ padding: '0.5rem 0.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div style={{ fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#967230', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
                 FEATURED WELLNESS
               </div>
@@ -856,7 +861,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               </p>
 
               {/* 3 Outlined Circular Ingredient Badges */}
-              <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.85rem' }}>
+              <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.85rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
                   <div style={{ width: '30px', height: '30px', borderRadius: '50%', border: '1.5px solid #00A896', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00A896', backgroundColor: 'rgba(255,255,255,0.7)' }}>
                     <Leaf size={15} />
@@ -901,6 +906,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 <ArrowRight size={15} />
               </button>
             </div>
+
+            {/* 3. RIGHT: Spacer column corresponding to girl background image */}
+            <div style={{ pointerEvents: 'none' }} />
           </div>
         </div>
       </section>
