@@ -155,9 +155,9 @@ export const Journal: React.FC<JournalProps> = ({ onNavigate }) => {
       <section style={{ padding: '3.5rem 1.5rem' }}>
         <div className="container">
           
-          <div style={{
+          <div className="journal-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '2rem'
           }}>
             {articles.map((article) => (

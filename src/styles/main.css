@@ -454,43 +454,94 @@ button {
 @media (max-width: 768px) {
   /* Prevent ANY website content, text, cards, or footer links from being obscured at the bottom of the page */
   body {
-    padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .footer-bottom-bar {
-    padding-bottom: calc(1.2rem + 50px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(1.2rem + 60px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .whatsapp-floating-widget {
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
-    right: clamp(14px, 4vw, 20px) !important;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 14px !important;
     left: auto !important;
     width: auto !important;
-    padding: 0.5rem 0.95rem !important;
-    font-size: 0.78125rem !important;
-    gap: 0.45rem !important;
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35) !important;
-    max-height: 38px !important;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.75rem !important;
+    gap: 0.4rem !important;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4) !important;
+    max-height: 36px !important;
     line-height: 1 !important;
   }
 
   .wa-widget-label {
     display: inline-block !important;
-    font-size: 0.78125rem !important;
+    font-size: 0.75rem !important;
     font-weight: 700 !important;
     letter-spacing: 0.01em !important;
     white-space: nowrap !important;
+  }
+
+  /* CONTACT FORM MOBILE RESPONSIVE FIXES */
+  .contact-form-card {
+    grid-template-columns: 1fr !important;
+    border-radius: 18px !important;
+  }
+  .contact-concierge-col,
+  .contact-fields-col {
+    padding: 1.65rem 1.25rem !important;
+  }
+  .contact-fields-col form {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* ABOUT PAGE MOBILE RESPONSIVE FIXES */
+  .about-container {
+    width: min(1280px, calc(100% - 24px)) !important;
+  }
+  .about-story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .about-identity-grid {
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .about-identity-card {
+    width: 210px !important;
+    height: 210px !important;
+  }
+  .about-identity {
+    padding: 2rem 1rem 1.75rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* JOURNAL GRID MOBILE RESPONSIVE FIXES */
+  .journal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 }
 
 @media (max-width: 380px) {
   .whatsapp-floating-widget {
-    padding: 0.45rem 0.85rem !important;
-    font-size: 0.75rem !important;
-    gap: 0.4rem !important;
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.71875rem !important;
+    gap: 0.35rem !important;
   }
   .wa-widget-label {
-    font-size: 0.75rem !important;
+    font-size: 0.71875rem !important;
+  }
+  .about-identity-card {
+    width: 190px !important;
+    height: 190px !important;
+    padding: 1rem 0.75rem !important;
+  }
+  .about-identity-card img {
+    height: 44px !important;
+    max-width: 130px !important;
   }
 }
 

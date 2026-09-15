@@ -37,7 +37,7 @@ export const ContactForm: React.FC = () => {
         gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))'
       }}>
         {/* Left Dark Green Concierge Card */}
-        <div style={{
+        <div className="contact-concierge-col" style={{
           backgroundColor: '#183C2D',
           color: '#FFFFFF',
           padding: '3rem 2.5rem',
@@ -45,7 +45,9 @@ export const ContactForm: React.FC = () => {
           flexDirection: 'column',
           justifyContent: 'space-between',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          wordBreak: 'break-word',
+          overflowWrap: 'anywhere'
         }}>
           {/* Subtle elegant pattern background accent */}
           <div style={{
@@ -175,7 +177,7 @@ export const ContactForm: React.FC = () => {
                   <div style={{ fontSize: '0.75rem', color: '#9BB5A6', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>
                     EMAIL INQUIRY
                   </div>
-                  <a href={`mailto:${siteConfig.email}`} style={{ fontSize: '0.96875rem', fontWeight: 600, color: '#B28B45', textDecoration: 'none' }}>
+                  <a href={`mailto:${siteConfig.email}`} style={{ fontSize: '0.96875rem', fontWeight: 600, color: '#B28B45', textDecoration: 'none', wordBreak: 'break-all', overflowWrap: 'anywhere' }}>
                     {siteConfig.email}
                   </a>
                 </div>
@@ -241,7 +243,7 @@ export const ContactForm: React.FC = () => {
         </div>
 
         {/* Right Form Card */}
-        <div style={{
+        <div className="contact-fields-col" style={{
           backgroundColor: '#FFFFFF',
           padding: '3rem 2.5rem',
           display: 'flex',
