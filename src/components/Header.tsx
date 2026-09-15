@@ -15,7 +15,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     { label: 'HOME', path: '/' },
     { label: 'OUR STORY', path: '/about' },
     { label: 'PRODUCTS', path: '/products', hasDropdown: true },
-    { label: 'SCIENCE', path: '/behind-the-product' },
     { label: 'JOURNAL', path: '/journal' },
     { label: 'CONTACT', path: '/contact' }
   ];

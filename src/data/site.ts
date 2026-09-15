@@ -40,10 +40,6 @@ export const pageSeoData: Record<string, PageSeo> = {
     title: "Our Wellness Range | Bliss Together Gummies",
     description: "Explore Bliss Together's science-backed gummy nutrition for Brain & Focus, Eye Health, Immunity, Hair-Skin-Nails, Daily Multivitamins & Sleep Support."
   },
-  behind: {
-    title: "Behind The Product | Science, Quality & Transparency",
-    description: "Discover how Bliss Together gummies are formulated with premium ingredients, strict quality controls, and purposeful science."
-  },
   journal: {
     title: "Wellness Journal | Health Tips & Research by Bliss Together",
     description: "Explore articles, nutritional guides, and health insights from Bliss Together and Krishiv Wellness LLP."

@@ -947,7 +947,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </div>
 
             <button
-              onClick={() => onNavigate('/behind-the-product')}
+              onClick={() => onNavigate('/journal')}
               style={{ fontSize: '0.875rem', fontWeight: 700, color: '#967230', display: 'flex', alignItems: 'center', gap: '0.35rem', cursor: 'pointer', background: 'none', border: 'none' }}
             >
               <span>Explore All Articles</span>
@@ -980,7 +980,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   7 Natural Tips for Better Sleep
                 </h3>
                 <button
-                  onClick={() => onNavigate('/behind-the-product')}
+                  onClick={() => onNavigate('/journal')}
                   style={{ fontSize: '0.78125rem', fontWeight: 700, color: 'var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
                 >
                   <span>Read More</span>
@@ -1013,7 +1013,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   How to Manage Stress in Everyday Life
                 </h3>
                 <button
-                  onClick={() => onNavigate('/behind-the-product')}
+                  onClick={() => onNavigate('/journal')}
                   style={{ fontSize: '0.78125rem', fontWeight: 700, color: 'var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
                 >
                   <span>Read More</span>
@@ -1046,7 +1046,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   Protect Your Eyes in the Digital Age
                 </h3>
                 <button
-                  onClick={() => onNavigate('/behind-the-product')}
+                  onClick={() => onNavigate('/journal')}
                   style={{ fontSize: '0.78125rem', fontWeight: 700, color: 'var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
                 >
                   <span>Read More</span>

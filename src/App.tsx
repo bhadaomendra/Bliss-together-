@@ -5,7 +5,6 @@ import { ProductModal } from './components/ProductModal';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { ProductsPage } from './pages/ProductsPage';
-import { BehindProduct } from './pages/BehindProduct';
 import { Journal } from './pages/Journal';
 import { Contact } from './pages/Contact';
 import { pageSeoData } from './data/site';
@@ -33,7 +32,6 @@ export const App: React.FC = () => {
     let key = 'home';
     if (currentPath === '/about') key = 'about';
     else if (currentPath === '/products') key = 'products';
-    else if (currentPath === '/behind-the-product') key = 'behind';
     else if (currentPath === '/journal') key = 'journal';
     else if (currentPath === '/contact') key = 'contact';
 
@@ -53,8 +51,6 @@ export const App: React.FC = () => {
         return <About onNavigate={navigateTo} />;
       case '/products':
         return <ProductsPage onNavigate={navigateTo} onQuickView={setSelectedProduct} />;
-      case '/behind-the-product':
-        return <BehindProduct onNavigate={navigateTo} />;
       case '/journal':
         return <Journal onNavigate={navigateTo} />;
       case '/contact':
