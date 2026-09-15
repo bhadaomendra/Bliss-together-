@@ -279,24 +279,32 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           <div style={{
             backgroundColor: '#FFFFFF',
             borderRadius: '22px',
-            padding: '1.15rem 1.5rem 1.15rem',
+            padding: '1.15rem 1.25rem 1rem',
             boxShadow: '0 12px 36px rgba(0, 0, 0, 0.04)',
             border: '1px solid rgba(24, 60, 45, 0.08)',
             textAlign: 'left',
-            maxWidth: '1120px',
-            margin: '0 auto'
+            maxWidth: '1260px',
+            margin: '0 auto',
+            overflow: 'hidden'
           }}>
             
-            {/* Filter Row (1 Single Line on Desktop) */}
+            {/* Filter Row (Fits cleanly inside card) */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '0.5rem',
+              justifyContent: 'center',
+              gap: '0.4rem',
               marginBottom: '1rem',
               width: '100%'
             }}>
-              <div className="filter-pills-row" style={{ width: '100%', justifyContent: 'space-between' }}>
+              <div className="filter-pills-row" style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.4rem',
+                flexWrap: 'wrap',
+                width: '100%'
+              }}>
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -318,8 +326,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '0.35rem',
-                        padding: '0.45rem 0.95rem',
+                        gap: '0.3rem',
+                        padding: '0.4rem 0.75rem',
                         borderRadius: '50px',
                         fontSize: '0.8125rem',
                         fontWeight: 700,
@@ -341,27 +349,27 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
               </div>
             </div>
 
-            {/* Centered Wellness Tag — no search box */}
+            {/* Centered Wellness Tag — Single Line & Centered */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              minHeight: '52px',
-              padding: '0.35rem 1rem 0.1rem',
-              borderTop: '1px solid rgba(24, 60, 45, 0.05)'
+              minHeight: '46px',
+              padding: '0.4rem 1rem 0.1rem',
+              borderTop: '1px solid rgba(24, 60, 45, 0.06)'
             }}>
               <div style={{
-                fontFamily: '\"Dancing Script\", \"Alex Brush\", cursive',
-                fontSize: '1.25rem',
+                fontFamily: '"Dancing Script", "Alex Brush", cursive',
+                fontSize: '1.35rem',
                 fontWeight: 700,
                 color: '#4B6B52',
                 lineHeight: 1.2,
-                transform: 'rotate(-3deg)',
+                transform: 'rotate(-1deg)',
                 textAlign: 'center',
-                margin: 0
+                margin: 0,
+                whiteSpace: 'nowrap'
               }}>
-                Wellness for<br />
-                Every Generation <span style={{ color: '#B28B45' }}>♡</span>
+                Wellness for Every Generation <span style={{ color: '#B28B45' }}>♡</span>
               </div>
             </div>
 
