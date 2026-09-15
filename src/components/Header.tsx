@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     <header className="site-header" style={{
       backgroundColor: '#0A251C',
       borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-      height: '84px',
+      height: 'var(--header-height)',
       position: 'sticky',
       top: 0,
       zIndex: 1000
@@ -131,7 +131,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       {mobileMenuOpen && (
         <div style={{
           position: 'fixed',
-          top: '84px',
+          top: 'var(--header-height)',
           left: 0,
           right: 0,
           bottom: 0,
