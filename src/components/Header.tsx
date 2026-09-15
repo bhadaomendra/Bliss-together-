@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Heart, ChevronDown } from 'lucide-react';
+import { productsData } from '../data/products';
 
 interface HeaderProps {
   currentPath: string;
@@ -8,6 +9,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
 
   const navItems = [
     { label: 'HOME', path: '/' },
