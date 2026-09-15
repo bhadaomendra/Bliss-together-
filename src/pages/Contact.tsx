@@ -69,7 +69,7 @@ export const Contact: React.FC = () => {
             margin: '0 auto',
             letterSpacing: '0.01em'
           }}>
-            Reach out to <strong>{siteConfig.primaryContact}</strong> and the team at <strong>{siteConfig.companyName}</strong> for product inquiries, distribution partnerships, or general assistance.
+            Reach out to the team at <strong>{siteConfig.companyName}</strong> for product inquiries, distribution partnerships, or general assistance.
           </p>
         </div>
       </section>

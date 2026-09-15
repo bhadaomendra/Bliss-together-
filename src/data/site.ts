@@ -13,9 +13,9 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   brandName: "Bliss Together",
   companyName: "Krishiv Wellness LLP",
-  websiteDomain: "blisstogetherwellness.com",
+  websiteDomain: "blisstogether.in",
   tagline: "NOURISH. BALANCE. THRIVE.", // FINAL and LOCKED tagline
-  primaryContact: "Shailendra Pal Singh",
+  primaryContact: "Krishiv Wellness LLP",
   phone: "80948-12345",
   phoneRaw: "+918094812345",
   email: "Blisstogether.wellness@gmail.com",
@@ -46,6 +46,6 @@ export const pageSeoData: Record<string, PageSeo> = {
   },
   contact: {
     title: "Contact Us | Bliss Together — Krishiv Wellness LLP",
-    description: "Get in touch with Bliss Together for inquiries, distribution, or product assistance. Call 80948-12345 or email Blisstogether.wellness@gmail.com."
+    description: "Get in touch with Bliss Together and Krishiv Wellness LLP for inquiries, distribution, or product assistance. Email Blisstogether.wellness@gmail.com or connect via WhatsApp."
   }
 };

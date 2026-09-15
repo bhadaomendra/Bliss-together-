@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ProductModal } from './components/ProductModal';
+import { WhatsAppWidget } from './components/WhatsAppWidget';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { ProductsPage } from './pages/ProductsPage';
@@ -69,6 +70,7 @@ export const App: React.FC = () => {
       </div>
       <Footer onNavigate={navigateTo} />
       <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      <WhatsAppWidget />
     </div>
   );
 };
