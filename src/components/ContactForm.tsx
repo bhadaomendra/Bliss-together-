@@ -145,7 +145,7 @@ export const ContactForm: React.FC = () => {
                     WHATSAPP SUPPORT
                   </div>
                   <a
-                    href={`https://wa.me/${siteConfig.whatsappNumber}`}
+                    href={siteConfig.getWhatsAppLink()}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#25D366', textDecoration: 'none' }}
@@ -213,7 +213,7 @@ export const ContactForm: React.FC = () => {
           {/* Quick WhatsApp Action Button */}
           <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
             <a
-              href={`https://wa.me/${siteConfig.whatsappNumber}`}
+              href={siteConfig.getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
               style={{

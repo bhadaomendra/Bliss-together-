@@ -4,7 +4,7 @@ import { siteConfig } from '../data/site';
 export const WhatsAppWidget: React.FC = () => {
   return (
     <a
-      href={`https://wa.me/${siteConfig.whatsappNumber}`}
+      href={siteConfig.getWhatsAppLink()}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

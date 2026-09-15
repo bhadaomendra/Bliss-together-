@@ -8,7 +8,11 @@ export interface SiteConfig {
   phoneRaw: string;
   email: string;
   whatsappNumber: string;
+  whatsappDefaultMessage: string;
+  getWhatsAppLink: (customMessage?: string) => string;
 }
+
+const DEFAULT_WA_MESSAGE = "Hi, I’m interested in Bliss Together products. Please share more details about your products and how I can order.";
 
 export const siteConfig: SiteConfig = {
   brandName: "Bliss Together",
@@ -19,7 +23,12 @@ export const siteConfig: SiteConfig = {
   phone: "80948-12345",
   phoneRaw: "+918094812345",
   email: "Blisstogether.wellness@gmail.com",
-  whatsappNumber: "918094812345"
+  whatsappNumber: "918094812345",
+  whatsappDefaultMessage: DEFAULT_WA_MESSAGE,
+  getWhatsAppLink: (customMessage?: string) => {
+    const msg = customMessage || DEFAULT_WA_MESSAGE;
+    return `https://wa.me/918094812345?text=${encodeURIComponent(msg)}`;
+  }
 };
 
 export interface PageSeo {
