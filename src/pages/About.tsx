@@ -11,7 +11,7 @@ const teal = '#079E8D';
 const cream = '#FBF9F5';
 
 export const About: React.FC<AboutProps> = ({ onNavigate }) => (
-  <main className="about-page" style={{ background: cream, color: green, paddingTop: 'var(--header-height)' }}>
+  <main className="about-page" style={{ background: cream, color: green }}>
     <style>{`
       .about-page { overflow: hidden; }
       .about-container { width: min(1280px, calc(100% - 72px)); margin: 0 auto; }
