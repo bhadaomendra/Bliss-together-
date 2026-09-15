@@ -359,3 +359,30 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     max-width: calc(100vw - 24px) !important;
   }
 }
+
+@media (max-width: 640px) {
+  .contact-form-card {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .contact-form-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .contact-form-card > div {
+    min-width: 0 !important;
+  }
+  .contact-form-card > div:first-child {
+    padding: 2rem 1.25rem !important;
+  }
+  .contact-form-card > div:first-child > div {
+    min-width: 0 !important;
+  }
+  .contact-form-card > div:first-child a,
+  .contact-form-card > div:first-child div {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .contact-form-card > div:first-child > div > div {
+    min-width: 0 !important;
+  }
+}
