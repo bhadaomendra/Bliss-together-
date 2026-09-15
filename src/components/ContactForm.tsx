@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, User, Globe } from 'lucide-react';
+import { Mail, Phone, Send, CheckCircle2, User, Globe, MessageSquare } from 'lucide-react';
 import { siteConfig } from '../data/site';
 
 export const ContactForm: React.FC = () => {
@@ -18,242 +18,440 @@ export const ContactForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate polished inquiry send
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 800);
+    }, 700);
   };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3.5rem', alignItems: 'start' }}>
-      {/* Contact Info Card */}
+    <div style={{ maxWidth: '1160px', margin: '0 auto' }}>
+      {/* Main Unified Split Card */}
       <div style={{
-        backgroundColor: 'var(--color-primary)',
-        color: 'var(--color-white)',
-        borderRadius: 'var(--radius-lg)',
-        padding: '3rem 2.5rem',
-        boxShadow: 'var(--shadow-lg)',
-        position: 'relative',
-        overflow: 'hidden'
+        backgroundColor: '#FFFFFF',
+        borderRadius: '24px',
+        boxShadow: '0 20px 50px rgba(24, 60, 45, 0.08)',
+        border: '1px solid rgba(24, 60, 45, 0.08)',
+        overflow: 'hidden',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))'
       }}>
+        {/* Left Dark Green Concierge Card */}
         <div style={{
-          position: 'absolute',
-          bottom: '-30px',
-          right: '-30px',
-          width: '200px',
-          height: '200px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(197, 160, 89, 0.2) 0%, rgba(0,0,0,0) 70%)'
-        }} />
+          backgroundColor: '#183C2D',
+          color: '#FFFFFF',
+          padding: '3rem 2.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+          {/* Subtle elegant pattern background accent */}
+          <div style={{
+            position: 'absolute',
+            top: '-50px',
+            right: '-50px',
+            width: '220px',
+            height: '220px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(178, 139, 69, 0.15) 0%, rgba(0,0,0,0) 70%)',
+            pointerEvents: 'none'
+          }} />
 
-        <div className="subheading-tag" style={{ color: 'var(--color-accent)' }}>Get In Touch</div>
-        <h3 className="heading-md" style={{ color: 'var(--color-cream-bg)', marginBottom: '1rem' }}>
-          Connect With Us
-        </h3>
-        <p style={{ color: '#C3D4CB', marginBottom: '2.5rem', fontSize: '1rem', lineHeight: '1.6' }}>
-          Have questions about our gummy range, corporate orders, or partnership opportunities? We are always here to help.
-        </p>
+          <div>
+            {/* Top Brand Pill */}
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.35rem 0.85rem',
+              borderRadius: '50px',
+              backgroundColor: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(178, 139, 69, 0.3)',
+              fontSize: '0.75rem',
+              fontWeight: 800,
+              letterSpacing: '0.15em',
+              color: '#B28B45',
+              textTransform: 'uppercase',
+              marginBottom: '1.25rem'
+            }}>
+              <span>✦ KRISHIV WELLNESS LLP</span>
+            </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '0.75rem', borderRadius: '50%', color: 'var(--color-accent)' }}>
-              <User size={20} />
-            </div>
-            <div>
-              <div style={{ fontSize: '0.8125rem', color: '#8CA497', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Primary Contact & Company</div>
-              <div style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--color-white)' }}>{siteConfig.primaryContact}</div>
-              <div style={{ fontSize: '0.9rem', color: '#C3D4CB' }}>{siteConfig.companyName}</div>
-            </div>
-          </div>
+            <h3 style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontSize: '2.2rem',
+              fontWeight: 700,
+              color: '#F7F5EE',
+              lineHeight: 1.15,
+              marginBottom: '0.85rem'
+            }}>
+              Connect With Our Team
+            </h3>
 
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '0.75rem', borderRadius: '50%', color: 'var(--color-accent)' }}>
-              <Phone size={20} />
-            </div>
-            <div>
-              <div style={{ fontSize: '0.8125rem', color: '#8CA497', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Phone / WhatsApp</div>
-              <a href={`tel:${siteConfig.phoneRaw}`} style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--color-white)' }}>
-                {siteConfig.phone}
-              </a>
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '0.75rem', borderRadius: '50%', color: 'var(--color-accent)' }}>
-              <Mail size={20} />
-            </div>
-            <div>
-              <div style={{ fontSize: '0.8125rem', color: '#8CA497', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email Inquiry</div>
-              <a href={`mailto:${siteConfig.email}`} style={{ fontSize: '1.05rem', fontWeight: 500, color: 'var(--color-accent)' }}>
-                {siteConfig.email}
-              </a>
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-            <div style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '0.75rem', borderRadius: '50%', color: 'var(--color-accent)' }}>
-              <Globe size={20} />
-            </div>
-            <div>
-              <div style={{ fontSize: '0.8125rem', color: '#8CA497', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Official Website</div>
-              <div style={{ fontSize: '1.05rem', fontWeight: 500, color: 'var(--color-white)' }}>
-                {siteConfig.websiteDomain}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div style={{
-        backgroundColor: 'var(--color-white)',
-        borderRadius: 'var(--radius-lg)',
-        padding: '3rem 2.5rem',
-        border: '1px solid var(--color-sage-border)',
-        boxShadow: 'var(--shadow-md)'
-      }}>
-        {submitted ? (
-          <div style={{ textAlign: 'center', padding: '2.5rem 1rem' }}>
-            <CheckCircle2 size={56} style={{ color: 'var(--color-primary)', margin: '0 auto 1.25rem' }} />
-            <h3 className="heading-md" style={{ marginBottom: '0.75rem' }}>Enquiry Received!</h3>
-            <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem', lineHeight: '1.6' }}>
-              Thank you, <strong>{formData.name}</strong>. Your message has been sent directly to {siteConfig.primaryContact} at Krishiv Wellness LLP. We will get back to you shortly!
+            <p style={{ color: '#D4E2D9', fontSize: '0.96875rem', lineHeight: '1.65', marginBottom: '2.25rem' }}>
+              Have questions about our gummy formulations, corporate orders, or retail partnerships? We are always here to help.
             </p>
-            <button
-              onClick={() => {
-                setSubmitted(false);
-                setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-              }}
-              className="btn btn-secondary"
-            >
-              Send Another Message
-            </button>
+
+            {/* Contact Items */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.65rem' }}>
+              
+              {/* Item 1 */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#B28B45',
+                  flexShrink: 0
+                }}>
+                  <User size={22} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.75rem', color: '#9BB5A6', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>
+                    PRIMARY CONTACT & COMPANY
+                  </div>
+                  <div style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#FFFFFF' }}>
+                    {siteConfig.primaryContact}
+                  </div>
+                  <div style={{ fontSize: '0.875rem', color: '#CBE0D4' }}>
+                    {siteConfig.companyName}
+                  </div>
+                </div>
+              </div>
+
+              {/* Item 2 */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#B28B45',
+                  flexShrink: 0
+                }}>
+                  <Phone size={22} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.75rem', color: '#9BB5A6', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>
+                    PHONE / WHATSAPP
+                  </div>
+                  <a href={`tel:${siteConfig.phoneRaw}`} style={{ fontSize: '1.0625rem', fontWeight: 700, color: '#FFFFFF', textDecoration: 'none' }}>
+                    {siteConfig.phone}
+                  </a>
+                </div>
+              </div>
+
+              {/* Item 3 */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#B28B45',
+                  flexShrink: 0
+                }}>
+                  <Mail size={22} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.75rem', color: '#9BB5A6', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>
+                    EMAIL INQUIRY
+                  </div>
+                  <a href={`mailto:${siteConfig.email}`} style={{ fontSize: '0.96875rem', fontWeight: 600, color: '#B28B45', textDecoration: 'none' }}>
+                    {siteConfig.email}
+                  </a>
+                </div>
+              </div>
+
+              {/* Item 4 */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.15rem' }}>
+                <div style={{
+                  width: '46px',
+                  height: '46px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#B28B45',
+                  flexShrink: 0
+                }}>
+                  <Globe size={22} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.75rem', color: '#9BB5A6', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>
+                    OFFICIAL WEBSITE
+                  </div>
+                  <div style={{ fontSize: '0.96875rem', fontWeight: 600, color: '#FFFFFF' }}>
+                    {siteConfig.websiteDomain}
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Send Us a Message</h3>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
-              <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text-dark)', marginBottom: '0.35rem' }}>
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="e.g. Rahul Sharma"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  style={{
-                    width: '100%',
-                    padding: '0.85rem 1rem',
-                    borderRadius: '8px',
-                    border: '1px solid var(--color-sage-border)',
-                    backgroundColor: 'var(--color-cream-bg)',
-                    outline: 'none'
-                  }}
-                />
-              </div>
+          {/* Quick WhatsApp Action Button */}
+          <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <a
+              href={`https://wa.me/${siteConfig.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.65rem',
+                width: '100%',
+                padding: '0.85rem 1.25rem',
+                borderRadius: '12px',
+                backgroundColor: '#25D366',
+                color: '#FFFFFF',
+                fontWeight: 700,
+                fontSize: '0.875rem',
+                textDecoration: 'none',
+                boxShadow: '0 4px 14px rgba(37, 211, 102, 0.25)',
+                transition: 'transform 0.2s ease'
+              }}
+            >
+              <MessageSquare size={18} />
+              <span>Chat Directly on WhatsApp</span>
+            </a>
+          </div>
 
-              <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text-dark)', marginBottom: '0.35rem' }}>
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="name@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  style={{
-                    width: '100%',
-                    padding: '0.85rem 1rem',
-                    borderRadius: '8px',
-                    border: '1px solid var(--color-sage-border)',
-                    backgroundColor: 'var(--color-cream-bg)',
-                    outline: 'none'
-                  }}
-                />
+        </div>
+
+        {/* Right Form Card */}
+        <div style={{
+          backgroundColor: '#FFFFFF',
+          padding: '3rem 2.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center'
+        }}>
+          {submitted ? (
+            <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
+              <div style={{
+                width: '64px',
+                height: '64px',
+                borderRadius: '50%',
+                backgroundColor: '#E3F0E6',
+                color: '#183C2D',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 1.25rem'
+              }}>
+                <CheckCircle2 size={36} />
               </div>
+              <h3 style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: '1.8rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.65rem' }}>
+                Enquiry Received!
+              </h3>
+              <p style={{ color: '#4A5D52', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+                Thank you, <strong>{formData.name}</strong>. Your message has been sent directly to {siteConfig.primaryContact} at Krishiv Wellness LLP. We will respond to you shortly!
+              </p>
+              <button
+                onClick={() => {
+                  setSubmitted(false);
+                  setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+                }}
+                style={{
+                  padding: '0.75rem 1.75rem',
+                  borderRadius: '50px',
+                  backgroundColor: '#183C2D',
+                  color: '#FFFFFF',
+                  fontWeight: 700,
+                  fontSize: '0.875rem',
+                  cursor: 'pointer',
+                  border: 'none'
+                }}
+              >
+                Send Another Message
+              </button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <h3 style={{
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontSize: '1.85rem',
+                fontWeight: 700,
+                color: '#183C2D',
+                marginBottom: '0.35rem'
+              }}>
+                Send Us a Message
+              </h3>
+              <p style={{ color: '#5A6E63', fontSize: '0.875rem', marginBottom: '1.75rem' }}>
+                Fill in your details below and our team will get back to you within 24 hours.
+              </p>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
-              <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text-dark)', marginBottom: '0.35rem' }}>
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="+91 98765 43210"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  style={{
-                    width: '100%',
-                    padding: '0.85rem 1rem',
-                    borderRadius: '8px',
-                    border: '1px solid var(--color-sage-border)',
-                    backgroundColor: 'var(--color-cream-bg)',
-                    outline: 'none'
-                  }}
-                />
+              {/* Name & Email Row */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.15rem', marginBottom: '1.15rem' }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.35rem' }}>
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Rahul Sharma"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    style={{
+                      width: '100%',
+                      padding: '0.8rem 1rem',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(24, 60, 45, 0.15)',
+                      backgroundColor: '#FAF8F5',
+                      fontSize: '0.90625rem',
+                      color: '#183C2D',
+                      outline: 'none'
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.35rem' }}>
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="name@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    style={{
+                      width: '100%',
+                      padding: '0.8rem 1rem',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(24, 60, 45, 0.15)',
+                      backgroundColor: '#FAF8F5',
+                      fontSize: '0.90625rem',
+                      color: '#183C2D',
+                      outline: 'none'
+                    }}
+                  />
+                </div>
               </div>
 
-              <div>
-                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text-dark)', marginBottom: '0.35rem' }}>
-                  Subject *
+              {/* Phone & Subject Row */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.15rem', marginBottom: '1.15rem' }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.35rem' }}>
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    style={{
+                      width: '100%',
+                      padding: '0.8rem 1rem',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(24, 60, 45, 0.15)',
+                      backgroundColor: '#FAF8F5',
+                      fontSize: '0.90625rem',
+                      color: '#183C2D',
+                      outline: 'none'
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.35rem' }}>
+                    Subject *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Product Inquiry / Bulk Order"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    style={{
+                      width: '100%',
+                      padding: '0.8rem 1rem',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(24, 60, 45, 0.15)',
+                      backgroundColor: '#FAF8F5',
+                      fontSize: '0.90625rem',
+                      color: '#183C2D',
+                      outline: 'none'
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Message Textarea */}
+              <div style={{ marginBottom: '1.5rem' }}>
+                <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', marginBottom: '0.35rem' }}>
+                  Your Message *
                 </label>
-                <input
-                  type="text"
+                <textarea
                   required
-                  placeholder="e.g. Product Inquiry / Bulk Order"
-                  value={formData.subject}
-                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  rows={4}
+                  placeholder="How can we assist you with Bliss Together wellness gummies?"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   style={{
                     width: '100%',
-                    padding: '0.85rem 1rem',
-                    borderRadius: '8px',
-                    border: '1px solid var(--color-sage-border)',
-                    backgroundColor: 'var(--color-cream-bg)',
-                    outline: 'none'
+                    padding: '0.8rem 1rem',
+                    borderRadius: '10px',
+                    border: '1px solid rgba(24, 60, 45, 0.15)',
+                    backgroundColor: '#FAF8F5',
+                    fontSize: '0.90625rem',
+                    color: '#183C2D',
+                    outline: 'none',
+                    resize: 'vertical'
                   }}
                 />
               </div>
-            </div>
 
-            <div style={{ marginBottom: '1.75rem' }}>
-              <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-text-dark)', marginBottom: '0.35rem' }}>
-                Your Message *
-              </label>
-              <textarea
-                required
-                rows={5}
-                placeholder="How can we assist you with Bliss Together wellness gummies?"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={loading}
                 style={{
                   width: '100%',
-                  padding: '0.85rem 1rem',
-                  borderRadius: '8px',
-                  border: '1px solid var(--color-sage-border)',
-                  backgroundColor: 'var(--color-cream-bg)',
-                  outline: 'none',
-                  resize: 'vertical'
+                  padding: '0.95rem 1.5rem',
+                  borderRadius: '12px',
+                  backgroundColor: '#183C2D',
+                  color: '#FFFFFF',
+                  fontWeight: 800,
+                  fontSize: '0.875rem',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  boxShadow: '0 6px 18px rgba(24, 60, 45, 0.18)',
+                  transition: 'background-color 0.2s ease'
                 }}
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="btn btn-primary"
-              style={{ width: '100%', padding: '1rem' }}
-            >
-              <Send size={16} />
-              <span>{loading ? 'Sending Enquiry...' : 'SEND ENQUIRY'}</span>
-            </button>
-          </form>
-        )}
+              >
+                <Send size={16} />
+                <span>{loading ? 'Sending Enquiry...' : 'SEND ENQUIRY'}</span>
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );
