@@ -44,6 +44,10 @@ export const pageSeoData: Record<string, PageSeo> = {
     title: "Behind The Product | Science, Quality & Transparency",
     description: "Discover how Bliss Together gummies are formulated with premium ingredients, strict quality controls, and purposeful science."
   },
+  journal: {
+    title: "Wellness Journal | Health Tips & Research by Bliss Together",
+    description: "Explore articles, nutritional guides, and health insights from Bliss Together and Krishiv Wellness LLP."
+  },
   contact: {
     title: "Contact Us | Bliss Together — Krishiv Wellness LLP",
     description: "Get in touch with Bliss Together for inquiries, distribution, or product assistance. Call 80948-12345 or email Blisstogether.wellness@gmail.com."
