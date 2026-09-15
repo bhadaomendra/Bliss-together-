@@ -67,64 +67,94 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
         overflow: 'hidden'
       }}>
         
-        {/* Right Pale Green Organic Background Blob Shape */}
-        <div style={{
-          position: 'absolute',
-          right: '-10px',
-          top: '0%',
-          width: '290px',
-          height: '300px',
-          background: '#E2EEE5',
-          borderRadius: '50% 0 0 50% / 50% 0 0 50%',
-          opacity: 0.55,
-          pointerEvents: 'none',
-          zIndex: 0
-        }} />
-
-        {/* Left Handwritten Quote (Filling Left Gap) */}
+        {/* Left Shape + Centered Quote Wrapper */}
         <div className="desktop-only-quote" style={{
           position: 'absolute',
-          left: '3.5%',
-          top: '38%',
-          transform: 'translateY(-50%) rotate(-4deg)',
-          fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.15rem, 1.5vw, 1.45rem)',
-          fontWeight: 700,
-          color: '#183C2D',
-          lineHeight: 1.2,
-          textAlign: 'center',
+          left: '0',
+          top: '50%',
+          transform: 'translateY(-60%)',
+          width: '260px',
+          height: '260px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           pointerEvents: 'none',
-          zIndex: 2,
-          letterSpacing: '0.02em'
+          zIndex: 1
         }}>
-          Smaller<br />
-          Steps<br />
-          Healthier<br />
-          Tomorrows<br />
-          <span style={{ fontSize: '1.1rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
+          {/* Pale Green Organic Shape Background */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: '#E2EEE5',
+            borderRadius: '0 50% 50% 0 / 0 50% 50% 0',
+            opacity: 0.6,
+            zIndex: 0
+          }} />
+
+          {/* Left Handwritten Quote (Perfectly Centered Inside Shape) */}
+          <div style={{
+            position: 'relative',
+            zIndex: 2,
+            fontFamily: '"Dancing Script", "Alex Brush", cursive',
+            fontSize: 'clamp(1.1rem, 1.4vw, 1.35rem)',
+            fontWeight: 700,
+            color: '#183C2D',
+            lineHeight: 1.2,
+            textAlign: 'center',
+            transform: 'rotate(-3deg) translateX(-12px)',
+            letterSpacing: '0.02em'
+          }}>
+            Smaller<br />
+            Steps<br />
+            Healthier<br />
+            Tomorrows<br />
+            <span style={{ fontSize: '1.05rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
+          </div>
         </div>
 
-        {/* Right Handwritten Quote (Filling Right Gap) */}
+        {/* Right Shape + Centered Quote Wrapper */}
         <div className="desktop-only-quote" style={{
           position: 'absolute',
-          right: '3.5%',
-          top: '38%',
-          transform: 'translateY(-50%) rotate(4deg)',
-          fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.15rem, 1.5vw, 1.45rem)',
-          fontWeight: 700,
-          color: '#183C2D',
-          lineHeight: 1.2,
-          textAlign: 'center',
+          right: '0',
+          top: '50%',
+          transform: 'translateY(-60%)',
+          width: '260px',
+          height: '260px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           pointerEvents: 'none',
-          zIndex: 2,
-          letterSpacing: '0.02em'
+          zIndex: 1
         }}>
-          Good<br />
-          Nutrition<br />
-          Brighter<br />
-          Days<br />
-          <span style={{ fontSize: '1.1rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
+          {/* Pale Green Organic Shape Background */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: '#E2EEE5',
+            borderRadius: '50% 0 0 50% / 50% 0 0 50%',
+            opacity: 0.6,
+            zIndex: 0
+          }} />
+
+          {/* Right Handwritten Quote (Perfectly Centered Inside Shape) */}
+          <div style={{
+            position: 'relative',
+            zIndex: 2,
+            fontFamily: '"Dancing Script", "Alex Brush", cursive',
+            fontSize: 'clamp(1.1rem, 1.4vw, 1.35rem)',
+            fontWeight: 700,
+            color: '#183C2D',
+            lineHeight: 1.2,
+            textAlign: 'center',
+            transform: 'rotate(3deg) translateX(12px)',
+            letterSpacing: '0.02em'
+          }}>
+            Good<br />
+            Nutrition<br />
+            Brighter<br />
+            Days<br />
+            <span style={{ fontSize: '1.05rem', color: '#B28B45', display: 'inline-block', marginTop: '1px' }}>♡</span>
+          </div>
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
