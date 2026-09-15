@@ -85,28 +85,23 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           </ul>
         </nav>
 
-        {/* Right: DISCOVER WELLNESS ♡ Button */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <button
-            onClick={() => handleNavClick('/products')}
-            style={{
-              backgroundColor: '#00A896',
-              color: '#FFFFFF',
-              padding: '0.65rem 1.4rem',
-              borderRadius: '50px',
-              fontSize: '0.78125rem',
-              fontWeight: 700,
-              letterSpacing: '0.05em',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              boxShadow: '0 4px 14px rgba(0,168,150,0.35)',
-              transition: 'all 0.2s ease'
+        {/* Right: Bliss Together Brand Logo (Replacing Discover Wellness Button) */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+          <a
+            href="/products"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('/products');
             }}
+            style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
+            aria-label="Bliss Together Products"
           >
-            <span>DISCOVER WELLNESS</span>
-            <Heart size={14} fill="#FFFFFF" color="#FFFFFF" />
-          </button>
+            <img
+              src="/assets/bliss_together_logo_light_transparent.png"
+              alt="Bliss Together Logo"
+              style={{ height: '58px', width: 'auto', objectFit: 'contain' }}
+            />
+          </a>
 
           <button
             className="mobile-toggle"
