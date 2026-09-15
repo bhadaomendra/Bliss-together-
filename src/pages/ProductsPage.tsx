@@ -3,7 +3,6 @@ import { ProductCard } from '../components/ProductCard';
 import { CTASection } from '../components/CTASection';
 import { productsData, Product } from '../data/products';
 import {
-  Search,
   Filter,
   Sparkles,
   Leaf,
@@ -14,7 +13,6 @@ import {
   ShieldCheck,
   Sun,
   Moon,
-  ArrowRight,
   Brain
 } from 'lucide-react';
 
@@ -25,7 +23,6 @@ interface ProductsPageProps {
 
 export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickView }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
 
   const categories = [
     { id: 'all', label: 'All Products', icon: null },
@@ -37,13 +34,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
     { id: 'sleep', label: 'Sleep Support', icon: <Moon size={14} /> }
   ];
 
-  const filteredProducts = productsData.filter(product => {
-    const matchesCategory = selectedCategory === 'all' || product.categorySlug === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          product.ingredients.some(i => i.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const filteredProducts = productsData.filter(product =>
+    selectedCategory === 'all' || product.categorySlug === selectedCategory
+  );
 
   return (
     <main style={{ paddingTop: 'var(--header-height)', backgroundColor: '#F8F6F0', minHeight: '100vh', overflow: 'hidden' }}>
@@ -348,86 +341,28 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
               </div>
             </div>
 
-            {/* Search Row & Handwritten Tag */}
+            {/* Centered Wellness Tag — no search box */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '1.5rem',
-              flexWrap: 'wrap',
-              paddingTop: '0.25rem',
+              justifyContent: 'center',
+              minHeight: '52px',
+              padding: '0.35rem 1rem 0.1rem',
               borderTop: '1px solid rgba(24, 60, 45, 0.05)'
             }}>
-              
-              {/* Search Bar */}
               <div style={{
-                position: 'relative',
-                flex: '1',
-                minWidth: '280px',
-                maxWidth: '650px',
-                marginTop: '0.25rem'
-              }}>
-                <Search size={17} style={{
-                  position: 'absolute',
-                  left: '1.15rem',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  color: '#7A8C81'
-                }} />
-                
-                <input
-                  type="text"
-                  placeholder="Search gummies or ingredients..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  style={{
-                    width: '100%',
-                    padding: '0.65rem 3.25rem 0.65rem 2.85rem',
-                    borderRadius: '50px',
-                    border: '1px solid rgba(24, 60, 45, 0.12)',
-                    backgroundColor: '#F7F5F0',
-                    fontSize: '0.875rem',
-                    color: '#183C2D',
-                    outline: 'none',
-                    transition: 'border-color 0.2s ease'
-                  }}
-                />
-
-                <button style={{
-                  position: 'absolute',
-                  right: '5px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '50%',
-                  backgroundColor: '#183C2D',
-                  color: '#FFFFFF',
-                  border: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer'
-                }}>
-                  <ArrowRight size={15} />
-                </button>
-              </div>
-
-              {/* Handwritten Tag on Bottom Right */}
-              <div style={{
-                fontFamily: '"Dancing Script", "Alex Brush", cursive',
+                fontFamily: '\"Dancing Script\", \"Alex Brush\", cursive',
                 fontSize: '1.25rem',
                 fontWeight: 700,
                 color: '#4B6B52',
                 lineHeight: 1.2,
                 transform: 'rotate(-3deg)',
-                textAlign: 'right',
-                marginTop: '0.25rem'
+                textAlign: 'center',
+                margin: 0
               }}>
                 Wellness for<br />
                 Every Generation <span style={{ color: '#B28B45' }}>♡</span>
               </div>
-
             </div>
 
           </div>
