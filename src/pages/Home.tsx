@@ -24,11 +24,11 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
     {
       id: "prod-5", // Multivitamin + Probiotic
       title: "Multivitamin + Probiotic",
-      subtitle: "Multivitamin",
+      subtitle: "Daily Wellness & Gut Health",
       tubImg: "/assets/products/pre-probiotic-multivitamin.png",
       accent: "#10B981",
       bgGradient: "linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)",
-      badge: "Multivitamin + Probiotic",
+      badge: "Daily Wellness & Gut Health",
       ingredients: "12 Vitamins | Prebiotics | Probiotics",
       flavour: "Orange Flavour"
     },

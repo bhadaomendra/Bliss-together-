@@ -30,7 +30,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
     { id: 'eye', label: 'Eye Health', icon: <Eye size={14} /> },
     { id: 'immunity', label: 'Immunity Booster', icon: <ShieldCheck size={14} /> },
     { id: 'beauty', label: 'Hair • Skin • Nails', icon: <Sparkles size={14} /> },
-    { id: 'daily', label: 'Daily Nutrition', icon: <Sun size={14} /> },
+    { id: 'daily', label: 'Daily Wellness & Gut Health', icon: <Sun size={14} /> },
     { id: 'sleep', label: 'Sleep Support', icon: <Moon size={14} /> }
   ];
 
