@@ -156,7 +156,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </p>
 
             {/* Action Buttons */}
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+            <div className="hero-action-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
               <button
                 onClick={() => onNavigate('/products')}
                 style={{
