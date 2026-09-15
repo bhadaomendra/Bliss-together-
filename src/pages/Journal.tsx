@@ -86,7 +86,7 @@ export const Journal: React.FC<JournalProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <main style={{ paddingTop: 'var(--header-height)', backgroundColor: '#F8F6F0', minHeight: '100vh' }}>
+    <main className="journal-page" style={{ backgroundColor: '#F8F6F0', minHeight: '100vh' }}>
       
       {/* Hero Section */}
       <section style={{
