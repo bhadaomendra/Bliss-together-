@@ -25,9 +25,9 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: '1160px', margin: '0 auto' }}>
+    <div className="contact-form-shell" style={{ maxWidth: '1160px', margin: '0 auto' }}>
       {/* Main Unified Split Card */}
-      <div style={{
+      <div className="contact-form-card" style={{
         backgroundColor: '#FFFFFF',
         borderRadius: '24px',
         boxShadow: '0 20px 50px rgba(24, 60, 45, 0.08)',
