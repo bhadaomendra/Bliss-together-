@@ -61,7 +61,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
 
       <section style={{
         position: 'relative',
-        padding: '0.65rem 1.5rem 1.15rem',
+        padding: '0.15rem 1.5rem 1.15rem',
         backgroundColor: '#F7F5EE',
         borderBottom: '1px solid rgba(24, 60, 45, 0.06)',
         overflow: 'hidden'
