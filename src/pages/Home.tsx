@@ -88,8 +88,14 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         padding: '5rem 0',
         overflow: 'hidden'
       }}>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ maxWidth: '680px' }}>
+        <div style={{
+          position: 'relative',
+          zIndex: 2,
+          width: '100%',
+          maxWidth: '100%',
+          padding: '0 clamp(1.5rem, 3.5vw, 3.5rem)'
+        }}>
+          <div style={{ maxWidth: '720px' }}>
             {/* Eyebrow */}
             <div style={{
               display: 'inline-flex',

@@ -35,10 +35,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       top: 0,
       zIndex: 1000
     }}>
-      <div className="container header-container" style={{
+      <div className="header-container" style={{
         height: '100%',
-        maxWidth: '1600px',
-        padding: '0 4vw',
+        width: '100%',
+        maxWidth: '100%',
+        padding: '0 clamp(1.5rem, 3.5vw, 3.5rem)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
