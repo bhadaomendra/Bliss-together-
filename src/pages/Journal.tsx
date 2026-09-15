@@ -153,7 +153,7 @@ export const Journal: React.FC<JournalProps> = ({ onNavigate }) => {
 
       {/* Main Journal Grid */}
       <section style={{ padding: '3.5rem 1.5rem' }}>
-        <div className="container" style={{ maxWidth: '1160px' }}>
+        <div className="container">
           
           <div style={{
             display: 'grid',

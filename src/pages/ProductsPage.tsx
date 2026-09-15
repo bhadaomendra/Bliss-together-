@@ -127,7 +127,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           <span style={{ fontSize: '1.4rem', color: '#B28B45', display: 'inline-block', marginTop: '2px' }}>♡</span>
         </div>
 
-        <div className="container" style={{ maxWidth: '1160px', position: 'relative', zIndex: 2, textAlign: 'center' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           
           {/* Eyebrow Tag */}
           <div style={{
@@ -372,7 +372,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
 
       {/* PRODUCT GRID SECTION */}
       <section className="section-padding" style={{ backgroundColor: '#F8F6F0' }}>
-        <div className="container" style={{ maxWidth: '1180px' }}>
+        <div className="container">
           {filteredProducts.length > 0 ? (
             <div className="products-grid">
               {filteredProducts.map((product) => (
