@@ -64,10 +64,11 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
         }
       `}</style>
 
-      {/* HERO SECTION (WIDE LAYOUT WITH SHALLOW FILTER BOX) */}
+      {/* HERO SECTION (COMPACT DEPTH, DEEP REFINEMENT & FILLED TEXT) */}
+
       <section style={{
         position: 'relative',
-        padding: '3rem 1.5rem 2.75rem',
+        padding: '1.65rem 1.5rem 1.35rem',
         backgroundColor: '#F7F5EE',
         borderBottom: '1px solid rgba(24, 60, 45, 0.06)',
         overflow: 'hidden'
@@ -77,9 +78,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
         <div style={{
           position: 'absolute',
           right: '-10px',
-          top: '5%',
-          width: '360px',
-          height: '460px',
+          top: '0%',
+          width: '420px',
+          height: '450px',
           background: '#E2EEE5',
           borderRadius: '50% 0 0 50% / 50% 0 0 50%',
           opacity: 0.65,
@@ -90,14 +91,14 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
         {/* Left Handwritten Quote (Filling Left Gap) */}
         <div className="desktop-only-quote" style={{
           position: 'absolute',
-          left: '4%',
-          top: '38%',
+          left: '3.5%',
+          top: '40%',
           transform: 'translateY(-50%) rotate(-4deg)',
           fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.45rem, 2.1vw, 1.95rem)',
+          fontSize: 'clamp(1.6rem, 2.4vw, 2.25rem)',
           fontWeight: 700,
           color: '#183C2D',
-          lineHeight: 1.35,
+          lineHeight: 1.25,
           textAlign: 'center',
           pointerEvents: 'none',
           zIndex: 2,
@@ -107,20 +108,20 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           Steps<br />
           Healthier<br />
           Tomorrows<br />
-          <span style={{ fontSize: '1.35rem', color: '#B28B45', display: 'inline-block', marginTop: '6px' }}>♡</span>
+          <span style={{ fontSize: '1.4rem', color: '#B28B45', display: 'inline-block', marginTop: '2px' }}>♡</span>
         </div>
 
         {/* Right Handwritten Quote (Filling Right Gap) */}
         <div className="desktop-only-quote" style={{
           position: 'absolute',
-          right: '4%',
-          top: '38%',
+          right: '3.5%',
+          top: '40%',
           transform: 'translateY(-50%) rotate(4deg)',
           fontFamily: '"Dancing Script", "Alex Brush", cursive',
-          fontSize: 'clamp(1.5rem, 2.2vw, 2.05rem)',
+          fontSize: 'clamp(1.65rem, 2.5vw, 2.3rem)',
           fontWeight: 700,
           color: '#183C2D',
-          lineHeight: 1.35,
+          lineHeight: 1.25,
           textAlign: 'center',
           pointerEvents: 'none',
           zIndex: 2,
@@ -130,7 +131,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           Nutrition<br />
           Brighter<br />
           Days<br />
-          <span style={{ fontSize: '1.35rem', color: '#B28B45', display: 'inline-block', marginTop: '6px' }}>♡</span>
+          <span style={{ fontSize: '1.4rem', color: '#B28B45', display: 'inline-block', marginTop: '2px' }}>♡</span>
         </div>
 
         <div className="container" style={{ maxWidth: '1160px', position: 'relative', zIndex: 2, textAlign: 'center' }}>
@@ -140,26 +141,26 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.85rem',
-            fontSize: '0.78125rem',
+            fontSize: '0.8125rem',
             fontWeight: 800,
-            letterSpacing: '0.18em',
+            letterSpacing: '0.22em',
             color: '#B28B45',
             textTransform: 'uppercase',
-            marginBottom: '0.75rem'
+            marginBottom: '0.35rem'
           }}>
-            <span style={{ color: '#B28B45', opacity: 0.6 }}>────────</span>
+            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
             <span>OUR WELLNESS RANGE</span>
-            <span style={{ color: '#B28B45', opacity: 0.6 }}>────────</span>
+            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
           </div>
 
           {/* Heading */}
           <h1 style={{
             fontFamily: '"Cormorant Garamond", Georgia, serif',
-            fontSize: 'clamp(2.4rem, 4vw, 3.6rem)',
+            fontSize: 'clamp(2.5rem, 4.2vw, 3.8rem)',
             fontWeight: 700,
             color: '#183C2D',
-            lineHeight: 1.12,
-            marginBottom: '0.85rem',
+            lineHeight: 1.08,
+            marginBottom: '0.35rem',
             letterSpacing: '-0.01em'
           }}>
             Purposeful Nutrition.<br />
@@ -172,110 +173,114 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
             </span>
           </h1>
 
-          {/* Subtext */}
+          {/* Subtext - Broadened to fill horizontal space cleanly */}
           <p style={{
-            color: '#4A5D52',
-            fontSize: '1.025rem',
-            lineHeight: 1.6,
-            maxWidth: '680px',
-            margin: '0 auto 2rem'
+            color: '#3D5245',
+            fontSize: '1.0625rem',
+            fontWeight: 500,
+            lineHeight: 1.5,
+            maxWidth: '820px',
+            margin: '0 auto 1.15rem',
+            letterSpacing: '0.01em'
           }}>
             Discover our collection of science-backed gummy nutrition, formulated with premium ingredients for every member of the family.
           </p>
 
-          {/* 4 Feature Badges (Spread Across Layout) */}
+          {/* 4 Feature Badges (Balanced Horizontal Layout) */}
           <div style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            gap: '3.25rem',
+            gap: '2.5rem',
             flexWrap: 'wrap',
-            marginBottom: '2.25rem'
+            marginBottom: '1rem',
+            padding: '0.4rem 1rem'
           }}>
             {/* Feature 1 */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '135px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '150px' }}>
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '46px',
+                height: '46px',
                 borderRadius: '50%',
                 backgroundColor: '#E3F0E6',
                 color: '#183C2D',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '0.5rem',
-                boxShadow: '0 4px 12px rgba(24, 60, 45, 0.05)'
+                marginBottom: '0.35rem',
+                boxShadow: '0 4px 14px rgba(24, 60, 45, 0.06)'
               }}>
                 <Leaf size={20} />
               </div>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.3 }}>
+              <span style={{ fontSize: '0.84375rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.25 }}>
                 Science-Backed<br />Formulations
               </span>
             </div>
 
             {/* Feature 2 */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '135px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '150px' }}>
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '46px',
+                height: '46px',
                 borderRadius: '50%',
                 backgroundColor: '#FEF5E7',
                 color: '#B28B45',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '0.5rem',
-                boxShadow: '0 4px 12px rgba(178, 139, 69, 0.05)'
+                marginBottom: '0.35rem',
+                boxShadow: '0 4px 14px rgba(178, 139, 69, 0.06)'
               }}>
                 <Heart size={20} />
               </div>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.3 }}>
+              <span style={{ fontSize: '0.84375rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.25 }}>
                 Premium<br />Ingredients
               </span>
             </div>
 
             {/* Feature 3 */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '135px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '150px' }}>
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '46px',
+                height: '46px',
                 borderRadius: '50%',
                 backgroundColor: '#E2F4F2',
                 color: '#00A896',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '0.5rem',
-                boxShadow: '0 4px 12px rgba(0, 168, 150, 0.05)'
+                marginBottom: '0.35rem',
+                boxShadow: '0 4px 14px rgba(0, 168, 150, 0.06)'
               }}>
                 <Users size={20} />
               </div>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.3 }}>
+              <span style={{ fontSize: '0.84375rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.25 }}>
                 For the<br />Whole Family
               </span>
             </div>
 
             {/* Feature 4 */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '135px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '150px' }}>
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '46px',
+                height: '46px',
                 borderRadius: '50%',
                 backgroundColor: '#FDEAEA',
                 color: '#E05D5D',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '0.5rem',
-                boxShadow: '0 4px 12px rgba(224, 93, 93, 0.05)'
+                marginBottom: '0.35rem',
+                boxShadow: '0 4px 14px rgba(224, 93, 93, 0.06)'
               }}>
                 <Smile size={20} />
               </div>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.3 }}>
+              <span style={{ fontSize: '0.84375rem', fontWeight: 700, color: '#183C2D', lineHeight: 1.25 }}>
                 Tasty. Easy.<br />Daily Wellness.
               </span>
             </div>
           </div>
+
 
           {/* FILTER & SEARCH CARD (WIDE & SHALLOW DEPTH) */}
           <div style={{
