@@ -83,7 +83,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
   };
 
   return (
-    <main style={{ backgroundColor: '#FAF7F2' }}>
+    <main className="home-page" style={{ backgroundColor: '#FAF7F2' }}>
 
       {/* ========================================================================= */}
       {/* 1. CINEMATIC SUNLIT FOREST HERO SECTION (EXACT MATCHING MOCKUP IMAGE 2) */}
