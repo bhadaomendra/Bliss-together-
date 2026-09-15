@@ -35,7 +35,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       top: 0,
       zIndex: 1000
     }}>
-      <div className="container header-container" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div className="container header-container" style={{
+        height: '100%',
+        maxWidth: '1420px',
+        padding: '0 2.25rem',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      }}>
         {/* Left: Official Krishiv Wellness Logo Image (White / Gold) */}
         <a
           href="/"
@@ -55,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
 
         {/* Desktop Navigation */}
         <nav aria-label="Main Navigation">
-          <ul className="nav-menu" style={{ display: 'flex', alignItems: 'center', gap: '2rem', listStyle: 'none' }}>
+          <ul className="nav-menu" style={{ display: 'flex', alignItems: 'center', gap: '2.25rem', listStyle: 'none' }}>
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
@@ -66,9 +73,9 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
                   }}
                   className={`nav-link ${currentPath === item.path ? 'active' : ''}`}
                   style={{
-                    fontSize: '0.8125rem',
+                    fontSize: '0.875rem',
                     fontWeight: 700,
-                    letterSpacing: '0.1em',
+                    letterSpacing: '0.08em',
                     color: currentPath === item.path ? '#00A896' : '#FFFFFF',
                     display: 'inline-flex',
                     alignItems: 'center',
