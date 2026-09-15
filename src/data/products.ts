@@ -31,7 +31,8 @@ export const productsData: Product[] = [
     image: "/assets/products/kids-brain-booster.png",
     accentColor: "#2E5B88",
     badge: "Focus & Learning",
-    description: "Thoughtfully formulated to support growing minds. Packed with DHA, Lutein, Zinc and essential B-vitamins to aid concentration, cognitive performance, and memory retention.",
+    flavour: "Mixed Berry Flavour",
+    description: "Thoughtfully formulated to support growing minds. Delicious Mixed Berry flavoured gummies packed with DHA, Lutein, Zinc and essential B-vitamins to aid concentration, cognitive performance, and memory retention.",
     benefits: [
       "Supports cognitive performance & brain development",
       "Enhances memory retention & concentration during learning",
@@ -42,7 +43,6 @@ export const productsData: Product[] = [
     ingredients: ["DHA", "Lutein", "Zeaxanthin", "Zinc", "Magnesium", "Vitamins A, B1, B6, B12"],
     usage: "Children (ages 4+): Take 1 to 2 gummies daily under adult supervision.",
     servings: "30 Gummies",
-    flavour: "Mixed Berry",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSKIDSBRAIN?tag=blisstogether-21"
   },
   {
@@ -56,7 +56,8 @@ export const productsData: Product[] = [
     image: "/assets/products/eye-care.png",
     accentColor: "#9C4D78",
     badge: "Eye Health",
-    description: "Designed for modern digital lifestyles. Formulated with premium Lutein, Zeaxanthin, Astaxanthin and DHA to protect eyes against blue light, reduce digital eye strain, and support long-term eye health.",
+    flavour: "Mango Citrus Flavour",
+    description: "Designed for modern digital lifestyles. Refreshing Mango Citrus flavoured gummies formulated with premium Lutein, Zeaxanthin, Astaxanthin and DHA to protect eyes against blue light, reduce digital eye strain, and support long-term eye health.",
     benefits: [
       "Relieves eye fatigue and dryness from extended screen time",
       "Filters harmful blue light emitted by phones, laptops & TVs",
@@ -67,7 +68,6 @@ export const productsData: Product[] = [
     ingredients: ["Lutein", "Zeaxanthin", "Astaxanthin", "DHA", "Vitamin C & E"],
     usage: "Take 1 gummy daily with meals or as recommended by a healthcare professional.",
     servings: "30 Gummies",
-    flavour: "Mango Citrus",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSEYECARE?tag=blisstogether-21"
   },
   {
@@ -81,7 +81,8 @@ export const productsData: Product[] = [
     image: "/assets/products/kids-immunity.png",
     accentColor: "#D97706",
     badge: "Immunity",
-    description: "Empower your child's natural immune shield. Blending high-potency Vitamin C, Vitamin D3, Zinc, and Elderberry extract to strengthen immunity against daily environmental challenges.",
+    flavour: "Tangy Orange Flavour",
+    description: "Empower your child's natural immune shield. Delicious Tangy Orange flavoured gummies blending high-potency Vitamin C, Vitamin D3, Zinc, and Elderberry extract to strengthen immunity against daily environmental challenges.",
     benefits: [
       "Strengthens natural immune defense for year-round protection",
       "Supports healthy bone growth & vital daily energy levels",
@@ -92,7 +93,6 @@ export const productsData: Product[] = [
     ingredients: ["Vitamin C", "Vitamin D3", "Zinc Citrate", "Elderberry Extract"],
     usage: "Children (ages 3+): 1 gummy daily. Chew thoroughly before swallowing.",
     servings: "30 Gummies",
-    flavour: "Tangy Orange",
     amazonUrl: "https://www.amazon.in/dp/B0BLISIMMUNITYKIDS?tag=blisstogether-21"
   },
   {
@@ -106,7 +106,8 @@ export const productsData: Product[] = [
     image: "/assets/products/hair-skin-nails.png",
     accentColor: "#BE123C",
     badge: "Hair • Skin • Nails",
-    description: "Nourish your inner beauty from within. Features high-dose Natural Biotin (10,000 mcg), Amla extract, Hyaluronic Acid, and key anti-aging vitamins to promote lush hair growth, radiant glowing skin, and strong resilient nails.",
+    flavour: "Juicy Strawberry Flavour",
+    description: "Nourish your inner beauty from within. Delicious Juicy Strawberry flavoured gummies featuring high-dose Natural Biotin (10,000 mcg), Amla extract, Hyaluronic Acid, and key anti-aging vitamins to promote lush hair growth, radiant glowing skin, and strong resilient nails.",
     benefits: [
       "Promotes stronger, thicker hair growth and reduces hair breakage",
       "Deeply hydrates skin with Hyaluronic Acid for a natural radiant glow",
@@ -117,7 +118,6 @@ export const productsData: Product[] = [
     ingredients: ["Natural Biotin (10,000 mcg)", "Amla Extract", "Hyaluronic Acid", "Vitamins C & E", "Zinc"],
     usage: "Adults: Take 1 gummy daily after mealtime.",
     servings: "30 Gummies",
-    flavour: "Juicy Strawberry",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSHAIRSKIN?tag=blisstogether-21"
   },
   {
@@ -131,7 +131,8 @@ export const productsData: Product[] = [
     image: "/assets/products/pre-probiotic-multivitamin.png",
     accentColor: "#15803D",
     badge: "Daily Wellness",
-    description: "The complete daily foundation for optimal digestive balance and overall wellness. Combines active spore-forming probiotics, prebiotic fiber, and essential multivitamin spectrum for maximum gut absorption.",
+    flavour: "Citrus Grape Flavour",
+    description: "The complete daily foundation for optimal digestive balance and overall wellness. Delicious Citrus Grape flavoured gummies combining active spore-forming probiotics, prebiotic fiber, and essential multivitamin spectrum for maximum gut absorption.",
     benefits: [
       "Balances gut microbiome and promotes smooth digestion",
       "Fills daily nutritional gaps caused by fast-paced routines",
@@ -142,7 +143,6 @@ export const productsData: Product[] = [
     ingredients: ["Spore Probiotics (Bacillus Coagulans 2B CFU)", "Prebiotic FOS", "Multivitamins (A, C, D3, E, B-Complex)", "Zinc"],
     usage: "Adults & Teens (ages 12+): Take 1 to 2 gummies daily with water/food.",
     servings: "30 Gummies",
-    flavour: "Citrus Grape",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSPREPROBIOTIC?tag=blisstogether-21"
   },
   {
@@ -156,7 +156,8 @@ export const productsData: Product[] = [
     image: "/assets/products/melatonin.png",
     accentColor: "#4338CA",
     badge: "Sleep Support",
-    description: "Fall asleep naturally and wake up refreshed without morning grogginess. Synergistic botanical blend of Tagar (Valerian) root extract, L-Theanine, Chamomile, Passion Flower, Magnesium, and gentle Melatonin.",
+    flavour: "Blueberry Flavour",
+    description: "Fall asleep naturally and relax your mind. Delicious Blueberry flavoured gummies crafted with a synergistic botanical blend of Tagar (Valerian) root extract, L-Theanine, Chamomile, Passion Flower, Magnesium, and gentle Melatonin.",
     benefits: [
       "Promotes faster, natural onset of peaceful sleep",
       "Calms evening anxiety and relaxes tense muscles",
@@ -167,7 +168,6 @@ export const productsData: Product[] = [
     ingredients: ["Melatonin", "Tagar Extract", "L-Theanine", "Chamomile Extract", "Passion Flower", "Magnesium"],
     usage: "Adults: Take 1 gummy 30-45 minutes before bedtime.",
     servings: "30 Gummies",
-    flavour: "Midnight Blueberry",
     amazonUrl: "https://www.amazon.in/dp/B0BLISSMELATONIN?tag=blisstogether-21"
   }
 ];

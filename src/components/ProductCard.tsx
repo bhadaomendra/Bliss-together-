@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Eye, ExternalLink, ShieldCheck, Sparkles } from 'lucide-react';
 import { Product } from '../data/products';
 
 interface ProductCardProps {
@@ -37,9 +37,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
         <h3 className="product-title">{product.name}</h3>
         <p className="product-desc">{product.description}</p>
 
-        <div className="product-meta">
-          <ShieldCheck size={15} />
-          <span>{product.servings} • {product.flavour}</span>
+        <div className="product-meta" style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '0.4rem',
+          fontSize: '0.8125rem',
+          fontWeight: 700,
+          color: '#00A896',
+          backgroundColor: 'rgba(0,168,150,0.08)',
+          border: '1px solid rgba(0,168,150,0.2)',
+          padding: '0.3rem 0.75rem',
+          borderRadius: '50px',
+          marginTop: '0.5rem',
+          marginBottom: '0.75rem'
+        }}>
+          <Sparkles size={14} />
+          <span>Flavour: {product.flavour} · {product.servings}</span>
         </div>
 
         <div className="product-actions">
