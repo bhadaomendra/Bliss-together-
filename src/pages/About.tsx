@@ -64,12 +64,13 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       .about-identity-banner-line { width: 34px; height: 3px; background-color: ${gold}; border-radius: 2px; margin-top: 10px; position: relative; z-index: 2; }
       
       /* VISION & MISSION */
-      .about-guides { padding: 4rem 0; background: #F4F0E8; }
-      .about-guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-      .about-guide-card { background: #FFFFFF; border-radius: 24px; padding: 3rem 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid rgba(27,59,43,0.08); }
-      .about-icon { width: 56px; height: 56px; border-radius: 50%; background: #EBF3EE; color: #00A896; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
-      .about-card-label { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.15em; color: ${gold}; text-transform: uppercase; margin-bottom: 0.5rem; }
-      .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; font-weight: 600; color: ${green}; line-height: 1.55; font-style: italic; margin: 0; }
+      .about-guides { padding: 2.25rem 0; background: #F4F0E8; }
+      .about-guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+      .about-guide-card { background: #FFFFFF; border-radius: 18px; padding: 1.5rem 1.75rem; box-shadow: 0 6px 20px rgba(0,0,0,0.03); border: 1px solid rgba(27,59,43,0.08); }
+      .about-icon { width: 44px; height: 44px; border-radius: 50%; background: #EBF3EE; color: #00A896; display: flex; align-items: center; justify-content: center; margin-bottom: 0.85rem; }
+      .about-card-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; color: ${gold}; text-transform: uppercase; margin-bottom: 0.35rem; }
+      .about-card-copy { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.15rem; font-weight: 600; color: ${green}; line-height: 1.45; font-style: italic; margin: 0; }
+
 
       /* CORE VALUES PILLARS (EXACT REFERENCE MATCH) */
       .about-pillars { padding: 5rem 0 6rem; background: #FAF8F4; }
@@ -313,16 +314,17 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       <div className="about-container">
         <div className="about-guide-grid">
           <div className="about-guide-card">
-            <div className="about-icon"><Target size={28} /></div>
+            <div className="about-icon"><Target size={22} /></div>
             <div className="about-card-label">OUR VISION</div>
             <p className="about-card-copy">“To help everyone experience complete wellbeing—holistically—so they can live life to its fullest and enjoy every moment with greater health, happiness and joy.”</p>
           </div>
 
           <div className="about-guide-card">
-            <div className="about-icon"><Leaf size={28} /></div>
+            <div className="about-icon"><Leaf size={22} /></div>
             <div className="about-card-label">OUR MISSION</div>
             <p className="about-card-copy">“To reach every person who cares about their wellbeing and inspire them to become a part of the wave towards a healthier India.”</p>
           </div>
+
         </div>
       </div>
     </section>
