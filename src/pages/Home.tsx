@@ -295,7 +295,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         </div>
 
         {/* Exact Fluffy Scalloped Comic Puffy Cloud with Bliss Together Logo */}
-        <div style={{
+        <div className="hero-puffy-cloud" style={{
           position: 'absolute',
           top: '1.2rem',
           right: '3.5rem',
@@ -523,7 +523,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       <section style={{ padding: '5rem 0', backgroundColor: '#FAF7F2' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr 0.8fr', gap: '2.5rem', alignItems: 'center' }}>
+          <div className="our-story-grid">
             {/* Left Story Text */}
             <div>
               <div style={{ fontSize: '0.78125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#9CA3AF', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
@@ -675,12 +675,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1.2fr repeat(5, 1fr)',
-            alignItems: 'center',
-            gap: '1rem'
-          }}>
+          <div className="science-trust-banner-grid">
             {/* Title Column */}
             <div style={{
               fontSize: '1.15rem',
@@ -789,7 +784,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         borderBottom: '1px solid rgba(27,59,43,0.06)'
       }}>
         {/* Right Background Photo (GIRL IMAGE - UNTOUCHED & PRESERVED) */}
-        <div style={{
+        <div className="featured-woman-bg" style={{
           position: 'absolute',
           top: 0,
           right: 0,
@@ -813,13 +808,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1380px' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '440px 1fr',
-            gap: '2.5rem',
-            alignItems: 'center',
-            maxWidth: '1020px'
-          }}>
+          <div className="featured-product-grid">
             {/* 1. LEFT: Product Tub Visual (Larger, Prominent & High-Res) */}
             <div style={{
               display: 'flex',

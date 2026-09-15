@@ -334,6 +334,29 @@ button {
   justify-content: center;
 }
 
+/* Grid Layouts with Responsive Overrides */
+.our-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.science-trust-banner-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.featured-product-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 440px) 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 1020px;
+}
+
 /* Mobile Responsive Adjustments */
 @media (max-width: 900px) {
   .nav-menu {
@@ -348,9 +371,33 @@ button {
   .desktop-only-quote {
     display: none !important;
   }
+  .hero-puffy-cloud {
+    display: none !important;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .our-story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+  .science-trust-banner-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem 1rem !important;
+  }
+  .science-trust-banner-grid > div {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+  .featured-product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+  }
+  .featured-woman-bg {
+    display: none !important;
   }
 }
 
@@ -376,6 +423,11 @@ button {
     -webkit-overflow-scrolling: touch;
     padding-bottom: 0.35rem;
     justify-content: flex-start !important;
+  }
+  .science-trust-banner-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    text-align: center !important;
   }
 }
 
