@@ -135,7 +135,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
           <div className="about-hero-message" style={{
             position: 'relative',
             zIndex: 5,
-            transform: 'rotate(-5deg) translateX(-12px)',
+            transform: 'rotate(-5deg) translateX(25px)',
             transformOrigin: 'center center',
             textAlign: 'center'
           }}>
