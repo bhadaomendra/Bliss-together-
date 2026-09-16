@@ -14,13 +14,13 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
   <main className="about-page" style={{ background: cream, color: green }}>
     <style>{`
       .about-page { overflow: hidden; }
-      .about-container { width: min(1280px, calc(100% - 2.5rem)); margin: 0 auto; }
+      .about-container { width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: clamp(1.25rem, 3vw, 3rem); padding-right: clamp(1.25rem, 3vw, 3rem); }
       .about-eyebrow { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.18em; color: ${gold}; text-transform: uppercase; }
       .about-display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
       
       /* HERO HEADER (EXACT MOCKUP MATCH) */
       .about-hero { position: relative; padding: 4rem 0 3.5rem; background: #F8F5EE; border-bottom: 1px solid rgba(24, 60, 45, 0.08); overflow: hidden; }
-      .about-hero-grid { display: grid; grid-template-columns: 36% 46% 18%; gap: 1.5rem; align-items: center; }
+      .about-hero-grid { display: grid; grid-template-columns: 38% 44% 18%; gap: 1.5rem; align-items: center; }
       .about-hero-title { font-size: clamp(2.3rem, 3.5vw, 3.4rem); line-height: 1.12; margin: 0.75rem 0 1.25rem; font-weight: 700; color: ${green}; }
       .about-hero-sub { color: #4A5D52; line-height: 1.6; font-size: 1.05rem; margin-bottom: 1.75rem; max-width: 440px; }
       .about-hero-tag { display: inline-flex; align-items: center; gap: 0.65rem; font-size: 0.78125rem; font-weight: 800; letter-spacing: 0.15em; color: ${green}; text-transform: uppercase; }
@@ -35,10 +35,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       }
 
       @media (max-width: 768px) {
-        .about-container { width: min(1280px, calc(100% - 1.5rem)); }
         .about-hero { padding: 2.25rem 0 2rem; }
         .about-story { padding: 3rem 0; }
-        .about-hero-left-leaf { opacity: 0.12 !important; width: 130px !important; height: 180px !important; }
       }
       
       /* FOUNDER'S STORY */
