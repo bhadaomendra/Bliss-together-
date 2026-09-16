@@ -14,7 +14,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
   <main className="about-page" style={{ background: cream, color: green }}>
     <style>{`
       .about-page { overflow: hidden; }
-      .about-container { width: min(1280px, calc(100% - 72px)); margin: 0 auto; }
+      .about-container { width: min(1280px, calc(100% - 2.5rem)); margin: 0 auto; }
       .about-eyebrow { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.18em; color: ${gold}; text-transform: uppercase; }
       .about-display { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
       
@@ -32,6 +32,13 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
       @media (max-width: 992px) {
         .about-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
         .about-hero-sub { max-width: 100%; }
+      }
+
+      @media (max-width: 768px) {
+        .about-container { width: min(1280px, calc(100% - 1.5rem)); }
+        .about-hero { padding: 2.25rem 0 2rem; }
+        .about-story { padding: 3rem 0; }
+        .about-hero-left-leaf { opacity: 0.12 !important; width: 130px !important; height: 180px !important; }
       }
       
       /* FOUNDER'S STORY */
@@ -100,7 +107,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
     {/* HERO SECTION (EXACT MOCKUP MATCH) */}
     <section className="about-hero">
       {/* Left Leaf Cluster Graphic */}
-      <div style={{ position: 'absolute', top: '-10px', left: '-20px', width: '220px', height: '300px', opacity: 0.35, pointerEvents: 'none', zIndex: 1 }}>
+      <div className="about-hero-left-leaf" style={{ position: 'absolute', top: '-10px', left: '-20px', width: '220px', height: '300px', opacity: 0.35, pointerEvents: 'none', zIndex: 1 }}>
         <svg viewBox="0 0 220 300" fill="none">
           <path d="M-20 300 C20 180, 100 80, 220 10 C170 90, 110 190,-20 300 Z" fill="#183C2D" />
           <path d="M20 280 C60 190, 130 110, 210 40 C170 120, 110 200, 20 280 Z" fill="#2A523C" />
