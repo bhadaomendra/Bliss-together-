@@ -88,7 +88,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC SUNLIT FOREST HERO SECTION (EXACT MATCHING MOCKUP IMAGE 2) */}
       {/* ========================================================================= */}
-      <section style={{
+      <section className="home-hero-section" style={{
         position: 'relative',
         minHeight: '86vh',
         backgroundImage: "linear-gradient(90deg, rgba(10, 35, 26, 0.85) 0%, rgba(10, 35, 26, 0.62) 48%, rgba(10, 35, 26, 0.1) 82%), url('/assets/hero_wallpaper.jpg')",
@@ -108,7 +108,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         }}>
           <div style={{ maxWidth: '720px' }}>
             {/* Eyebrow */}
-            <div style={{
+            <div className="home-hero-eyebrow" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
@@ -124,7 +124,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </div>
 
             {/* Main Headline */}
-            <h1 style={{
+            <h1 className="home-hero-heading" style={{
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)',
               fontWeight: 700,
@@ -145,7 +145,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </h1>
 
             {/* Subtitle */}
-            <p style={{
+            <p className="home-hero-sub" style={{
               fontSize: '1.1rem',
               color: 'rgba(255, 255, 255, 0.9)',
               maxWidth: '500px',
