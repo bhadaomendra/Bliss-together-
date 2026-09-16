@@ -90,13 +90,11 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       <section className="home-hero-section" style={{
         position: 'relative',
-        minHeight: '86vh',
         backgroundImage: "linear-gradient(90deg, rgba(10, 35, 26, 0.85) 0%, rgba(10, 35, 26, 0.62) 48%, rgba(10, 35, 26, 0.1) 82%), url('/assets/hero_wallpaper.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'right center',
         display: 'flex',
         alignItems: 'center',
-        padding: '5rem 0',
         overflow: 'hidden'
       }}>
         <div style={{

@@ -543,51 +543,57 @@ button {
   /* HERO SECTION MOBILE COMPACT FULL-VIEW RESPONSIVE FIXES */
   .home-hero-section {
     min-height: auto !important;
-    padding: 2.5rem 0 1.5rem 0 !important;
+    padding: 2rem 0 1.25rem 0 !important;
     overflow: visible !important;
   }
   .home-hero-eyebrow {
-    font-size: 0.71875rem !important;
-    margin-bottom: 0.45rem !important;
+    font-size: 0.6875rem !important;
+    margin-bottom: 0.35rem !important;
   }
   .home-hero-heading {
-    font-size: clamp(2rem, 7.5vw, 2.75rem) !important;
-    line-height: 1.1 !important;
-    margin-bottom: 0.65rem !important;
+    font-size: clamp(1.85rem, 7vw, 2.5rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.5rem !important;
   }
   .home-hero-sub {
-    font-size: 0.90625rem !important;
-    line-height: 1.45 !important;
-    margin-bottom: 1.25rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1rem !important;
+    max-width: 320px !important;
   }
   .hero-action-buttons {
     flex-direction: column !important;
     align-items: stretch !important;
     width: 100% !important;
-    max-width: 250px !important;
-    margin-bottom: 1.5rem !important;
-    gap: 0.65rem !important;
+    max-width: 240px !important;
+    margin-bottom: 1.15rem !important;
+    gap: 0.55rem !important;
   }
   .hero-action-buttons button {
     width: 100% !important;
     justify-content: center !important;
-    padding: 0.7rem 1.1rem !important;
-    font-size: 0.8125rem !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.78125rem !important;
   }
   .trust-signals-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.85rem 0.5rem !important;
-    padding-top: 1rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-  .trust-signals-grid > div > div:first-child {
-    width: 36px !important;
-    height: 36px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.35rem !important;
+    padding-top: 0.85rem !important;
     margin-bottom: 0.35rem !important;
   }
+  .trust-signals-grid > div > div:first-child {
+    width: 32px !important;
+    height: 32px !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .trust-signals-grid > div > div:first-child svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
   .trust-signals-grid > div > div:last-child {
-    font-size: 0.7rem !important;
-    line-height: 1.15 !important;
+    font-size: 0.625rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
   }
 
   /* JOURNAL GRID MOBILE RESPONSIVE FIXES */
