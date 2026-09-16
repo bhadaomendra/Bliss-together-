@@ -88,47 +88,40 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       {/* 1. CINEMATIC SUNLIT FOREST HERO SECTION (EXACT MATCHING MOCKUP IMAGE 2) */}
       {/* ========================================================================= */}
-      <section className="home-hero-section" style={{
-        position: 'relative',
-        backgroundImage: "linear-gradient(90deg, rgba(10, 35, 26, 0.85) 0%, rgba(10, 35, 26, 0.62) 48%, rgba(10, 35, 26, 0.1) 82%), url('/assets/hero_wallpaper.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'right center',
-        display: 'flex',
-        alignItems: 'center',
-        overflow: 'hidden'
-      }}>
+      {/* ========================================================================= */}
+      {/* 1. CINEMATIC SUNLIT FOREST HERO SECTION (EXACT MATCHING MOCKUP IMAGE 2) */}
+      {/* ========================================================================= */}
+      <section className="home-hero-section">
         <div style={{
           position: 'relative',
           zIndex: 2,
           width: '100%',
           maxWidth: '100%',
-          padding: '0 clamp(1.5rem, 3.5vw, 3.5rem)'
+          padding: '0 clamp(1.25rem, 3.5vw, 3.5rem)'
         }}>
           <div style={{ maxWidth: '720px' }}>
             {/* Eyebrow */}
             <div className="home-hero-eyebrow" style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.78125rem',
-              fontWeight: 700,
-              letterSpacing: '0.15em',
+              justifyContent: 'flex-start',
+              gap: '0.4rem',
+              width: 'auto',
               color: '#FFFFFF',
-              textTransform: 'uppercase',
-              marginBottom: '1rem'
+              textTransform: 'uppercase'
             }}>
               <span>THOUGHTFULLY MADE, DELICIOUSLY NATURAL</span>
-              <span style={{ color: 'var(--color-gold)' }}>♡</span>
+              <span style={{ color: 'var(--color-gold)', display: 'inline-block' }}>♡</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="home-hero-heading" style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.8rem, 5.5vw, 4.5rem)',
+              fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
               fontWeight: 700,
               lineHeight: 1.08,
               color: '#FFFFFF',
-              marginBottom: '1.25rem'
+              marginBottom: '1rem'
             }}>
               Wellness That<br />
               <span style={{
@@ -144,17 +137,17 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
 
             {/* Subtitle */}
             <p className="home-hero-sub" style={{
-              fontSize: '1.1rem',
+              fontSize: '1.05rem',
               color: 'rgba(255, 255, 255, 0.9)',
               maxWidth: '500px',
-              lineHeight: 1.6,
-              marginBottom: '2.25rem'
+              lineHeight: 1.55,
+              marginBottom: '1.75rem'
             }}>
               Science-backed nutrition in delicious, convenient formats designed for modern lifestyles.
             </p>
 
             {/* Action Buttons */}
-            <div className="hero-action-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+            <div className="hero-action-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
               <button
                 onClick={() => onNavigate('/products')}
                 style={{
@@ -168,7 +161,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   alignItems: 'center',
                   gap: '0.5rem',
                   boxShadow: '0 4px 16px rgba(0,168,150,0.4)',
-                  transition: 'all 0.2s ease'
+                  transition: 'all 0.2s ease',
+                  border: 'none',
+                  cursor: 'pointer'
                 }}
               >
                 <span>EXPLORE PRODUCTS</span>
@@ -189,7 +184,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  transition: 'all 0.2s ease'
+                  transition: 'all 0.2s ease',
+                  cursor: 'pointer'
                 }}
               >
                 <span>DISCOVER OUR STORY</span>
@@ -202,13 +198,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '1rem',
-              paddingTop: '1.5rem',
+              paddingTop: '1.25rem',
               borderTop: '1px solid rgba(255, 255, 255, 0.2)'
             }}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   backgroundColor: 'rgba(255, 255, 255, 0.15)',
                   backdropFilter: 'blur(8px)',
@@ -216,10 +212,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 0.5rem',
+                  margin: '0 auto 0.4rem',
                   color: '#FFFFFF'
                 }}>
-                  <Leaf size={20} />
+                  <Leaf size={18} />
                 </div>
                 <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
                   Natural<br />Ingredients
@@ -228,8 +224,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
 
               <div style={{ textAlign: 'center' }}>
                 <div style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   backgroundColor: 'rgba(255, 255, 255, 0.15)',
                   backdropFilter: 'blur(8px)',
@@ -237,10 +233,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 0.5rem',
+                  margin: '0 auto 0.4rem',
                   color: '#FFFFFF'
                 }}>
-                  <Microscope size={20} />
+                  <Microscope size={18} />
                 </div>
                 <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
                   Clean & Safe<br />Formula
@@ -249,8 +245,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
 
               <div style={{ textAlign: 'center' }}>
                 <div style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   backgroundColor: 'rgba(255, 255, 255, 0.15)',
                   backdropFilter: 'blur(8px)',
@@ -258,10 +254,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 0.5rem',
+                  margin: '0 auto 0.4rem',
                   color: '#FFFFFF'
                 }}>
-                  <ShieldCheck size={20} />
+                  <ShieldCheck size={18} />
                 </div>
                 <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
                   No Artificial<br />Colors
@@ -270,8 +266,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
 
               <div style={{ textAlign: 'center' }}>
                 <div style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '40px',
+                  height: '40px',
                   borderRadius: '50%',
                   backgroundColor: 'rgba(255, 255, 255, 0.15)',
                   backdropFilter: 'blur(8px)',
@@ -279,10 +275,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 0.5rem',
+                  margin: '0 auto 0.4rem',
                   color: '#FFFFFF'
                 }}>
-                  <Heart size={20} />
+                  <Heart size={18} />
                 </div>
                 <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.2 }}>
                   Made With<br />Love
