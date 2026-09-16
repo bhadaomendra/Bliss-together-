@@ -10,6 +10,7 @@ export interface SiteConfig {
   whatsappNumber: string;
   whatsappDefaultMessage: string;
   getWhatsAppLink: (customMessage?: string) => string;
+  getProductWhatsAppLink: (productName: string) => string;
 }
 
 const DEFAULT_WA_MESSAGE = "Hi, I’m interested in Bliss Together products. Please share more details about your products and how I can order.";
@@ -27,6 +28,13 @@ export const siteConfig: SiteConfig = {
   whatsappDefaultMessage: DEFAULT_WA_MESSAGE,
   getWhatsAppLink: (customMessage?: string) => {
     const msg = customMessage || DEFAULT_WA_MESSAGE;
+    return `https://wa.me/918094812345?text=${encodeURIComponent(msg)}`;
+  },
+  getProductWhatsAppLink: (productName: string) => {
+    const formattedName = productName.toLowerCase().includes('gumm')
+      ? productName
+      : `${productName} Gummies`;
+    const msg = `Hi, I’m interested in your ${formattedName}. Please share its details, price and ordering information.`;
     return `https://wa.me/918094812345?text=${encodeURIComponent(msg)}`;
   }
 };

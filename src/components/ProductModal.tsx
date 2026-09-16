@@ -1,6 +1,7 @@
 import React from 'react';
-import { X, ExternalLink, CheckCircle2, Leaf, Clock, Sparkles } from 'lucide-react';
+import { X, CheckCircle2, Leaf, Clock, Sparkles, MessageSquare } from 'lucide-react';
 import { Product } from '../data/products';
+import { siteConfig } from '../data/site';
 
 interface ProductModalProps {
   product: Product | null;
@@ -78,13 +79,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
 
             <div className="product-detail-actions">
               <a
-                href={product.amazonUrl}
+                href={siteConfig.getProductWhatsAppLink(product.name)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-amazon product-buy-button"
+                style={{ backgroundColor: '#25D366', borderColor: '#25D366' }}
               >
-                <span>BUY NOW</span>
-                <ExternalLink size={16} />
+                <MessageSquare size={16} />
+                <span>BUY NOW ON WHATSAPP</span>
               </a>
               <button onClick={onClose} className="btn btn-secondary">
                 Close

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Eye, ExternalLink, ShieldCheck, Sparkles } from 'lucide-react';
+import { Eye, Sparkles, MessageSquare } from 'lucide-react';
 import { Product } from '../data/products';
+import { siteConfig } from '../data/site';
 
 interface ProductCardProps {
   product: Product;
@@ -69,15 +70,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
           </button>
 
           <a
-            href={product.amazonUrl}
+            href={siteConfig.getProductWhatsAppLink(product.name)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="btn btn-amazon"
-            aria-label={`Buy ${product.name} on Amazon`}
+            aria-label={`Buy ${product.name} on WhatsApp`}
+            style={{ backgroundColor: '#25D366', borderColor: '#25D366' }}
           >
+            <MessageSquare size={14} />
             <span>BUY NOW</span>
-            <ExternalLink size={14} />
           </a>
         </div>
       </div>
