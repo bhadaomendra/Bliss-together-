@@ -142,11 +142,11 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
             <p style={{
               fontFamily: "'Cormorant Garamond', Georgia, serif",
               fontStyle: 'italic',
-              fontSize: 'clamp(1.55rem, 2.3vw, 2.15rem)',
+              fontSize: 'clamp(1.15rem, 1.6vw, 1.45rem)',
               color: '#183C2D',
               fontWeight: 600,
               lineHeight: 1.25,
-              marginBottom: '1.25rem',
+              marginBottom: '1rem',
               letterSpacing: '0.01em'
             }}>
               Wellness<br/>
