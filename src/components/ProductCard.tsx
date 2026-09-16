@@ -38,6 +38,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
           src={allImages[activeImgIndex] || product.image}
           alt={`${product.name} - View ${activeImgIndex + 1}`}
           loading="lazy"
+          style={{
+            objectFit: 'contain',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            borderRadius: activeImgIndex === 1 ? '8px' : '0',
+            padding: activeImgIndex === 1 ? '0.25rem' : '0'
+          }}
         />
 
         {hasMultipleImages && (

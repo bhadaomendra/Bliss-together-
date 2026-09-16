@@ -40,15 +40,19 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
           <div className="product-detail-visual">
             <div className="product-badge product-detail-badge">{product.badge}</div>
 
-            <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '260px' }}>
               <img
                 src={allImages[activeImgIndex] || product.image}
                 alt={`${product.name} - View ${activeImgIndex + 1}`}
                 className="product-detail-image"
                 style={{
-                  maxHeight: '320px',
+                  maxHeight: '340px',
+                  maxWidth: '100%',
+                  width: 'auto',
+                  height: 'auto',
                   objectFit: 'contain',
                   borderRadius: '12px',
+                  boxShadow: activeImgIndex === 1 ? '0 4px 20px rgba(0,0,0,0.08)' : 'none',
                   transition: 'all 0.25s ease'
                 }}
               />
