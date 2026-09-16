@@ -32,19 +32,21 @@ export const Contact: React.FC = () => {
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '840px', margin: '0 auto' }}>
           {/* Eyebrow Tag */}
           <div style={{
-            display: 'inline-flex',
+            display: 'flex',
             alignItems: 'center',
-            gap: '0.85rem',
+            justifyContent: 'center',
+            gap: '0.75rem',
+            maxWidth: '360px',
+            margin: '0 auto 0.5rem',
             fontSize: '0.8125rem',
             fontWeight: 800,
-            letterSpacing: '0.22em',
+            letterSpacing: '0.18em',
             color: '#B28B45',
-            textTransform: 'uppercase',
-            marginBottom: '0.5rem'
+            textTransform: 'uppercase'
           }}>
-            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
-            <span>LET'S CONNECT</span>
-            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
+            <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '60px' }} />
+            <span style={{ whiteSpace: 'nowrap' }}>LET'S CONNECT</span>
+            <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '60px' }} />
           </div>
 
           {/* Heading */}

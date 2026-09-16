@@ -161,19 +161,21 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
           
           {/* Eyebrow Tag */}
           <div style={{
-            display: 'inline-flex',
+            display: 'flex',
             alignItems: 'center',
-            gap: '0.85rem',
+            justifyContent: 'center',
+            gap: '0.75rem',
+            maxWidth: '420px',
+            margin: '0 auto 0.35rem',
             fontSize: '0.8125rem',
             fontWeight: 800,
-            letterSpacing: '0.22em',
+            letterSpacing: '0.18em',
             color: '#B28B45',
-            textTransform: 'uppercase',
-            marginBottom: '0.35rem'
+            textTransform: 'uppercase'
           }}>
-            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
-            <span>OUR WELLNESS RANGE</span>
-            <span style={{ color: '#B28B45', opacity: 0.65 }}>─────────</span>
+            <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '60px' }} />
+            <span style={{ whiteSpace: 'nowrap' }}>OUR WELLNESS RANGE</span>
+            <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '60px' }} />
           </div>
 
           {/* Heading */}

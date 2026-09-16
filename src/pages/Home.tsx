@@ -381,18 +381,21 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           {/* Section Divider */}
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={{
-              display: 'inline-flex',
+              display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
               gap: '0.75rem',
+              maxWidth: '440px',
+              margin: '0 auto',
               fontSize: '0.85rem',
               fontWeight: 700,
-              letterSpacing: '0.2em',
+              letterSpacing: '0.18em',
               color: 'var(--color-primary)',
               textTransform: 'uppercase'
             }}>
-              <span style={{ color: 'var(--color-gold)' }}>── ♡</span>
-              <span>OUR WELLNESS COLLECTION</span>
-              <span style={{ color: 'var(--color-gold)' }}>♡ ──</span>
+              <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '50px' }} />
+              <span style={{ whiteSpace: 'nowrap' }}>OUR WELLNESS COLLECTION</span>
+              <span style={{ flex: 1, height: '1px', backgroundColor: '#B28B45', opacity: 0.35, maxWidth: '50px' }} />
             </div>
           </div>
 
