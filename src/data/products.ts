@@ -91,6 +91,11 @@ export const productsData: Product[] = [
     categorySlug: "sleep",
     subtitle: "Restful Night Quality & Calm Mind Complex",
     image: "/assets/products/melatonin.png",
+    ingredientsImage: "/assets/products/melatonin-ingredients.png",
+    images: [
+      "/assets/products/melatonin.png",
+      "/assets/products/melatonin-ingredients.png"
+    ],
     accentColor: "#4338CA",
     badge: "Sleep Support",
     flavour: "Blueberry Flavour",
@@ -116,6 +121,11 @@ export const productsData: Product[] = [
     categorySlug: "eye",
     subtitle: "Digital Screen Strain Relief & Vision Defense",
     image: "/assets/products/eye-care.png",
+    ingredientsImage: "/assets/products/eye-care-ingredients.png",
+    images: [
+      "/assets/products/eye-care.png",
+      "/assets/products/eye-care-ingredients.png"
+    ],
     accentColor: "#9C4D78",
     badge: "Eye Health",
     flavour: "Mixed Fruit Flavour",
@@ -141,6 +151,11 @@ export const productsData: Product[] = [
     categorySlug: "brain",
     subtitle: "Supports Brain Development, Focus & Memory",
     image: "/assets/products/kids-brain-booster.png",
+    ingredientsImage: "/assets/products/kids-brain-booster-ingredients.jpg",
+    images: [
+      "/assets/products/kids-brain-booster.png",
+      "/assets/products/kids-brain-booster-ingredients.jpg"
+    ],
     accentColor: "#2E5B88",
     badge: "Focus & Learning",
     flavour: "Mango Flavour",
@@ -166,6 +181,11 @@ export const productsData: Product[] = [
     categorySlug: "immunity",
     subtitle: "Daily Immune Defense & Vital Energy",
     image: "/assets/products/kids-immunity.png",
+    ingredientsImage: "/assets/products/kids-immunity-ingredients.png",
+    images: [
+      "/assets/products/kids-immunity.png",
+      "/assets/products/kids-immunity-ingredients.png"
+    ],
     accentColor: "#D97706",
     badge: "Immunity",
     flavour: "Mixed Berry Flavour",
