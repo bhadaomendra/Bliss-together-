@@ -450,28 +450,29 @@ button {
 }
 
 /* ==========================================================================
-   MOBILE FLOATING WHATSAPP CTA & OVERLAP PREVENTION SYSTEM
+   MOBILE FLOATING WHATSAPP CTA (SLEEK CIRCULAR ICON-ONLY BUTTON)
    ========================================================================== */
 .whatsapp-floating-widget {
   position: fixed;
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   right: calc(20px + env(safe-area-inset-right, 0px));
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   background-color: #25D366;
   color: #FFFFFF;
-  padding: 0.65rem 1.15rem;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.84375rem;
   transition: all 0.25s ease;
   cursor: pointer;
-  max-height: 42px;
-}/* HERO SECTION BASE STYLING */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* HERO SECTION BASE STYLING */
 .home-hero-section {
   position: relative;
   min-height: calc(100vh - 72px);
@@ -488,32 +489,26 @@ button {
 @media (max-width: 768px) {
   /* Prevent ANY website content, text, cards, or footer links from being obscured at the bottom of the page */
   body {
-    padding-bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .footer-bottom-bar {
-    padding-bottom: calc(1.2rem + 60px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(1.2rem + 50px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .whatsapp-floating-widget {
-    bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
-    right: 14px !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
     left: auto !important;
-    width: auto !important;
-    padding: 0.45rem 0.85rem !important;
-    font-size: 0.75rem !important;
-    gap: 0.4rem !important;
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4) !important;
-    max-height: 36px !important;
-    line-height: 1 !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
   }
 
   .wa-widget-label {
-    display: inline-block !important;
-    font-size: 0.75rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.01em !important;
-    white-space: nowrap !important;
+    display: none !important;
   }
 
   /* CONTACT FORM MOBILE RESPONSIVE FIXES */
