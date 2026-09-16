@@ -31,6 +31,11 @@ export const productsData: Product[] = [
     categorySlug: "beauty",
     subtitle: "Natural Biotin 10,000 mcg Glow & Strength Complex",
     image: "/assets/products/hair-skin-nails.png",
+    ingredientsImage: "/assets/products/hair-skin-nails-ingredients.jpg",
+    images: [
+      "/assets/products/hair-skin-nails.png",
+      "/assets/products/hair-skin-nails-ingredients.jpg"
+    ],
     accentColor: "#BE123C",
     badge: "Hair • Skin • Nails",
     flavour: "Strawberry Flavour",
