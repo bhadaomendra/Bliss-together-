@@ -200,7 +200,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </div>
 
             {/* Trust Signals Row (4 Icon Items) */}
-            <div style={{
+            <div className="trust-signals-grid" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
               gap: '1rem',
@@ -403,7 +403,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
 
           {/* 5 Tub Product Cards Horizontal Grid */}
-          <div style={{
+          <div className="tubs-showcase-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '1.25rem',
@@ -466,7 +466,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
 
           {/* 4 Value Proposition Cards Box */}
-          <div style={{
+          <div className="home-value-box" style={{
             backgroundColor: '#F3EFEA',
             borderRadius: '20px',
             padding: '2rem 2.5rem',
