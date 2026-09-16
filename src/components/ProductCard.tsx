@@ -1,5 +1,5 @@
-import React from 'react';
-import { Eye, Sparkles, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
+import { Eye, Sparkles, MessageSquare, Package, FileText } from 'lucide-react';
 import { Product } from '../data/products';
 import { siteConfig } from '../data/site';
 
@@ -9,6 +9,14 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }) => {
+  const [activeImgIndex, setActiveImgIndex] = useState<number>(0);
+
+  const allImages = product.images && product.images.length > 0
+    ? product.images
+    : (product.ingredientsImage ? [product.image, product.ingredientsImage] : [product.image]);
+
+  const hasMultipleImages = allImages.length > 1;
+
   return (
     <article
       className="product-card"
@@ -25,12 +33,85 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
     >
       <div className="product-badge">{product.badge}</div>
 
-      <div className="product-img-wrapper">
+      <div className="product-img-wrapper" style={{ position: 'relative' }}>
         <img
-          src={product.image}
-          alt={product.name}
+          src={allImages[activeImgIndex] || product.image}
+          alt={`${product.name} - View ${activeImgIndex + 1}`}
           loading="lazy"
         />
+
+        {hasMultipleImages && (
+          <div
+            className="product-img-switcher"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'absolute',
+              bottom: '10px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              backgroundColor: 'rgba(24, 60, 45, 0.88)',
+              backdropFilter: 'blur(8px)',
+              padding: '3px 8px',
+              borderRadius: '20px',
+              zIndex: 3,
+              boxShadow: '0 4px 12px rgba(0,0,0,0.18)'
+            }}
+          >
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImgIndex(0);
+              }}
+              aria-label="View product bottle image"
+              style={{
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                color: activeImgIndex === 0 ? '#183C2D' : '#FFFFFF',
+                backgroundColor: activeImgIndex === 0 ? '#FFFFFF' : 'transparent',
+                border: 'none',
+                padding: '2px 8px',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '3px'
+              }}
+            >
+              <Package size={11} />
+              <span>Product</span>
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImgIndex(1);
+              }}
+              aria-label="View ingredients table image"
+              style={{
+                fontSize: '0.7rem',
+                fontWeight: 700,
+                color: activeImgIndex === 1 ? '#183C2D' : '#FFFFFF',
+                backgroundColor: activeImgIndex === 1 ? '#FFFFFF' : 'transparent',
+                border: 'none',
+                padding: '2px 8px',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '3px'
+              }}
+            >
+              <FileText size={11} />
+              <span>Ingredients</span>
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="product-card-body">

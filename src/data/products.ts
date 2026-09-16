@@ -7,6 +7,8 @@ export interface Product {
   categorySlug: 'brain' | 'eye' | 'immunity' | 'beauty' | 'daily' | 'sleep';
   subtitle: string;
   image: string;
+  ingredientsImage?: string;
+  images?: string[];
   accentColor: string;
   badge: string;
   description: string;
@@ -54,6 +56,11 @@ export const productsData: Product[] = [
     categorySlug: "daily",
     subtitle: "Gut Balance & Comprehensive Daily Micronutrients",
     image: "/assets/products/pre-probiotic-multivitamin.png",
+    ingredientsImage: "/assets/products/pre-probiotic-ingredients.png",
+    images: [
+      "/assets/products/pre-probiotic-multivitamin.png",
+      "/assets/products/pre-probiotic-ingredients.png"
+    ],
     accentColor: "#15803D",
     badge: "Daily Wellness & Gut Health",
     flavour: "Orange Flavour",

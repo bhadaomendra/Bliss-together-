@@ -1,5 +1,5 @@
-import React from 'react';
-import { X, CheckCircle2, Leaf, Clock, Sparkles, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, CheckCircle2, Leaf, Clock, Sparkles, MessageSquare, Package, FileText } from 'lucide-react';
 import { Product } from '../data/products';
 import { siteConfig } from '../data/site';
 
@@ -9,7 +9,19 @@ interface ProductModalProps {
 }
 
 export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveImgIndex(0);
+  }, [product?.id]);
+
   if (!product) return null;
+
+  const allImages = product.images && product.images.length > 0
+    ? product.images
+    : (product.ingredientsImage ? [product.image, product.ingredientsImage] : [product.image]);
+
+  const hasMultipleImages = allImages.length > 1;
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -27,12 +39,80 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         <div className="product-detail-grid">
           <div className="product-detail-visual">
             <div className="product-badge product-detail-badge">{product.badge}</div>
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-detail-image"
-            />
-            <p className="product-detail-flavour">
+
+            <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <img
+                src={allImages[activeImgIndex] || product.image}
+                alt={`${product.name} - View ${activeImgIndex + 1}`}
+                className="product-detail-image"
+                style={{
+                  maxHeight: '320px',
+                  objectFit: 'contain',
+                  borderRadius: '12px',
+                  transition: 'all 0.25s ease'
+                }}
+              />
+            </div>
+
+            {hasMultipleImages && (
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '0.6rem',
+                  marginTop: '0.85rem',
+                  marginBottom: '0.35rem'
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setActiveImgIndex(0)}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    padding: '0.4rem 0.85rem',
+                    borderRadius: '50px',
+                    fontSize: '0.78125rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    border: activeImgIndex === 0 ? '1.5px solid #183C2D' : '1px solid rgba(24,60,45,0.15)',
+                    backgroundColor: activeImgIndex === 0 ? '#183C2D' : '#FFFFFF',
+                    color: activeImgIndex === 0 ? '#FFFFFF' : '#183C2D',
+                    boxShadow: activeImgIndex === 0 ? '0 4px 10px rgba(24,60,45,0.15)' : 'none'
+                  }}
+                >
+                  <Package size={14} />
+                  <span>Product Bottle</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveImgIndex(1)}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    padding: '0.4rem 0.85rem',
+                    borderRadius: '50px',
+                    fontSize: '0.78125rem',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    border: activeImgIndex === 1 ? '1.5px solid #183C2D' : '1px solid rgba(24,60,45,0.15)',
+                    backgroundColor: activeImgIndex === 1 ? '#183C2D' : '#FFFFFF',
+                    color: activeImgIndex === 1 ? '#FFFFFF' : '#183C2D',
+                    boxShadow: activeImgIndex === 1 ? '0 4px 10px rgba(24,60,45,0.15)' : 'none'
+                  }}
+                >
+                  <FileText size={14} />
+                  <span>Ingredients Table</span>
+                </button>
+              </div>
+            )}
+
+            <p className="product-detail-flavour" style={{ marginTop: hasMultipleImages ? '0.25rem' : '0.75rem' }}>
               Flavour: <span>{product.flavour}</span> · {product.servings}
             </p>
           </div>
