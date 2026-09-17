@@ -572,10 +572,10 @@ button {
   }
   .hero-puffy-cloud {
     display: block !important;
-    width: 130px !important;
-    height: 86px !important;
-    top: 0.4rem !important;
-    right: 3rem !important;
+    width: 110px !important;
+    height: 73px !important;
+    top: 0.25rem !important;
+    right: 0.6rem !important;
     z-index: 5 !important;
     pointer-events: none !important;
   }
