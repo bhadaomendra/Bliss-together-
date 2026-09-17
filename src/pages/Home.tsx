@@ -769,18 +769,21 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           </div>
         </div>
       </section>
-             {/* ========================================================================= */}
-      {/* 5. FEATURED WELLNESS SECTION (PROMINENT PRODUCT TUB, TIGHT TEXT, GIRL RIGHT) */}
+          {/* ========================================================================= */}
+      {/* 5. FEATURED WELLNESS SECTION (EXACT MATCHING REFERENCE MOCKUP IMAGE) */}
       {/* ========================================================================= */}
-      <section style={{
+      {/* ========================================================================= */}
+      {/* 5. FEATURED WELLNESS SECTION (WITH NEW PRE + PROBIOTIC TUB COMPOSITION) */}
+      {/* ========================================================================= */}
+      <section className="featured-wellness-section" style={{
         position: 'relative',
-        backgroundColor: '#F7F4EC',
-        padding: '3rem 0',
+        backgroundColor: '#FAF5ED',
+        padding: '3.5rem 0',
         overflow: 'hidden',
         borderTop: '1px solid rgba(27,59,43,0.06)',
         borderBottom: '1px solid rgba(27,59,43,0.06)'
       }}>
-        {/* Right Background Photo (GIRL IMAGE - UNTOUCHED & PRESERVED) */}
+        {/* Right Background Photo (Girl Enjoying Gummy) */}
         <div className="featured-woman-bg" style={{
           position: 'absolute',
           top: 0,
@@ -806,7 +809,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
 
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1380px' }}>
           <div className="featured-product-grid">
-            {/* 1. LEFT: Product Tub Visual (Larger, Prominent & High-Res) */}
+            
+            {/* 1. LEFT: Product Tub Visual (NEW USER UPLOADED COMPOSITION IMAGE) */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -814,6 +818,25 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               position: 'relative',
               paddingBottom: '0.5rem'
             }}>
+              {/* Cursive Background Script Text on Left */}
+              <div style={{
+                position: 'absolute',
+                left: '-15px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontStyle: 'italic',
+                fontSize: '1.65rem',
+                color: '#D97706',
+                opacity: 0.75,
+                lineHeight: 1.15,
+                zIndex: 1,
+                pointerEvents: 'none',
+                textAlign: 'left'
+              }}>
+                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1rem', fontStyle: 'normal' }}>♥</span>
+              </div>
+
               {/* Soft realistic 3D floor contact shadow */}
               <div style={{
                 position: 'absolute',
@@ -829,12 +852,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 zIndex: 1
               }} />
 
+              {/* NEW TRANSPARENT TUB COMPOSITION IMAGE */}
               <img
-                src="/assets/mockup_exact/featured_tub_exact.png"
-                alt="Krishiv Calm & Anti Stress Gummy Tub Render"
+                src="/assets/featured_user_tub_clean.png"
+                alt="Bliss Together Pre + Probiotic Multivitamin Gummies Tub Composition"
                 style={{
                   width: '100%',
-                  maxHeight: '440px',
+                  maxHeight: '460px',
                   objectFit: 'contain',
                   position: 'relative',
                   zIndex: 2,
@@ -843,48 +867,120 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               />
             </div>
 
-            {/* 2. CENTER: Featured Text Content (Tightly Grouped beside Tub) */}
-            <div style={{ padding: '0.5rem 0', maxWidth: '540px' }}>
-              <div style={{ fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#967230', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
+            {/* 2. CENTER: Featured Text Content */}
+            <div style={{ padding: '0.5rem 0', maxWidth: '560px' }}>
+              <div style={{ fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#B8731D', textTransform: 'uppercase', marginBottom: '0.4rem' }}>
                 FEATURED WELLNESS
               </div>
 
-              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, color: '#11352A', marginBottom: '0.65rem', lineHeight: 1.15 }}>
-                Find Your Balance. Naturally.
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.65rem', lineHeight: 1.15 }}>
+                <span style={{ color: '#11352A', display: 'block' }}>A Happier Gut</span>
+                <span style={{ color: '#EA580C', display: 'block' }}>A Healthier You.</span>
               </h2>
 
-              <p style={{ fontSize: '0.95rem', color: '#4A5568', lineHeight: 1.5, marginBottom: '1.5rem', maxWidth: '480px' }}>
-                Calm & Anti-Stress Gummies help you manage daily stress, relax your mind and support mood balance.
+              <p style={{ fontSize: '0.95rem', color: '#4A5568', lineHeight: 1.55, marginBottom: '1.5rem', maxWidth: '510px' }}>
+                Pre + Probiotic Multivitamin Gummies with essential vitamins, probiotics and prebiotic fiber to support gut health, boost immunity and enhance overall wellness — naturally.
               </p>
 
-              {/* 3 Outlined Circular Ingredient Badges */}
-              <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', flexWrap: 'wrap', marginBottom: '1.85rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                  <div style={{ width: '30px', height: '30px', borderRadius: '50%', border: '1.5px solid #00A896', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00A896', backgroundColor: 'rgba(255,255,255,0.7)' }}>
-                    <Leaf size={15} />
+              {/* 4 Circular Benefit Badges Row */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '1.85rem' }}>
+                
+                {/* Badge 1: Supports Gut Health */}
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '50%',
+                    border: '1.5px solid #EA580C',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#EA580C',
+                    backgroundColor: 'rgba(255,255,255,0.85)',
+                    margin: '0 auto 0.4rem',
+                    boxShadow: '0 2px 8px rgba(234, 88, 12, 0.15)'
+                  }}>
+                    <span style={{ fontSize: '1.1rem' }}>🫄</span>
                   </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#11352A' }}>Ashwagandha</span>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#11352A', lineHeight: 1.2 }}>
+                    Supports<br />Gut Health*
+                  </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                  <div style={{ width: '30px', height: '30px', borderRadius: '50%', border: '1.5px solid #00A896', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#00A896', backgroundColor: 'rgba(255,255,255,0.7)' }}>
-                    <span style={{ fontSize: '0.8rem' }}>🪷</span>
+                {/* Badge 2: Boosts Immunity */}
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '50%',
+                    border: '1.5px solid #EA580C',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#EA580C',
+                    backgroundColor: 'rgba(255,255,255,0.85)',
+                    margin: '0 auto 0.4rem',
+                    boxShadow: '0 2px 8px rgba(234, 88, 12, 0.15)'
+                  }}>
+                    <ShieldCheck size={18} />
                   </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#11352A' }}>L-Theanine</span>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#11352A', lineHeight: 1.2 }}>
+                    Boosts<br />Immunity*
+                  </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-                  <div style={{ width: '30px', height: '30px', borderRadius: '50%', border: '1.5px solid #00A896', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', fontWeight: 700, color: '#00A896', backgroundColor: 'rgba(255,255,255,0.7)' }}>
-                    B6
+                {/* Badge 3: Supports Healthy Digestion */}
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '50%',
+                    border: '1.5px solid #EA580C',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#EA580C',
+                    backgroundColor: 'rgba(255,255,255,0.85)',
+                    margin: '0 auto 0.4rem',
+                    boxShadow: '0 2px 8px rgba(234, 88, 12, 0.15)'
+                  }}>
+                    <span style={{ fontSize: '1.1rem' }}>✨</span>
                   </div>
-                  <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#11352A' }}>Vitamin B6</span>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#11352A', lineHeight: 1.2 }}>
+                    Supports<br />Healthy Digestion*
+                  </div>
                 </div>
+
+                {/* Badge 4: Enhances Overall Wellness */}
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '50%',
+                    border: '1.5px solid #EA580C',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#EA580C',
+                    backgroundColor: 'rgba(255,255,255,0.85)',
+                    margin: '0 auto 0.4rem',
+                    boxShadow: '0 2px 8px rgba(234, 88, 12, 0.15)'
+                  }}>
+                    <Heart size={18} />
+                  </div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#11352A', lineHeight: 1.2 }}>
+                    Enhances<br />Overall Wellness*
+                  </div>
+                </div>
+
               </div>
 
+              {/* Primary CTA Button */}
               <button
-                onClick={() => onQuickView(getProductObj('prod-6'))}
+                onClick={() => onQuickView(getProductObj('prod-5'))}
                 style={{
-                  backgroundColor: '#00A896',
+                  backgroundColor: '#F57C00',
+                  backgroundImage: 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
                   color: '#FFFFFF',
                   padding: '0.85rem 1.85rem',
                   borderRadius: '50px',
@@ -894,12 +990,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                   alignItems: 'center',
                   gap: '0.55rem',
                   letterSpacing: '0.04em',
-                  boxShadow: '0 4px 16px rgba(0,168,150,0.3)',
+                  boxShadow: '0 6px 20px rgba(249, 115, 22, 0.35)',
                   cursor: 'pointer',
-                  border: 'none'
+                  border: 'none',
+                  transition: 'all 0.2s ease'
                 }}
               >
-                <span>EXPLORE CALM & ANTI-STRESS GUMMIES</span>
+                <span>EXPLORE PRE + PROBIOTIC GUMMIES</span>
                 <ArrowRight size={15} />
               </button>
             </div>
