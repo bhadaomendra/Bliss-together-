@@ -53,10 +53,10 @@ const section = `      {/* =====================================================
                 filter: 'blur(7px)', pointerEvents: 'none', zIndex: 1
               }} />
               <img
-                src="/assets/products/pre-probiotic-multivitamin.png"
+                src="/assets/featured_user_tub_clean.png"
                 alt="Bliss Together Pre + Probiotic Multivitamin Gummies"
                 style={{
-                  width: '100%', maxHeight: '440px', objectFit: 'contain', position: 'relative', zIndex: 2,
+                  width: '100%', maxHeight: '460px', objectFit: 'contain', position: 'relative', zIndex: 2,
                   filter: 'drop-shadow(0 16px 26px rgba(17,35,28,0.20))'
                 }}
               />
