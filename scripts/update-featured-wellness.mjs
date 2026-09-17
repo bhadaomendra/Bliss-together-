@@ -58,22 +58,24 @@ const section = `      {/* =====================================================
               paddingBottom: '0.5rem'
             }}>
               {/* Cursive Background Script Text on Left */}
-              <div style={{
+              <div className="healthy-gut-quote-overlay" style={{
                 position: 'absolute',
-                left: '-15px',
-                top: '50%',
-                transform: 'translateY(-50%)',
+                left: '-50px',
+                top: '12%',
+                transform: 'rotate(-10deg)',
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontStyle: 'italic',
-                fontSize: '1.65rem',
+                fontSize: '1.9rem',
+                fontWeight: 700,
                 color: '#D97706',
-                opacity: 0.75,
-                lineHeight: 1.15,
-                zIndex: 1,
+                opacity: 0.95,
+                lineHeight: 1.12,
+                zIndex: 2,
                 pointerEvents: 'none',
-                textAlign: 'left'
+                textAlign: 'left',
+                filter: 'drop-shadow(0 2px 8px rgba(255, 255, 255, 0.9))'
               }}>
-                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1rem', fontStyle: 'normal' }}>♥</span>
+                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1.1rem', fontStyle: 'normal' }}>♥</span>
               </div>
 
               {/* Soft realistic 3D floor contact shadow */}

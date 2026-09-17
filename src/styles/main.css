@@ -409,6 +409,11 @@ button {
   .featured-product-grid img {
     max-height: 250px !important;
   }
+  .healthy-gut-quote-overlay {
+    left: 0px !important;
+    top: 5% !important;
+    font-size: 1.3rem !important;
+  }
   .featured-woman-bg {
     display: none !important;
   }
