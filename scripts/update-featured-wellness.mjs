@@ -3,38 +3,43 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const path = 'src/pages/Home.tsx';
 const text = readFileSync(path, 'utf8');
 
-if (text.includes('5. FEATURED WELLNESS SECTION — PRE + PROBIOTIC MULTIVITAMIN')) {
-  console.log('Featured Wellness section already updated.');
-  process.exit(0);
-}
-
 const start = text.indexOf('      {/* 5. FEATURED WELLNESS SECTION');
 const end = text.indexOf('      {/* 6. WELLNESS JOURNAL SECTION', start);
 
 if (start === -1 || end === -1) {
-  throw new Error('Featured Wellness section markers not found in Home.tsx');
+  console.log('Section markers not found or already rewritten cleanly.');
+  process.exit(0);
 }
 
 const section = `      {/* ========================================================================= */}
-      {/* 5. FEATURED WELLNESS SECTION — PRE + PROBIOTIC MULTIVITAMIN */}
+      {/* 5. FEATURED WELLNESS SECTION */}
       {/* ========================================================================= */}
-      <section style={{
+      <section className="featured-wellness-section" style={{
         position: 'relative',
-        backgroundColor: '#FFF7EC',
-        padding: '3rem 0',
+        backgroundColor: '#FAF5ED',
+        padding: '3.5rem 0',
         overflow: 'hidden',
         borderTop: '1px solid rgba(27,59,43,0.06)',
         borderBottom: '1px solid rgba(27,59,43,0.06)'
       }}>
+        {/* Right Background Photo (Girl Enjoying Gummy) */}
         <div className="featured-woman-bg" style={{
-          position: 'absolute', top: 0, right: 0, bottom: 0, width: '38%',
-          zIndex: 1, pointerEvents: 'none'
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          width: '38%',
+          zIndex: 1,
+          pointerEvents: 'none'
         }}>
           <img
             src="/assets/mockup_exact/featured_woman_exact.jpg"
-            alt="Woman enjoying wellness gummies"
+            alt="Woman Enjoying Wellness Gummy Background"
             style={{
-              width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center right',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center right',
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)',
               maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)'
             }}
@@ -43,28 +48,68 @@ const section = `      {/* =====================================================
 
         <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1380px' }}>
           <div className="featured-product-grid">
+            
+            {/* 1. LEFT: Product Tub Visual (NEW USER UPLOADED COMPOSITION IMAGE) */}
             <div style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', paddingBottom: '0.5rem'
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              paddingBottom: '0.5rem'
             }}>
+              {/* Cursive Background Script Text on Left */}
               <div style={{
-                position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)',
-                width: '88%', height: '26px', borderRadius: '50%',
-                background: 'radial-gradient(ellipse at center, rgba(17,35,28,0.28) 0%, rgba(17,35,28,0.10) 55%, rgba(17,35,28,0) 80%)',
-                filter: 'blur(7px)', pointerEvents: 'none', zIndex: 1
+                position: 'absolute',
+                left: '-15px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontStyle: 'italic',
+                fontSize: '1.65rem',
+                color: '#D97706',
+                opacity: 0.75,
+                lineHeight: 1.15,
+                zIndex: 1,
+                pointerEvents: 'none',
+                textAlign: 'left'
+              }}>
+                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1rem', fontStyle: 'normal' }}>♥</span>
+              </div>
+
+              {/* Soft realistic 3D floor contact shadow */}
+              <div style={{
+                position: 'absolute',
+                bottom: '10px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '88%',
+                height: '26px',
+                borderRadius: '50%',
+                background: 'radial-gradient(ellipse at center, rgba(17, 35, 28, 0.35) 0%, rgba(17, 35, 28, 0.12) 55%, rgba(17, 35, 28, 0) 80%)',
+                filter: 'blur(7px)',
+                pointerEvents: 'none',
+                zIndex: 1
               }} />
+
+              {/* NEW TRANSPARENT TUB COMPOSITION IMAGE */}
               <img
                 src="/assets/featured_user_tub_clean.png"
-                alt="Bliss Together Pre + Probiotic Multivitamin Gummies"
+                alt="Bliss Together Pre + Probiotic Multivitamin Gummies Tub Composition"
                 style={{
-                  width: '100%', maxHeight: '460px', objectFit: 'contain', position: 'relative', zIndex: 2,
-                  filter: 'drop-shadow(0 16px 26px rgba(17,35,28,0.20))'
+                  width: '100%',
+                  maxHeight: '460px',
+                  objectFit: 'contain',
+                  position: 'relative',
+                  zIndex: 2,
+                  filter: 'drop-shadow(0 16px 26px rgba(17, 35, 28, 0.22))'
                 }}
               />
             </div>
 
+            {/* 2. CENTER: Featured Text Content */}
             <div style={{ padding: '0.5rem 0', maxWidth: '560px' }}>
               <div style={{
-                fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#B56500',
+                fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#B8731D',
                 textTransform: 'uppercase', marginBottom: '0.4rem'
               }}>
                 FEATURED WELLNESS
@@ -156,6 +201,7 @@ const section = `      {/* =====================================================
                 <ArrowRight size={15} />
               </button>
             </div>
+
           </div>
         </div>
       </section>
@@ -163,4 +209,4 @@ const section = `      {/* =====================================================
 `;
 
 writeFileSync(path, text.slice(0, start) + section + text.slice(end), 'utf8');
-console.log('Featured Wellness section updated for the production build.');
+console.log('Featured Wellness section updated cleanly.');
