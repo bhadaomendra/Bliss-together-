@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home9/blisstoge/public_html/
+    - /usr/bin/npm ci
+    - /usr/bin/npm run build
+    - /bin/cp -R dist/. $DEPLOYPATH
