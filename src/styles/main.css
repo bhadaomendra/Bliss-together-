@@ -347,10 +347,11 @@ button {
 
 .featured-product-grid {
   display: grid;
-  grid-template-columns: minmax(0, 410px) minmax(0, 470px);
-  gap: 1.75rem;
+  grid-template-columns: minmax(0, 390px) minmax(0, 460px);
+  gap: 1.5rem;
   align-items: center;
-  max-width: 910px;
+  max-width: 865px;
+  margin-left: 1.5rem;
 }
 
 /* Mobile Responsive Adjustments */

@@ -803,6 +803,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
+      {/* ========================================================================= */}
       {/* 5. FEATURED WELLNESS SECTION */}
       {/* ========================================================================= */}
       <section className="featured-wellness-section" style={{
@@ -819,8 +820,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           top: 0,
           right: 0,
           bottom: 0,
-          width: '30%',
-          maxWidth: '440px',
+          width: '38%',
           zIndex: 1,
           pointerEvents: 'none'
         }}>
@@ -832,8 +832,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center right',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 30%, black 75%)',
-              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 30%, black 75%)'
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)'
             }}
           />
         </div>
@@ -852,7 +852,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               {/* Cursive Background Script Text on Left */}
               <div className="healthy-gut-quote-overlay" style={{
                 position: 'absolute',
-                left: '-40px',
+                left: '-70px',
                 top: '12%',
                 transform: 'rotate(-10deg)',
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
