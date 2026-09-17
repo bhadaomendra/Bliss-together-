@@ -802,6 +802,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
       {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
+      {/* ========================================================================= */}
       {/* 5. FEATURED WELLNESS SECTION */}
       {/* ========================================================================= */}
       <section className="featured-wellness-section" style={{
@@ -818,7 +819,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
           top: 0,
           right: 0,
           bottom: 0,
-          width: '38%',
+          width: '30%',
+          maxWidth: '440px',
           zIndex: 1,
           pointerEvents: 'none'
         }}>
@@ -830,8 +832,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center right',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)',
-              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 18%, black 50%)'
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 30%, black 75%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 30%, black 75%)'
             }}
           />
         </div>
@@ -850,12 +852,12 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               {/* Cursive Background Script Text on Left */}
               <div className="healthy-gut-quote-overlay" style={{
                 position: 'absolute',
-                left: '-50px',
+                left: '-40px',
                 top: '12%',
                 transform: 'rotate(-10deg)',
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
                 fontStyle: 'italic',
-                fontSize: '1.9rem',
+                fontSize: '1.85rem',
                 fontWeight: 700,
                 color: '#D97706',
                 opacity: 0.95,
@@ -865,7 +867,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 textAlign: 'left',
                 filter: 'drop-shadow(0 2px 8px rgba(255, 255, 255, 0.9))'
               }}>
-                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1.1rem', fontStyle: 'normal' }}>♥</span>
+                Healthy<br />Gut<br />Happier<br />You <span style={{ fontSize: '1.05rem', fontStyle: 'normal' }}>♥</span>
               </div>
 
               {/* Soft realistic 3D floor contact shadow */}
@@ -899,7 +901,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </div>
 
             {/* 2. CENTER: Featured Text Content */}
-            <div style={{ padding: '0.5rem 0', maxWidth: '560px' }}>
+            <div style={{ padding: '0.5rem 0', maxWidth: '470px' }}>
               <div style={{
                 fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.15em', color: '#B8731D',
                 textTransform: 'uppercase', marginBottom: '0.4rem'
@@ -908,19 +910,19 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               </div>
 
               <h2 style={{
-                fontFamily: 'var(--font-heading)', fontSize: '2.65rem', fontWeight: 700,
+                fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700,
                 marginBottom: '0.75rem', lineHeight: 1.15
               }}>
                 <span style={{ color: '#0F3A2E', display: 'block' }}>A Happier Gut</span>
                 <span style={{ color: '#E65100', display: 'block' }}>A Healthier You.</span>
               </h2>
 
-              <p style={{ fontSize: '0.95rem', color: '#4A5568', lineHeight: 1.55, marginBottom: '1.65rem', maxWidth: '510px' }}>
+              <p style={{ fontSize: '0.925rem', color: '#4A5568', lineHeight: 1.5, marginBottom: '1.65rem', maxWidth: '460px' }}>
                 Pre + Probiotic Multivitamin Gummies with essential vitamins, probiotics and prebiotic fiber to support gut health, boost immunity and enhance overall wellness — naturally.
               </p>
 
               {/* 4 Circular Benefit Badges Row */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.75rem', alignItems: 'flex-start', marginBottom: '1.85rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.35rem', alignItems: 'flex-start', marginBottom: '1.85rem' }}>
                 {/* Badge 1: Supports Gut Health */}
                 <div style={{ textAlign: 'center' }}>
                   <div style={{
