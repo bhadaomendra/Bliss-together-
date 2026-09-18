@@ -54,8 +54,8 @@ export const pageSeoData: Record<string, PageSeo> = {
     description: "Learn about Shailendra Pal Singh's 18-year pharmaceutical journey and the vision behind Krishiv Wellness LLP and Bliss Together gummies."
   },
   products: {
-    title: "Our Wellness Range | Bliss Together Gummies",
-    description: "Explore Bliss Together's science-backed gummy nutrition for Brain & Focus, Eye Health, Immunity, Hair-Skin-Nails, Daily Multivitamins & Sleep Support."
+    title: "Wellness Gummies in India | Bliss Together",
+    description: "Explore Bliss Together wellness gummies in India, including kids gummies, multivitamin gummies, immunity gummies, eye health gummies, hair-skin-nails gummies and sleep support gummies."
   },
   journal: {
     title: "Wellness Journal | Health Tips & Research by Bliss Together",
