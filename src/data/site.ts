@@ -46,8 +46,8 @@ export interface PageSeo {
 
 export const pageSeoData: Record<string, PageSeo> = {
   home: {
-    title: "Bliss Together | Everyday Wellness Gummies",
-    description: "Discover thoughtfully crafted wellness gummies by Bliss Together, created to make everyday nutrition simple, enjoyable and accessible for every wellness journey."
+    title: "Bliss Together | Wellness Gummies in Jaipur, India",
+    description: "Bliss Together wellness gummies in Jaipur, India, thoughtfully crafted for kids, families and everyday wellness. Explore our gummy range and connect with us for product inquiries."
   },
   about: {
     title: "About Krishiv | Healthcare Experience to Everyday Wellness",
