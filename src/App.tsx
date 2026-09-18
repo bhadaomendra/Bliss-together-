@@ -43,6 +43,38 @@ export const App: React.FC = () => {
       if (metaDesc) {
         metaDesc.setAttribute('content', seo.description);
       }
+
+      // Keep the Products page's canonical and social URL aligned with its
+      // actual route so Google receives a clear page-level signal.
+      if (currentPath === '/products') {
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', 'https://blisstogether.in/products');
+
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', 'https://blisstogether.in/products');
+
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', seo.title);
+
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogDescription) ogDescription.setAttribute('content', seo.description);
+      } else {
+        // Restore the static homepage values when navigating away.
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', 'https://blisstogether.in/');
+
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', 'https://blisstogether.in/');
+
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', 'Bliss Together | Everyday Wellness Gummies');
+
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogDescription) ogDescription.setAttribute(
+          'content',
+          'Thoughtfully crafted gummies for every age, every need & every step of your wellness journey. NOURISH. BALANCE. THRIVE.'
+        );
+      }
     }
   }, [currentPath]);
 
