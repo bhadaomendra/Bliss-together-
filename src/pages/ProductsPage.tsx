@@ -208,7 +208,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, onQuickV
             margin: '0 auto 1.15rem',
             letterSpacing: '0.01em'
           }}>
-            Discover our collection of science-backed gummy nutrition, formulated with premium ingredients for every member of the family.
+            Explore our wellness gummies for everyday nutrition, including kids gummies, multivitamin gummies, immunity gummies, eye health gummies, hair-skin-nails gummies and sleep support gummies.
           </p>
 
           {/* 4 Feature Badges (Balanced Horizontal Layout) */}
