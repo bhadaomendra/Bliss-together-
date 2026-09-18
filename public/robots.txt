@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blisstogetherwellness.com/sitemap.xml
+Sitemap: https://blisstogether.in/sitemap.xml
