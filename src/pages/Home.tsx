@@ -567,8 +567,12 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 Krishiv is inspired by the timeless essence of Krishna and Shiva — symbols of trust, balance and blissfulness.
               </p>
 
-              <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
+              <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '0.65rem' }}>
                 We believe wellness should be positive, enjoyable and sustainable. That’s why we created delicious gummies with complete nutrition to support your everyday well-being.
+              </p>
+
+              <p style={{ fontSize: '0.8125rem', color: 'var(--color-text-muted)', lineHeight: 1.55, marginBottom: '1.75rem' }}>
+                <strong style={{ color: 'var(--color-primary)' }}>Bliss Together</strong> is a wellness brand serving Jaipur and beyond with thoughtfully crafted gummy nutrition for everyday life.
               </p>
 
               <button
