@@ -365,25 +365,22 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             {/* Bliss Together Logo Centered Inside Puffy Cloud */}
             <div className="cloud-logo-container" style={{
               position: 'absolute',
-              top: '12%',
-              left: '12%',
-              width: '76%',
-              height: '74%',
+              top: '18%',
+              left: '20%',
+              width: '60%',
+              height: '60%',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              padding: '2px'
+              justifyContent: 'center'
             }}>
               <img
-                src="/assets/official_bt_logo.png"
+                src="/assets/bliss_together_logo_transparent.png"
                 alt="Bliss Together - Nourish. Balance. Thrive."
                 style={{
-                  width: '95%',
-                  height: 'auto',
-                  maxHeight: '180px',
+                  width: '100%',
+                  height: '100%',
                   objectFit: 'contain',
-                  display: 'block',
-                  filter: 'contrast(1.05) brightness(1.02)'
+                  display: 'block'
                 }}
               />
             </div>
@@ -809,6 +806,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         </div>
       </section>
           {/* ========================================================================= */}
+      {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
