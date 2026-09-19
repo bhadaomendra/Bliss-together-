@@ -634,7 +634,21 @@ button {
   }
 
   .home-hero-section > div:first-child {
-    padding-top: 11.5rem !important;
+    padding-top: 14rem !important;
+  }
+
+  .home-hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 32% 0 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(10, 35, 26, 0.02) 0%, rgba(10, 35, 26, 0.34) 48%, rgba(10, 35, 26, 0.82) 100%);
+  }
+
+  .home-hero-section > div:first-child {
+    position: relative;
+    z-index: 2;
   }
 
   .home-hero-section > div:first-child > div {
