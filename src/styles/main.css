@@ -629,7 +629,7 @@ button {
     background-image: linear-gradient(180deg, rgba(10, 35, 26, 0.05) 0%, rgba(10, 35, 26, 0.08) 35%, rgba(10, 35, 26, 0.58) 68%, rgba(10, 35, 26, 0.96) 100%), url('/assets/hero_wallpaper.jpg') !important;
     background-size: auto 100% !important;
     background-repeat: no-repeat !important;
-    background-position: 62% center !important;
+    background-position: 57% center !important;
     background-color: #0A231C !important;
   }
 
@@ -640,22 +640,17 @@ button {
   .home-hero-section > div:first-child > div {
     max-width: 100% !important;
   }
+  /* Hide desktop comic cloud on mobile; keep only the dedicated thinking cloud */
   .hero-puffy-cloud {
-    display: block !important;
-    width: 88px !important;
-    height: 58px !important;
-    top: 0.25rem !important;
-    right: 0.25rem !important;
-    z-index: 5 !important;
-    pointer-events: none !important;
+    display: none !important;
   }
   .mobile-hero-cloud-badge {
     display: block !important;
-    top: 5.9rem !important;
-    right: 0.15rem !important;
+    top: 4.6rem !important;
+    right: -0.15rem !important;
   }
   .mobile-thought-bubble {
-    transform: scale(0.82);
+    transform: scale(0.78);
     transform-origin: top right;
   }
   .home-hero-eyebrow {
