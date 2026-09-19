@@ -301,6 +301,12 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile-only scroll cue */}
+            <div className="mobile-hero-scroll-cue" aria-hidden="true">
+              <span className="mobile-hero-scroll-arrow">⌄</span>
+              <span>SCROLL TO EXPLORE</span>
+            </div>
           </div>
         </div>
 
