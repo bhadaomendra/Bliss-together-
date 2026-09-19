@@ -648,9 +648,9 @@ button {
   /* BT Cloud Badge Position & Size in Top-Left Sunbeam Space above Girl, dots pointing to Boy mind */
   .hero-puffy-cloud {
     display: block !important;
-    width: 130px !important;
-    height: 86px !important;
-    top: 0.8rem !important;
+    width: 140px !important;
+    height: 92px !important;
+    top: 0.6rem !important;
     left: 0.4rem !important;
     right: auto !important;
     z-index: 5 !important;
