@@ -1,6 +1,6 @@
 import React from 'react';
 import { productsData, Product } from '../data/products';
-import { ArrowRight, Leaf, Microscope, ShieldCheck, Heart, Sparkles, CheckCircle2, Award, Zap, Smile, Compass, ChevronRight } from 'lucide-react';
+import { ArrowRight, Leaf, Microscope, ShieldCheck, Heart, Sparkles, CheckCircle2, Award, Zap, Smile, Compass, ChevronRight, ChevronDown } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (path: string) => void;
@@ -392,6 +392,23 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
               />
             </div>
           </div>
+        </div>
+
+        {/* Mobile-Only Scroll To Explore Indicator */}
+        <div className="mobile-scroll-explore" style={{
+          display: 'none',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.15rem',
+          paddingTop: '0.5rem',
+          color: 'rgba(255, 255, 255, 0.75)',
+          cursor: 'pointer',
+          position: 'relative',
+          zIndex: 3
+        }} onClick={() => window.scrollTo({ top: window.innerHeight * 0.85, behavior: 'smooth' })}>
+          <ChevronDown size={14} style={{ animation: 'bounce 2s infinite' }} />
+          <span style={{ fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase' }}>SCROLL TO EXPLORE</span>
         </div>
       </section>
 
@@ -796,6 +813,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
         </div>
       </section>
           {/* ========================================================================= */}
+      {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
       {/* ========================================================================= */}
