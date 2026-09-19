@@ -645,16 +645,16 @@ button {
     max-width: 100% !important;
   }
 
-  /* BT Cloud Badge Position & Size */
+  /* BT Cloud Badge Position & Size in Top-Right Foliage Space above Boy */
   .hero-puffy-cloud {
     display: block !important;
-    width: 115px !important;
-    height: 76px !important;
-    top: 1.8rem !important;
-    right: 0.4rem !important;
+    width: 130px !important;
+    height: 86px !important;
+    top: 1.0rem !important;
+    right: 0.6rem !important;
     z-index: 5 !important;
     pointer-events: none !important;
-    transform: rotate(4deg) !important;
+    transform: rotate(3deg) !important;
   }
 
   .mobile-hero-cloud-badge {
