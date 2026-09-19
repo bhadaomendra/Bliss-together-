@@ -485,6 +485,62 @@ button {
 
 .mobile-hero-cloud-badge {
   display: none !important;
+  position: absolute;
+  top: 7.5rem;
+  right: 0.65rem;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.mobile-thought-bubble {
+  position: relative;
+  width: 155px;
+  height: 118px;
+}
+
+.thought-cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 125px;
+  height: 82px;
+}
+
+.thought-cloud-shape {
+  position: absolute;
+  inset: 0;
+  background: #FFFFFF;
+  border-radius: 48% 52% 46% 54% / 54% 46% 52% 48%;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
+
+.thought-cloud-logo {
+  position: absolute;
+  inset: 15px 14px;
+  width: calc(100% - 28px);
+  height: calc(100% - 30px);
+  object-fit: contain;
+}
+
+.thought-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+.thought-dot-lg {
+  width: 18px;
+  height: 18px;
+  left: 18px;
+  bottom: 24px;
+}
+
+.thought-dot-sm {
+  width: 10px;
+  height: 10px;
+  left: 4px;
+  bottom: 10px;
 }
 
 /* HERO SECTION BASE STYLING */
@@ -563,16 +619,17 @@ button {
     border-radius: 20px !important;
   }
 
-  /* HERO SECTION MOBILE BACKGROUND IMAGE COMPLETE UN-CROPPED DISPLAY FIX */
+  /* Dedicated mobile hero composition: large lifestyle image + overlaid content */
   .home-hero-section {
-    min-height: auto !important;
-    padding: 2.25rem 0 1.5rem 0 !important;
+    min-height: 720px !important;
+    max-height: none !important;
+    padding: 1.5rem 0 1.75rem 0 !important;
     justify-content: flex-start !important;
-    overflow: visible !important;
-    background-image: linear-gradient(180deg, rgba(10, 35, 26, 0.45) 0%, rgba(10, 35, 26, 0.8) 60%, rgba(10, 35, 26, 0.98) 100%), url('/assets/hero_wallpaper.jpg') !important;
-    background-size: 100% auto !important;
+    overflow: hidden !important;
+    background-image: linear-gradient(180deg, rgba(10, 35, 26, 0.12) 0%, rgba(10, 35, 26, 0.2) 34%, rgba(10, 35, 26, 0.78) 68%, rgba(10, 35, 26, 0.98) 100%), url('/assets/hero_wallpaper.jpg') !important;
+    background-size: auto 100% !important;
     background-repeat: no-repeat !important;
-    background-position: center top !important;
+    background-position: 68% center !important;
     background-color: #0A231C !important;
   }
   .hero-puffy-cloud {
@@ -585,7 +642,13 @@ button {
     pointer-events: none !important;
   }
   .mobile-hero-cloud-badge {
-    display: none !important;
+    display: block !important;
+    top: 7.25rem !important;
+    right: 0.4rem !important;
+  }
+  .mobile-thought-bubble {
+    transform: scale(0.92);
+    transform-origin: top right;
   }
   .home-hero-eyebrow {
     font-size: 0.6875rem !important;
