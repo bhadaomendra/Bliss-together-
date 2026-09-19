@@ -147,25 +147,17 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onQuickView }) => {
             </p>
 
             {/* Mobile-Only Dedicated BT Brand Cloud Badge */}
-            <div className="mobile-hero-cloud-badge">
-              <div style={{ position: 'relative', width: '150px', height: '98px' }}>
-                <svg viewBox="0 0 520 320" width="100%" height="100%" style={{ overflow: 'visible' }}>
-                  <defs>
-                    <filter id="puffy-shadow-mobile" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#000000" floodOpacity="0.25" />
-                    </filter>
-                  </defs>
-                  {/* Spark Lines */}
-                  <line x1="85" y1="65" x2="60" y2="40" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-                  <line x1="115" y1="48" x2="100" y2="20" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-                  <line x1="435" y1="65" x2="460" y2="40" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-                  <line x1="405" y1="48" x2="420" y2="20" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-                  <line x1="460" y1="95" x2="485" y2="85" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-                  {/* Fluffy Cloud Shape */}
-                  <path d="M 140 80 A 42 42 0 0 1 210 55 A 52 52 0 0 1 300 50 A 46 46 0 0 1 380 70 A 44 44 0 0 1 435 115 A 42 42 0 0 1 445 170 A 44 44 0 0 1 410 220 A 46 46 0 0 1 340 250 A 52 52 0 0 1 240 255 A 46 46 0 0 1 160 238 A 42 42 0 0 1 105 198 A 44 44 0 0 1 95 135 A 42 42 0 0 1 140 80 Z" fill="#FFFFFF" filter="url(#puffy-shadow-mobile)" />
-                </svg>
-                <div style={{ position: 'absolute', top: '18%', left: '21%', width: '58%', height: '62%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/assets/bliss_together_logo_transparent.png" alt="Bliss Together - Nourish. Balance. Thrive." style={{ width: '100%', height: 'auto', maxHeight: '60px', objectFit: 'contain', display: 'block' }} />
+            <div className="mobile-hero-cloud-badge" aria-label="Bliss Together thought bubble">
+              <div className="mobile-thought-bubble">
+                <span className="thought-dot thought-dot-lg" />
+                <span className="thought-dot thought-dot-sm" />
+                <div className="thought-cloud">
+                  <div className="thought-cloud-shape" />
+                  <img
+                    src="/assets/bliss_together_logo_transparent.png"
+                    alt="Bliss Together - Nourish. Balance. Thrive."
+                    className="thought-cloud-logo"
+                  />
                 </div>
               </div>
             </div>
