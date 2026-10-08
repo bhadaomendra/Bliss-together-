@@ -182,12 +182,16 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => (
             <div className="about-eyebrow">THE FOUNDER'S JOURNEY</div>
             <h2 className="about-display about-story-title">A Journey with a Purpose</h2>
             <div className="about-story-text">
-              <p>With <strong>18 years of experience</strong> in the pharmaceutical industry, <strong>Shailendra Pal Singh</strong> has always been closely connected to healthcare and, more importantly, to the wellbeing of the people around him.</p>
-              <p>While exploring opportunities to build a new venture with his partner, one thought kept coming back:</p>
+              <p>With <strong>18 years of experience</strong> in the pharmaceutical industry, <strong>Shailendra Pal Singh</strong> has always been closely connected to healthcare and, more importantly, to the wellbeing of people around him.</p>
+              <p>At the same time, <strong>Himanshu Jeendgar</strong> grew up in a family with a long-standing presence in industrial activities and the distribution of ghee and vegetable oils in Jaipur. Even during his studies, Himanshu developed a keen interest in the family business, dedicating his spare time to learning the practical skills and understanding the fundamentals of business.</p>
+              <p>By the time he completed his studies, he was well prepared to contribute to and help expand the family business.</p>
+              <p>While exploring opportunities to build something meaningful together, <strong>Shailendra and Himanshu</strong> found a common vision — to create a venture where wellness could become a simple and enjoyable part of everyday life.</p>
+              <p>One thought kept coming back:</p>
               <div className="about-quote">“Prevention is better than cure.”</div>
-              <p>This belief led them towards the world of nutraceuticals — a space where everyday nutrition and wellness could become a part of people’s lives in a simple and enjoyable way.</p>
-              <p>As they explored the evolving nutraceutical landscape, they discovered the exciting potential of gummies: a convenient and enjoyable way to make wellness a more approachable part of everyday life.</p>
-              <p style={{ fontWeight: 700, color: green, fontSize: '1.1rem' }}>And that’s where Bliss Together was born. Because we believe wellness is better when we experience it together.</p>
+              <p>This belief led them towards the world of nutraceuticals — a space where everyday nutrition and wellness could become a natural part of people's lives.</p>
+              <p>As they explored the evolving nutraceutical landscape, they discovered the exciting potential of gummies: a convenient and enjoyable way to make wellness more approachable for people of every generation.</p>
+              <p>Together, Shailendra and Himanshu bring a strong combination of experience, business understanding, expertise and determination — united by a shared vision to take Bliss Together to new heights.</p>
+              <p style={{ fontWeight: 700, color: green, fontSize: '1.1rem' }}>And that's where Bliss Together was born. Because we believe wellness is better when we experience it together.</p>
             </div>
           </div>
 

@@ -51,7 +51,7 @@ export const pageSeoData: Record<string, PageSeo> = {
   },
   about: {
     title: "About Krishiv | Healthcare Experience to Everyday Wellness",
-    description: "Learn about Shailendra Pal Singh's 18-year pharmaceutical journey and the vision behind Krishiv Wellness LLP and Bliss Together gummies."
+    description: "Learn about Shailendra Pal Singh and Himanshu Jeendgar's journey and the vision behind Krishiv Wellness LLP and Bliss Together gummies."
   },
   products: {
     title: "Wellness Gummies in India | Bliss Together",
